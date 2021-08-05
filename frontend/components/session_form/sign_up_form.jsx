@@ -31,10 +31,11 @@ class SignUpForm extends React.Component {
         return ( 
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                Sign Up for Petday
+                <p className="signup-for-petday">Sign Up for Petday</p>
+                <p>Connect with great local businesses</p>
                 <br />
                 <br />
-                Connect with great local businesses
+                
                     <div className="login-form">
                         <br />
                             <input className="login-input"
