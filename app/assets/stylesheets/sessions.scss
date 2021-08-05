@@ -5,6 +5,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.login-to-petday {
+    color: #d32323;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+// .top-new-to-pet-day {
+//     color: grayscale($color: #2e2e2e);
+//     font-weight: bold;
+// }
 .login-form-container {
     margin: 0;
     padding: 0;
@@ -30,9 +40,9 @@
     font-family: "Roboto", sans-serif;
     outline: 1;
     background: f2f2f2;
-    width: 100%;
+    width: 300px;
+    height: 30px;
     border: 1px;
-    margin: 0 0 15px;
     padding: 15px;
     box-sizing: border-box;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
@@ -46,12 +56,18 @@
     background:#d32323;
     color: #f3f3f3;
     font-weight: normal;
-    // text-align: center;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-.if-user-or-not {
+.already-on-petday {
     text-align: center;
     text-decoration: none;
+}
+
+.new-to-petday {
+    text-align: center;
+    text-decoration: none;  
 }
 
 .login-form-box {
@@ -61,6 +77,7 @@
 .session-link {
     text-decoration: none;
     color: #01a1dd;
+    // font-weight: bold;
 }
 
 .session-link:hover {

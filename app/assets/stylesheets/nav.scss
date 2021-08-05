@@ -1,6 +1,7 @@
 .nav-bar {
     letter-spacing: 1px;
     width: 100%;
+    text-decoration: none;
 }
 
 .left-nave {
@@ -9,21 +10,48 @@
     width: 350px;
     margin-left: 200px;
     position: absolute;
+    text-decoration: none;
+
 
 }
+.write-a-review, .talk, .events, .login-bttn-nav, .signup-bttn-nav {
+    text-decoration: none;
+    // border-bottom-width: 20px;
+}
+
 
 .login-nav {
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     float: right;
-    margin-right: 500px ;
-    position: relative;
+    // margin-right: 500px ;
+    margin-left: 850px;
+    position: absolute;
 }
 
 .signup-nav {
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     display: flex;
     float: right;
-    margin-right: 50px;
-    position: relative;
+    margin-left: 950px;
+    position: absolute;
 }
+.write-a-review:hover, .talk:hover, .events:hover, .login-bttn-nav:hover {
+    text-decoration: 2px underline;
+    text-underline-position: under;
+}
+.signup-bttn-nav:hover {
+    color: grayscale($color: #7a7777);
+    background: rgb(243, 169, 169);
+}
+
+
+.signup-bttn-nav{
+    transition:all .3s ease-in-out;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 7px 24px 8px;
+    margin-top: -10px;
+
+}
+

@@ -10,9 +10,9 @@ const mapStateToProps = ({ errors }) => {
     welcomeMessage: "By logging in, you agree to Petday's Term of Service and Privacy Policy",
     formType: 'Login',
     buttomMessage: "Log In",
-    navLink: (
+    navlink: (
       <p>
-        New to Yelp? <Link to="/signup">Sign Up</Link>
+        New to Petday? <Link to="/signup" className="session-link">Sign Up</Link>
       </p>
     ),
   };

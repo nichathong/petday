@@ -7,16 +7,16 @@ const Navbar = ({ currentUser, logout }) => {
   const sessionLinks = () => (  
     <nav className="nav-bar">
       <div className="left-nave">
-        <Link to="/writeareview">Write a Review</Link>
-        <Link to="/events">Events</Link>
-        <Link to="/Talk">Talk</Link>
+        <Link to="/writeareview" className="write-a-review">Write a Review</Link>
+        <Link to="/events"className="events">Events</Link>
+        <Link to="/Talk"className="talk">Talk</Link>
       </div>
       <div className="login-nav">
-        <Link to="/login">Log In</Link>        
+        <Link to="/login" className="login-bttn-nav">Log In</Link>        
       </div>
       {/* &nbsp; &nbsp; */}
       <div className="signup-nav">
-      <Link to="/signup">Sign Up</Link>        
+      <Link to="/signup" className="signup-bttn-nav">Sign Up</Link>        
       </div>
 
     </nav>

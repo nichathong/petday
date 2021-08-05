@@ -52,7 +52,7 @@ class SignUpForm extends React.Component {
                             } /> 
                         <br />
                             <input className="login-input"
-                            type="text"
+                            type="email"
                             placeholder="Email"
                             value={this.state.email}
                             onChange={this.update("email")
@@ -72,7 +72,11 @@ class SignUpForm extends React.Component {
                             onChange={this.update("zipcode")
                             } /> 
                         <br />
+                        <br />
                         Birthday optional
+                        <br />
+                        <br />
+
                             <input className="login-input"
                             type="text"
                             placeholder="Month"
@@ -87,7 +91,7 @@ class SignUpForm extends React.Component {
                             } /> 
                             <input className="login-input"
                             type="text"
-                            placeholder="Day"
+                            placeholder="Year"
                             value={this.state.birthday}
                             onChange={this.update("birthday")
                             } /> 
@@ -98,6 +102,7 @@ class SignUpForm extends React.Component {
                         type="submit"
                         value={this.props.buttonMessage}
                         />
+                        <div className="already-on-petday">{this.props.navlink}</div>
                     </div>
 
                 </form>
