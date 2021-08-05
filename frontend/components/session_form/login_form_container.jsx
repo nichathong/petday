@@ -7,8 +7,14 @@ import SessionForm from './session_form';
 const mapStateToProps = ({ errors }) => {
   return {
     // errors: errors.session,
-    formType: 'login',
-    navLink: <Link to="/signup">sign up instead</Link>,
+    welcomeMessage: "By logging in, you agree to Petday's Term of Service and Privacy Policy",
+    formType: 'Login',
+    buttomMessage: "Log In",
+    navLink: (
+      <p>
+        New to Yelp? <Link to="/signup">Sign Up</Link>
+      </p>
+    ),
   };
 };
 

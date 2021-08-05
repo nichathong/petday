@@ -4,23 +4,14 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstname: '',
-      lastname: '',
-      email: '',
-      password: '',
-      zipcode: '',
-      birthmonth: '',
-      birthday: '',
-      birthyear: ''
-
+      email: "",
+      password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return e => this.setState({[field]: e.currentTarget.value});
   }
 
   handleSubmit(e) {
@@ -42,38 +33,45 @@ class SessionForm extends React.Component {
   //   );
   // }
 
+
   render() {
     return (
       <div className="login-form-container">
-        <form className="login-form-box">
-          Welcome to Petday!
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {/* {this.renderErrors()} */}
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          Log in to Petday
+          <br />
+          <br />
+          {this.props.welcomeMessage}
           <div className="login-form">
-            <br/>
-            <label>email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
+            <div>{this.props.navlink}</div> 
+              <input className="login-input"
+              type="text"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.update("email")
+              } /> 
+            <br />
+                <input className="login-input"
+                type="text"
+                placeholder="Password"
                 value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <button onClick={this.handleSubmit} className="session-submit" type="submit" value={this.props.formType} >{this.props.formType}</button>
+                onChange={this.update("password")
+                } /> 
+            <br />
+            <input
+            className="session-submit" 
+            type="submit"
+            value={this.props.buttonMessage}
+            />
+            <div className="new-to-yelp">{this.props.navlink}</div>
+
           </div>
+
         </form>
       </div>
-    );
+    )
   }
 }
+
 
 export default SessionForm;

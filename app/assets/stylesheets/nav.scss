@@ -1,0 +1,29 @@
+.nav-bar {
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.left-nave {
+    justify-content: space-evenly;
+    display: flex;
+    width: 350px;
+    margin-left: 200px;
+    position: absolute;
+
+}
+
+.login-nav {
+    display: flex;
+    justify-content: space-evenly;
+    float: right;
+    margin-right: 500px ;
+    position: relative;
+}
+
+.signup-nav {
+    justify-content: space-evenly;
+    display: flex;
+    float: right;
+    margin-right: 50px;
+    position: relative;
+}
