@@ -113,3 +113,11 @@ class SignUpForm extends React.Component {
 }
  
 export default SignUpForm;
+
+
+                        // <button className="session-submit"
+                        // value={this.props.buttonMessage}
+                        // >
+                        //     <Link to="/" >Sign Up</Link>
+
+                        // </button>
