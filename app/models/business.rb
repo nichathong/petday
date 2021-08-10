@@ -3,6 +3,8 @@ class Business < ApplicationRecord
 
     has_many :reviews
 
+    has_one_attached :photo
+
     # before_create :slugify
 
     # def slugify

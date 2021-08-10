@@ -11,9 +11,9 @@ const mapStateToProps = ({ errors }) => {
     formType: 'Sign Up',
     buttonMessage: "Sign Up",
     navlink: (
-      <p>
+      <div>
         Already on Petday? <Link to="/login" className="session-link">Log In</Link>,
-      </p>
+      </div>
     )
   };
 };

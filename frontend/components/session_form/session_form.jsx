@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -36,37 +37,56 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <p className="login-to-petday">Log in to Petday</p> 
-          <p className="top-new-to-petday">{this.props.navlink}</p>
-          {this.props.welcomeMessage}
-          <div className="login-form">
-              <input className="login-input"
-              type="email"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.update("email")
-              } /> 
-            <br />
-                <input className="login-input"
-                type="text"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update("password")
-                } /> 
-            <br />
-            <input
-            className="session-submit" 
-            type="submit"
-            value={this.props.buttonMessage}
-            />
-            <div className="new-to-petday">{this.props.navlink}</div>
-
+        <div className="session-top-tap">
+          <Link to="/">
+            <img
+              className="session-form-petday-icon"
+              src="/petday_img/petday_logo_small.png"
+            ></img>
+          </Link>
+        </div>
+        <div className="main-session-form">
+          <div className="session-form-box">
+            <div className="fillout-form">
+              <form onSubmit={this.handleSubmit} className="login-form-box">
+                <div className="login-to-petday">Log in to Petday</div>
+                <br />
+                <div className="top-new-to-petday">{this.props.navlink}</div>
+                <br />
+                {this.props.welcomeMessage}
+                <div className="login-form">
+                  <input
+                    className="login-input"
+                    type="email"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                  />
+                  <br />
+                  <input
+                    className="login-input"
+                    type="text"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                  />
+                  <br />
+                  <input
+                    className="session-submit"
+                    type="submit"
+                    value={this.props.buttonMessage}
+                  />
+                  <div className="new-to-petday">{this.props.navlink}</div>
+                </div>
+              </form>
+            </div>
           </div>
-
-        </form>
+          <div className="sessoion-deco-img">
+            <a>Hello</a>
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
 

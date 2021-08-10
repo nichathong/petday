@@ -1,18 +1,18 @@
-export const fetchBusineses = bound => (
+export const fetchBusinesses = bounds => (
     $.ajax({
         method: 'GET',
-        url: 'api/busineses',
+        url: 'api/businesses',
         data: bounds,
         error: (err) => console.log(err)
     })
 );
 
-export const fetchBusiness = id => (
-    $.ajax({
+export const fetchBusiness = id => {
+     return $.ajax({
         method: 'GET',
         url: `api/businesses/${id}`
     })
-);
+};
 
 export const fetchReviews = business_id => (
     $.ajax({

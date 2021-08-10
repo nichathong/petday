@@ -26,6 +26,7 @@ gem 'jquery-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'fast_jsonapi'
+gem "aws-sdk-s3"
 
 
 # Use ActiveStorage variant

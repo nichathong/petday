@@ -10,10 +10,11 @@ export const receiveBusinesses = businesses => ({
   businesses
 });
 
-export const receiveBusiness = business => ({
+export const receiveBusiness = business => {
+    return {
   type: RECEIVE_BUSINESS,
   business
-});
+}};
 
 export const receiveReviews = reviews => ({
   type: RECEIVE_REVIEWS,
@@ -25,8 +26,8 @@ export const receiveReview = review => ({
   review
 });
 
-export const fetchBusineses = bounds => dispatch => (
-    APIUtil.fetchBusineses(bounds)
+export const fetchBusinesses = bounds => dispatch => (
+    APIUtil.fetchBusinesses(bounds)
     .then( businesses => dispatch(receiveBusinesses(businesses)))
 );
 

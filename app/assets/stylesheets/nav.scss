@@ -2,6 +2,8 @@
     letter-spacing: 1px;
     width: 100%;
     text-decoration: none;
+    z-index: 3;
+    display: block;
 }
 
 .left-nave {
@@ -11,6 +13,7 @@
     margin-left: 200px;
     position: absolute;
     text-decoration: none;
+    margin-top: 50px;
 
 
 }
@@ -27,6 +30,9 @@
     // margin-right: 500px ;
     margin-left: 850px;
     position: absolute;
+    margin-top: 50px;
+    color: white;
+
 }
 
 .signup-nav {
@@ -35,20 +41,30 @@
     float: right;
     margin-left: 950px;
     position: absolute;
+    margin-top: 50px;    
 }
 .write-a-review:hover, .talk:hover, .events:hover, .login-bttn-nav:hover {
-    text-decoration: 2px underline;
-    text-underline-position: under;
+    // text-decoration: 2px underline;
+    // text-underline-position: under;
+    border-bottom-style: solid;
+    padding-bottom: 8px;
+}
+
+.write-a-review, .talk, .events, .login-bttn-nav, .signup-bttn-nav {
+    color: white;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 .signup-bttn-nav:hover {
-    color: grayscale($color: #7a7777);
-    background: rgb(243, 169, 169);
+    color: grayscale($color: #535353);
+    background: rgb(255, 255, 255);
 }
 
 
 .signup-bttn-nav{
-    transition:all .3s ease-in-out;
-    border: 3px solid black;
+    transition:all .5s ease-in-out;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 5px;
     padding: 7px 24px 8px;
     margin-top: -10px;

@@ -5,8 +5,9 @@ class Api::BusinessesController < ApplicationController
     end
 
     def show
+        # debugger
         # @business = Business.find_by(slug: params[:slug])
-        @business = Business.find_by(id: params[:id])
+        @business = Business.find(params[:id])
 
         # render json: BusinessSerializer.new(business, options).serialized_json
     end
