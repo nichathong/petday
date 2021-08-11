@@ -1,6 +1,6 @@
-@businesses.each do |biz|
-  json.set! biz.id do
-    json.partial! 'business', business: biz
+@businesses.each do |business|
+  json.set! business.id do
+    json.partial! "api/businesses/business", business: business
+    json.photoUrls business.photo.map {|photo| url_for(photo)}
   end
-  json.photoUrl url_for(biz.photo)
 end

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from './dropdown';
+// import Homepage from '../../homepage/homepage';
+// import Dropdown from './dropdown';
 
 
 
-const Navbar = ({ currentUser, logout }) => {
-  const [visible, setVisible] = useState(false);//set default state 
-  const handleDropDown = () => {
-    setVisible(!visible)
-  }
-  useEffect(() => {}, [visible])
+const Greeting = ({ currentUser, logout }) => {
+//   const [visible, setVisible] = useState(false);//set default state 
+//   const handleDropDown = () => {
+//     setVisible(!visible)
+//   }
+//   useEffect(() => {}, [visible])
+
+  
   const sessionLinks = () => (
     <nav className="nav-bar">
       <div className="left-nave">
@@ -40,7 +43,7 @@ const Navbar = ({ currentUser, logout }) => {
       <div></div>
     </nav>
   );
-  const personalGreeting = () => (
+  const personalGreeting = () => (  
     <hgroup className="header-group">
       <nav className="nav-bar">
         <div className="left-nave">
@@ -63,24 +66,24 @@ const Navbar = ({ currentUser, logout }) => {
             Talk
           </Link>
         </div>
-        {/* <div className="login-nav">
-        <Link to="/login" className="login-bttn-nav">Log In</Link>        
-      </div> */}
-        {/* &nbsp; &nbsp; */}
-        {/* <div className="signup-nav">
-      <Link to="/signup" className="signup-bttn-nav">Sign Up</Link>        
-      </div> */}
+        <div className="login-nav">
+        <Link to="/businsses" className="login-bttn-nav">Hello, {currentUser.firstname}</Link>        
+        </div>
+        &nbsp; &nbsp;
+        <div className="signup-nav">
+            <button className="signup-bttn-nav" onClick={logout}>Log out</button>
+      {/* <Link to="/signup" className="signup-bttn-nav">Log out</Link>         */}
+      </div>
       </nav>
-      <h2 className="header-name">Hi, {currentUser.email}!</h2>
+      {/* <h2 className="header-name">Hi, {currentUser.email}!</h2>
       <button className="header-button" onClick={handleDropDown}>
         Drop down menu
       </button>
-      {visible && <Dropdown />}
+      {visible && <Dropdown />} */}
     </hgroup>
-  );
-
+    );
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
 
-export default Navbar;
+export default Greeting;

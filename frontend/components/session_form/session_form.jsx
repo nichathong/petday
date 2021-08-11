@@ -65,7 +65,7 @@ class SessionForm extends React.Component {
                   <br />
                   <input
                     className="login-input"
-                    type="text"
+                    type="password"
                     placeholder="Password"
                     value={this.state.password}
                     onChange={this.update("password")}
@@ -81,9 +81,9 @@ class SessionForm extends React.Component {
               </form>
             </div>
           </div>
-          <div className="sessoion-deco-img">
+          {/* <div className="sessoion-deco-img">
             <a>Hello</a>
-          </div>
+          </div> */}
         </div>
       </div>
     );
