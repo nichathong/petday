@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchBusinesses } from '../../../actions/business_actions';
 import BusinessIndex from './business_index'; 
 import { logout } from '../../../actions/session_actions';
+import { updateFilter } from '../../../actions/filter_actions';
 
 const mSTP = (state, ownProps) => {
     return (
@@ -16,7 +17,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     fetchBusinesses: () => dispatch(fetchBusinesses()),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
 })
 
 export default connect(mSTP, mDTP)(BusinessIndex);

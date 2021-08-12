@@ -1,6 +1,7 @@
 // import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../../search/search';
 
 
 
@@ -22,13 +23,8 @@ class BusinessShow extends React.Component {
             return (
               <div className="biz-show-container">
                 <div className="biz-top-page">
-                  <Link to="/">
-                    <img
-                      className="top-logg-icon"
-                      scr="/petday_img/petday_icon.png"
-                    ></img>
-                  </Link>
-                  <div>Navr bar is Here</div>
+                  <Link to="/"><img className="pet-day-logo-index" src="/petday_img/petday_logo_small.png"></img></Link>
+                  <Search />
                 </div>
                 <div className="biz-top-container">
                   <div className="biz-photo-contianer">

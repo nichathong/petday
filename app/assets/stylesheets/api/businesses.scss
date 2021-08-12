@@ -11,13 +11,13 @@
 .biz-top-page {
     background-color: rgb(250, 250, 250);
     height: 130px;
-    width: 100%;
+    width: 101%;
     min-width: 800px;
 }
 
 .biz-top-page {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     // background-color: blueviolet;
 }
 
@@ -278,9 +278,20 @@
     top: 0;
     z-index: 100;
 }
-
 .biz-index-main {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+.biz-index-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-in-index {
+    right: 0px;
+    position: sticky;
 }
 
 .text-header {
@@ -412,5 +423,12 @@
     position: sticky;
     top: 122px;
     align-self: flex-start;
+}
+
+.pet-day-logo-index{
+    padding-top: 40px;
+    width: auto;
+    height: 25%;
+    padding-left: -60px;
 }
 

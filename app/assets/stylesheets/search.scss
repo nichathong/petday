@@ -1,0 +1,43 @@
+.search-box-homepage-container {
+    display: flex;
+    flex-direction: row;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.the-whole-search-box {
+    padding-top: 30px;
+    width: 900px;
+    // padding-left: 170px;
+    // padding-top: 10px;
+}
+
+.search-box-home {
+    height: 45px;
+    width: 880px;
+    border: 1px solid lightgray;
+    // border-color: lightgray;
+    border-radius: 3px;
+}
+
+.search-box-submit-bttn-home {
+    height: 49px;
+    min-width: 77px;
+    width: 82px;
+    background-color: #F43939;
+    border-radius: 2px;
+    border-style: none;
+    // top: 20px;
+}
+
+.submit-icon-petday {
+    // padding-top: 20px;
+    height: 35px;
+    width: auto;
+}

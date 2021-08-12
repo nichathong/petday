@@ -8,7 +8,8 @@
 .session-top-tap {
     // justify-content: center;
     background-color: #d32323;
-    padding: 10px 0px 10px 0px;
+    padding: 18px 0px 10px 0px;
+    // overflow: hidden;
     // display: grid;
     height: 48px;
     width: 100%;
@@ -18,8 +19,9 @@
     width: 120px;
     height: auto;
     position: relative;
+    margin-top: 25px;
     // bottom: 6px;
-    top: 20px;
+    // top: 20px;
     //margin: 0 50% 0 50%;
     // text-align: center;
     // height: auto;
@@ -50,8 +52,9 @@
 
 .session-form-box {
     display: flex;
-    margin: 100px 0 100px 0;
+    margin: 100px 0 0px 0;
     width: 500px;
+    justify-content: space-evenly;
 }
 
 .fillout-form {

@@ -109,19 +109,111 @@ businesses = Business.create([
 
 ])
 
-reviews = Review.create([
-    {
-        title: 'Great Atmosphere',
-        description: 'I have such an amazaing experience there',
-        score: 5,
-        business: Business.first
+# review1a = Review.create!(
+#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
+#     rating: 5,
+#     user_id: user2.id,
+#     business_id: 1
+# )
+# review1b = Review.create!(
+#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
+#     rating: 5,
+#     user_id: user2.id,
+#     business_id: 2
+# )
+# review1c = Review.create!(
+#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
+#     rating: 4,
+#     user_id: user3.id,
+#     business_id: 3
+# )
+# review1d = Review.create!(
+#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     rating: 5,
+#     user_id: user4.id,
+#     business_id: 4
+# )
+# review1e = Review.create!(
+#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     rating: 2,
+#     user_id: user5.id,
+#     business_id: 5
+# )
+# review1f = Review.create!(
+#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     rating: 5,
+#     user_id: user6.id,
+#     business_id: 6
+# )
+# review1g = Review.create!(
+#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     rating: 5,
+#     user_id: user6.id,
+#     business_id: 2
+# )
 
-    },
-    {
-        title: 'Awesome!',
-        description: 'food is delicious and the servers are very nice',
-        score: 4,
-        business: Business.first
+# user1 = User.create!(
+#     fname: "Chandler",
+#     lname: "Bing",
+#     email: "chandlerbing@email.com",
+#     zip_code: 90020,
+#     password: "chandlerbing",
+#     profile_pic: "chandler"
+# )
+# user2 = User.create!(
+#     fname: "Phoebe",
+#     lname: "Buffay",
+#     email: "phoebebuffay@email.com",
+#     zip_code: 90020,
+#     password: "phoebebuffay",
+#     profile_pic: "phoebe"
+# )
+# user3 = User.create!(
+#     fname: "Rachel",
+#     lname: "Green",
+#     email: "rachelgreen@email.com",
+#     zip_code: 90005,
+#     password: "rachelgreen",
+#     profile_pic: "rachel"
+# )
+# user4 = User.create!(
+#     fname: "Ross",
+#     lname: "Geller",
+#     email: "rossgeller@email.com",
+#     zip_code: 90022,
+#     password: "rossgeller",
+#     profile_pic: "ross"
+# )
+# user5 = User.create!(
+#     fname: "Joey",
+#     lname: "Tribbiani",
+#     email: "joeytribbiani@email.com",
+#     zip_code: 90020,
+#     password: "joeytribbiani",
+#     profile_pic: "joey"
+# )
+# user6 = User.create!(
+#     fname: "Monica",
+#     lname: "Geller",
+#     email: "monicageller@email.com",
+#     zip_code: 90020,
+#     password: "monicageller",
+#     profile_pic: "monica"
+# )
 
-    }
-])
+# # reviews = Review.create([
+# #     {
+# #         title: 'Great Atmosphere',
+# #         description: 'I have such an amazaing experience there',
+# #         score: 5,
+# #         business: Business.first
+
+# #     },
+# #     {
+# #         title: 'Awesome!',
+# #         description: 'food is delicious and the servers are very nice',
+# #         score: 4,
+# #         business: Business.first
+
+# #     }
+# # ])

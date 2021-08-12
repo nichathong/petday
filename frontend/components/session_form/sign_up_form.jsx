@@ -44,6 +44,7 @@ class SignUpForm extends React.Component {
                     <div className="fillout-form">
                         <form onSubmit={this.handleSubmit} className="login-form-box">
                         <div className="signup-for-petday">Sign Up for Petday</div>
+                        <br />
                         <div>Connect with great local businesses</div>
                         <div className="login-form">
                             <br />

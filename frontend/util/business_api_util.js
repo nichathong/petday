@@ -22,17 +22,17 @@ export const fetchReviews = business_id => (
     })
 );
 
-export const fetchAllReviews = () => (
-    $.ajax({
-        method: 'GET',
-        url: 'api/reviews'
-    })
-);
+// export const fetchAllReviews = () => (
+//     $.ajax({
+//         method: 'GET',
+//         url: 'api/reviews'
+//     })
+// );
 
-export const createReview = data => (
-    $.ajax({
-        method: 'POST',
-        url: 'api/reviews',
-        data
-    })
-);
+// export const createReview = data => (
+//     $.ajax({
+//         method: 'POST',
+//         url: 'api/reviews',
+//         data
+//     })
+// );

@@ -2,8 +2,8 @@ import * as APIUtil from '../util/business_api_util';
 
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
-export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
-export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+// export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+// export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
 export const receiveBusinesses = businesses => ({
   type: RECEIVE_BUSINESSES,
@@ -16,15 +16,15 @@ export const receiveBusiness = business => {
   business
 }};
 
-export const receiveReviews = reviews => ({
-  type: RECEIVE_REVIEWS,
-  reviews
-});
+// export const receiveReviews = reviews => ({
+//   type: RECEIVE_REVIEWS,
+//   reviews
+// });
 
-export const receiveReview = review => ({
-  type: RECEIVE_REVIEW,
-  review
-});
+// export const receiveReview = review => ({
+//   type: RECEIVE_REVIEW,
+//   review
+// });
 
 export const fetchBusinesses = bounds => dispatch => (
     APIUtil.fetchBusinesses(bounds)
@@ -36,17 +36,17 @@ export const fetchBusiness = id => dispatch => (
     .then( business => dispatch(receiveBusiness(business)))
 );
 
-export const fetchReviews = business_id => dispatch => (
-    APIUtil.fetchReviews(business_id)
-    .then ( reviews => dispatch(receiveReviews(reviews)))
-);
+// export const fetchReviews = business_id => dispatch => (
+//     APIUtil.fetchReviews(business_id)
+//     .then ( reviews => dispatch(receiveReviews(reviews)))
+// );
 
-export const fetchAllReviews = () => dispatch => (
-    APIUtil.fetchAllReviews()
-    .then( reviews => dispatch(receiveReviews(reviews)))
-);
+// export const fetchAllReviews = () => dispatch => (
+//     APIUtil.fetchAllReviews()
+//     .then( reviews => dispatch(receiveReviews(reviews)))
+// );
 
-export const createReview = review => dispatch => (
-    APIUtil.createReview(review)
-    .then(review => dispatch(receiveReview(review)))
-);
+// export const createReview = review => dispatch => (
+//     APIUtil.createReview(review)
+//     .then(review => dispatch(receiveReview(review)))
+// );

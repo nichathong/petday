@@ -11,7 +11,9 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => { console.log('buttonClick')
+   dispatch(logout())
+}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
