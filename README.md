@@ -1,6 +1,6 @@
 # README
 
-![Petday logo](https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/petday_logo_small.pngg)
+![Petday logo](s3://petday-seed/petday_img/petday_logo_small.png)
 
 ## Petday
 Petday is a yelp-clone project that focused on pet-friendly restaurants. Users are able to look up restaurants in their desire area to find out.
