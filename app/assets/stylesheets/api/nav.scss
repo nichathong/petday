@@ -16,16 +16,11 @@
     
 }
 
-.left-nave {
-    // justify-content: space-evenly;
-    // display: flex;
-    // width: 350px;
-    // margin-left: 200px;
-    // // position: absolute;
-    // text-decoration: none;
-    // margin-top: 50px;
-
-
+.write-a-review:hover, .talk:hover, .events:hover, .login-bttn-nav:hover {
+    // text-decoration: 2px underline;
+    // text-underline-position: under;
+    border-bottom-style: solid;
+    padding-bottom: 8px;
 }
 .write-a-review, .talk, .events, .login-bttn-nav, .signup-bttn-nav {
     text-decoration: none;
@@ -34,14 +29,8 @@
 
 
 .login-nav {
-    // display: flex;
-    // // justify-content: space-evenly;
-    // float: right;
-    // // margin-right: 500px ;
+
     margin-left: 500px;
-    // position: absolute;
-    // margin-top: 50px;
-    // color: white;
 
 }
 
@@ -52,12 +41,6 @@
     margin-left: 10px;
     // position: absolute;
     // margin-top: 50px;    
-}
-.write-a-review:hover, .talk:hover, .events:hover, .login-bttn-nav:hover {
-    // text-decoration: 2px underline;
-    // text-underline-position: under;
-    border-bottom-style: solid;
-    padding-bottom: 8px;
 }
 
 .write-a-review, .talk, .events, .login-bttn-nav, .signup-bttn-nav {

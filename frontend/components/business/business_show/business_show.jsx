@@ -32,6 +32,10 @@ class BusinessShow extends React.Component {
                     <img className="head-img-photo"src="/petday_img/food2.jpeg" alt="" />
                     <img className="head-img-photo"src="/petday_img/food4.jpeg" alt="" />
                     <img className="head-img-photo"src="/petday_img/food5.jpeg" alt="" />
+                    {/* <img className="head-img-photo"src={biz.photoUrls[1]} alt="" />
+                    <img className="head-img-photo"src={biz.photoUrls[2]} alt="" />
+                    <img className="head-img-photo"src={biz.photoUrls[3]} alt="" />
+                    <img className="head-img-photo"src={biz.photoUrls[4]} alt="" /> */}
                     {/* {this.props.business.photoUrls.map((photoUrl, 1) => (
                     //             <img className="business-pictures" key={i} src={photoUrl} />
                     //         ))} */}

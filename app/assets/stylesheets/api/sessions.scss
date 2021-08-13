@@ -1,3 +1,172 @@
-// Place all the styles related to the api/sessions controller here.
+// Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session-top-tap {
+    // justify-content: center;
+    background-color: #d32323;
+    padding: 18px 0px 10px 0px;
+    // overflow: hidden;
+    // display: grid;
+    height: 48px;
+    width: 100%;
+}
+
+.session-form-petday-icon {
+    width: 120px;
+    height: auto;
+    position: relative;
+    margin-top: 25px;
+    // bottom: 6px;
+    // top: 20px;
+    //margin: 0 50% 0 50%;
+    // text-align: center;
+    // height: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    // top: 50%;
+    left: 50%;
+    right: 50%;
+    // width: 250px;
+    // position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+.main-session-form {
+    display: flex;
+    justify-content: space-evenly;
+    // width: 300px;
+}
+
+.session-deco-img {
+    background-color: lightsalmon;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    border: solid;
+}
+
+.session-form-box {
+    display: flex;
+    margin: 100px 0 0px 0;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.fillout-form {
+    width: 300px;
+}
+.login-to-petday, .signup-for-petday {
+    color: #d32323;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+p {
+    color: grayscale($color: #2e2e2e);
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+// .top-new-to-pet-day {
+//     color: grayscale($color: #2e2e2e);
+//     font-weight: bold;
+// }
+.login-form-container {
+    // display: flex;
+    margin-left: -8px;
+    padding: 0;
+    font-family: sans-serif;
+    background-position: center;
+    // width: 600px;
+    background: #ffffff;
+    margin-top: -8px;
+    min-width: 600px;
+    width: 102%;
+    // padding: 20px;
+    // margin: 8% auto 0;
+}
+
+.login-form {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    max-width: 450px;
+    padding: 50px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.login-form .login-input {
+    // font-family: "Roboto", sans-serif;
+    // outline: 1;
+    // background: f2f2f2;
+    // width: 300px;
+    // height: 30px;
+    // border: 1px;
+    // padding: 15px;
+    // box-sizing: border-box;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.3);
+    // font-size: 14px; 
+    // // text-align: left;
+    // margin-top: 10px;
+    background-color: white;
+    margin: 0px 5px 9px;
+    padding: 5px 9px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+}
+
+
+.session-submit {
+    background-color: #d32323;
+    font: bold 16px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // margin-top: 6px;
+    border: 0px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 100%;
+    outline: none;
+
+}
+
+.already-on-petday {
+    text-align: center;
+    text-decoration: none;
+}
+
+.new-to-petday {
+    text-align: center;
+    text-decoration: none;  
+}
+
+.login-form-box {
+    text-align: center;
+}
+
+.session-link {
+    text-decoration: none;
+    color: #01a1dd;
+    // font-weight: bold;
+}
+
+.session-link:hover {
+    text-decoration: underline;
+}
+
+
+.new-to-petday {
+    padding-top: 10px;
+    text-align: right;
+}

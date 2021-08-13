@@ -5,73 +5,148 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+require 'net/http'
 
-businesses = Business.create([
-    {
-        name: "New England Lobster Market & Eatery",
-        img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/eIEvQKEdybaW7Xx3ZYRsyw/ls.jpg",
-        address: "824 Cowan Rd, Burlingame, California, 94010",
-        phone_number: "(650) 443-1559",
-        categories: "Seafood Markets, Seafood, Tapas/Small Plates",
-        cost: "$$",
-        hours: "Mon	10:00 am - 9:00 pm, Tue	10:00 am - 9:00 pm, Wed	10:00 am - 9:00 pm, Thu	10:00 am - 9:00 pm, Fri	10:00 am - 10:00 pm, Sat	9:00 am	- 10:00 pm, Sun	9:00 am	- 9:00 pm",
-        lat: "37.60324840042443",
-        long: "-122.37481763068352"
-    },
-    {
-        name: "Crepevine Restaurants",
-        img_url: "https://www.yelp.com/biz/crepevine-restaurants-burlingame-2?osq=Pet+Friendly+Restaurant",
-        address: "1310 Burlingame Ave, Burlingame, California, 94010",
-        phone_number: "(650) 344-1310",
-        categories: "American (New), Breakfast & Brunch, Creperies",
-        cost: "$$",
-        hours: "Mon	8:00 am	- 9:00 pm, Tue	8:00 am	- 9:00 pm, Wed	8:00 am	- 9:00 pm, Thu	8:00 am	- 9:00 pm, Fri	8:00 am	- 9:00 pm, Sat	8:00 am	- 9:00 pm, Sun	8:00 am	- 9:00 pm",
-        lat: "37.57861321893335", 
-        long: "-122.34757297374277"
+Business.destroy_all
+User.destroy_all
 
-    },
-    {
-        name: "Maverick Jack's",
-        img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/OnHjCuVgckxAgDRre1K7Mw/ls.jpg",
-        address: "1190 California Dr, Burlingame, California, 94010",
-        phone_number: "(650) 347-3061",
-        categories: "American (New), Burger",
-        cost: "$$",
-        hours: "Mon	11:00 am - 2:00 pm, Mon	5:00 pm	- 8:00 pm, Tue	11:00 am - 2:00 pm, Tue	5:00 pm	- 8:00 pm, Wed	11:00 am - 2:00 pm, Wed	5:00 pm	- 8:00 pm, Thu	11:00 am - 2:00 pm, Thu	5:00 pm	- 8:00 pm, Fri	11:00 am - 2:00 pm, Fri	5:00 pm	- 8:00 pm, Sat	11:00 am - 2:00 pm, Sat	5:00 pm	- 8:00 pm, Sun	11:00 am - 2:00 pm, Sun	5:00 pm	- 8:00 pm",
-        lat: "37.587809827081045",
-        long: "-122.36289300072987"
+# user1 = User.create!(email: "andy@hotmail.com", password: "ilovepasta", zipcode: "94010")
+# user2 = User.create!(email: "namfom@gmail.com", password: "ilovetoeat", zipcode: "94010")
+# user3 = User.create!(email: "annie@hgmail.com", password: "myheadisexploding", zipcode: "94010")
+# user4 = User.create!(email: "mara@gmail.com", password: "ilovemylife", zipcode: "94010")
+# user5 = User.create!(email: "veronika@gmail.com", password: "nycpartylife", zipcode: "94010")
+# user6 = User.create!(email: "jenny@gmail.com", password: "raspberrychocolate", zipcode: "94010")
+user7 = User.create!(firstname: "guest", lastname: "test", email: "guest@gmail.com", password: "1234567", zipcode: "94010")
 
-    },
-    {
-        name: "Rise Woodfire",
-        img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/lHGzQgBq0mI0M6CeTCcJzA/ls.jpg",
-        address: "2 N B St, San Mateo, California, 94401",
-        phone_number: "(650) 389-6918",
-        categories: "Bars, American (Traditional), Pizza",
-        cost: "$$",
-        hours: "Mon	11:00 am - 9:00 pm, Tue	11:00 am - 9:00 pm, Wed	11:00 am - 9:00 pm, Thu	11:00 am - 9:00 pm, Fri	11:00 am - 10:00 pm, Sat	11:00 am - 10:00 pm, Sun	11:00 am - 9:00 pm",
-        lat: "37.568163439635676",
-        long: "-122.3240314007304"
+business1 = Business.create!(
+    name: "New England Lobster Market & Eatery",
+    img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/eIEvQKEdybaW7Xx3ZYRsyw/ls.jpg",
+    address: "824 Cowan Rd, Burlingame, California, 94010",
+    phone_number: "(650) 443-1559",
+    categories: "Seafood Markets, Seafood, Tapas/Small Plates",
+    cost: "$$",
+    hours: "Mon	10:00 am - 9:00 pm, Tue	10:00 am - 9:00 pm, Wed	10:00 am - 9:00 pm, Thu	10:00 am - 9:00 pm, Fri	10:00 am - 10:00 pm, Sat	9:00 am	- 10:00 pm, Sun	9:00 am	- 9:00 pm",
+    lat: "37.60324840042443",
+    long: "-122.37481763068352"
+)
 
-    },
-    {
-        name: "Hula Hoops",
-        img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/QTye38JBo9VrCHfW_V9Q2A/ls.jpg",
-        address: "2278 Westborough Blvd, Ste 203, South San Francisco, California, 94080",
-        phone_number: "(650) 952-3255",
-        categories: "Venues & Event Spaces, Asian Fusion, Tiki Bars",
-        cost: "$$",
-        hours: "Tue	4:00 pm	- 9:00 pm, Wed	4:00 pm	- 9:00 pm, Thu	4:00 pm	- 9:30 pm, Fri	4:00 pm	- 9:30 pm, Sat	10:00 am - 3:00 pm, Sun	10:00 am - 3:00 pm",
-        lat: "37.6451097646044", 
-        long: "-122.45258191606997"
+file1 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/food1.jpeg')
+file2 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/food2.jpeg')
+file3 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/food4.jpeg')
+file4 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/food5.jpeg')
+file5 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/food6.jpeg')
 
-    }
-    # {
-    #     name: "Dog Haus"
-    #     description:
-    #     img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/xZAaAOXByCGjDAUkNsM_ew/348s.jpg"
-    #     address: "1000 El Camino Real, Belmont, California, 94002",
-    #     phone_number: "(650) 453-3748",
+business1.photo.attach(io: file1, filename: 'food1.jpeg')
+business1.photo.attach(io: file2, filename: 'food2.jpeg')
+business1.photo.attach(io: file3, filename: 'food4.jpeg')
+business1.photo.attach(io: file4, filename: 'food5.jpeg')
+business1.photo.attach(io: file5, filename: 'food6.jpeg')
+
+business2 = Business.create!(
+    name: "Crepevine Restaurants",
+    img_url: "https://www.yelp.com/biz/crepevine-restaurants-burlingame-2?osq=Pet+Friendly+Restaurant",
+    address: "1310 Burlingame Ave, Burlingame, California, 94010",
+    phone_number: "(650) 344-1310",
+    categories: "American (New), Breakfast & Brunch, Creperies",
+    cost: "$$",
+    hours: "Mon	8:00 am	- 9:00 pm, Tue	8:00 am	- 9:00 pm, Wed	8:00 am	- 9:00 pm, Thu	8:00 am	- 9:00 pm, Fri	8:00 am	- 9:00 pm, Sat	8:00 am	- 9:00 pm, Sun	8:00 am	- 9:00 pm",
+    lat: "37.57861321893335", 
+    long: "-122.34757297374277"
+)
+
+file6 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/egg_benedict.jpeg')
+file7 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/o.jpeg')
+file8 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/spaghetti_meatball.jpeg')
+file9 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/waffle.jpeg')
+
+business2.photo.attach(io: file6, filename: 'egg_benedict.jpeg')
+business2.photo.attach(io: file7, filename: 'o.jpeg')
+business2.photo.attach(io: file8, filename: 'spaghetti_meatball.jpeg')
+business2.photo.attach(io: file9, filename: 'waffle.jpeg')
+
+
+business3 = Business.create!(
+    name: "Maverick Jack's",
+    img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/OnHjCuVgckxAgDRre1K7Mw/ls.jpg",
+    address: "1190 California Dr, Burlingame, California, 94010",
+    phone_number: "(650) 347-3061",
+    categories: "American (New), Burger",
+    cost: "$$",
+    hours: "Mon	11:00 am - 2:00 pm, Mon	5:00 pm	- 8:00 pm, Tue	11:00 am - 2:00 pm, Tue	5:00 pm	- 8:00 pm, Wed	11:00 am - 2:00 pm, Wed	5:00 pm	- 8:00 pm, Thu	11:00 am - 2:00 pm, Thu	5:00 pm	- 8:00 pm, Fri	11:00 am - 2:00 pm, Fri	5:00 pm	- 8:00 pm, Sat	11:00 am - 2:00 pm, Sat	5:00 pm	- 8:00 pm, Sun	11:00 am - 2:00 pm, Sun	5:00 pm	- 8:00 pm",
+    lat: "37.587809827081045",
+    long: "-122.36289300072987"
+
+)
+file10 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick1.jpeg')
+file11 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick2.jpeg')
+file12 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick3.jpeg')
+file13 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick4.jpeg')
+file14 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick5.jpeg')
+
+business3.photo.attach(io: file10, filename: 'marverick1.jpeg')
+business3.photo.attach(io: file11, filename: 'marverick2.jpeg')
+business3.photo.attach(io: file12, filename: 'marverick3.jpeg')
+business3.photo.attach(io: file13, filename: 'marverick4.jpeg')
+business3.photo.attach(io: file14, filename: 'marverick5.jpeg')
+
+
+
+business4 = Business.create!(
+    name: "Rise Woodfire",
+    img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/lHGzQgBq0mI0M6CeTCcJzA/ls.jpg",
+    address: "2 N B St, San Mateo, California, 94401",
+    phone_number: "(650) 389-6918",
+    categories: "Bars, American (Traditional), Pizza",
+    cost: "$$",
+    hours: "Mon	11:00 am - 9:00 pm, Tue	11:00 am - 9:00 pm, Wed	11:00 am - 9:00 pm, Thu	11:00 am - 9:00 pm, Fri	11:00 am - 10:00 pm, Sat	11:00 am - 10:00 pm, Sun	11:00 am - 9:00 pm",
+    lat: "37.568163439635676",
+    long: "-122.3240314007304"
+
+)
+
+file15 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/woodfire1.jpeg')
+file16 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/woodfire2.jpeg')
+file17 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/woodfire3.jpeg')
+file18 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/woodfire4.jpeg')
+file19 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/woodfire5.jpeg')
+
+business4.photo.attach(io: file15, filename: 'woodfire1.jpeg')
+business4.photo.attach(io: file16, filename: 'woodfire2.jpeg')
+business4.photo.attach(io: file17, filename: 'woodfire3.jpeg')
+business4.photo.attach(io: file18, filename: 'woodfire4.jpeg')
+business4.photo.attach(io: file19, filename: 'woodfire5.jpeg')
+
+
+business5 = Business.create!(
+    name: "Hula Hoops",
+    img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/QTye38JBo9VrCHfW_V9Q2A/ls.jpg",
+    address: "2278 Westborough Blvd, Ste 203, South San Francisco, California, 94080",
+    phone_number: "(650) 952-3255",
+    categories: "Venues & Event Spaces, Asian Fusion, Tiki Bars",
+    cost: "$$",
+    hours: "Tue	4:00 pm	- 9:00 pm, Wed	4:00 pm	- 9:00 pm, Thu	4:00 pm	- 9:30 pm, Fri	4:00 pm	- 9:30 pm, Sat	10:00 am - 3:00 pm, Sun	10:00 am - 3:00 pm",
+    lat: "37.6451097646044", 
+    long: "-122.45258191606997"
+    
+)
+
+file20 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/hulahoop1.jpeg')
+file21 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/hulahoop2.jpeg')
+file22 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/hulahoop3.jpeg')
+file23 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/hulahoop4.jpeg')
+file24 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/hulahoop5.jpeg')
+
+business5.photo.attach(io: file20, filename: 'hulahoop1.jpeg')
+business5.photo.attach(io: file21, filename: 'hulahoop2.jpeg')
+business5.photo.attach(io: file22, filename: 'hulahoop3.jpeg')
+business5.photo.attach(io: file23, filename: 'hulahoop4.jpeg')
+business5.photo.attach(io: file24, filename: 'hulahoop5.jpeg')
+
+   #     description:
+        #     img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/xZAaAOXByCGjDAUkNsM_ew/348s.jpg"
+        #     address: "1000 El Camino Real, Belmont, California, 94002",
+        #     phone_number: "(650) 453-3748",
     #     categories: "American (New), ",
     #     cost: "$$",
 
@@ -107,7 +182,6 @@ businesses = Business.create([
 
     # }
 
-])
 
 # review1a = Review.create!(
 #     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",

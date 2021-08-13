@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router'; 
 import BusinessIndexItem from './business_index_item';
+// BusinessIndexItem = withRouter(BusinessIndexItem);
 import Search from '../../search/search';
 import Map from '../../map/map';
+
 
 class BusinessIndex extends React.Component {
     constructor(props) {

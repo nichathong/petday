@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
-const BusinessIndexItem = ( {business} ) => {
+const BusinessIndexItem = ( {business, history} ) => {
     return (
-        <div className="each-biz-containter">
-            <Link className="link-to-business" to={`/businesses/${business.id}`} />
+            // <Link className="link-to-business" to={`/businesses/${business.id}`} />
+        <div className="each-biz-containter" onClick={() => history.push(`/businesses/${business.id}`)}>
             <div className="each-biz">
                 <img className="biz-img" src={business.photoUrls[0]} alt="" />
                 <div className="biz-details-box">
@@ -58,4 +59,4 @@ const BusinessIndexItem = ( {business} ) => {
 }
 
 
-export default BusinessIndexItem; 
+export default withRouter(BusinessIndexItem); 
