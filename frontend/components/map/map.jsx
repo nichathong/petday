@@ -47,7 +47,7 @@ class Map extends React.Component {
   }
 
   handleMarkerClick(business) {
-    this.props.history.push(`${business.id}`);
+    this.props.history.push(`/businesses/${business.id}`);
   }
 
   // handleClick(coords) {
