@@ -55,6 +55,8 @@
     position: relative;
     display: flex;
     bottom: 257px;
+    padding-left: 270px;
+    padding-top: 100px;    
 }
 
 .biz-info-text {
@@ -81,7 +83,9 @@
 }
 
 .left-column {
-    width: 800px;
+    /* width: 100%; */
+    min-width: 1000px;
+    width: 1000px;
 
 }
 
@@ -115,6 +119,7 @@
     border-bottom: 1px solid lightgrey;
     margin-left: 141px;
     margin-right: 141px;
+    padding-left: 180px;
 }
 
 .biz-review-bttn {
