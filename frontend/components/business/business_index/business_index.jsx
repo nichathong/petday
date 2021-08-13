@@ -33,7 +33,7 @@ class BusinessIndex extends React.Component {
             </div>
             <div className="biz-index-main">
                 <div className="biz-index-left"> 
-                 <div className="text-header"> Pet Friendly restaurant in the Bay</div>
+                 <div className="text-header"> Pet-friendly Restaurants in your area</div>
                  <div className="all-results">All results</div>
                 <div>
                     {businesses.map((b, i) => (

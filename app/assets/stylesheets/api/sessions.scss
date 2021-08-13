@@ -126,11 +126,13 @@ p {
 
 
 .session-submit {
+    cursor: pointer;
     background-color: #d32323;
     font: bold 16px Arial, Helvetica, "Helvetica Neue";
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 5px;
     // margin-top: 6px;
     border: 0px solid grey;
     border-radius: 4px;

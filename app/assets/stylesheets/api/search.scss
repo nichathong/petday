@@ -1,6 +1,7 @@
 .search-box-homepage-container {
     display: flex;
     flex-direction: row;
+    box-shadow: lightgray;
 }
 .visually-hidden {
     clip: rect(0 0 0 0);
@@ -24,8 +25,13 @@
     border: 1px solid lightgray;
     // border-color: lightgray;
     border-radius: 3px;
+//     box-shadow: lightslategray;
+//     padding: 5px;
+// }
+    // padding: 16px 13px;
+    // border-radius: 4px 0px 0px 4px;
+    box-shadow: 0px 5px 5px #e3e0e0;
 }
-
 .search-box-submit-bttn-home {
     height: 49px;
     min-width: 77px;
@@ -33,6 +39,7 @@
     background-color: #F43939;
     border-radius: 2px;
     border-style: none;
+    box-shadow: 0px 5px 5px #b6b6b6;
     // top: 20px;
 }
 

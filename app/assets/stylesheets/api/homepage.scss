@@ -6,7 +6,8 @@ body {
     padding: 0;
 }
 .home {
-    background-image: url("/petday_img/photo10.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/petday_img/photo10.jpeg") ;
+    // opacity: 95%;
     min-height: 500px;
     // height: 45vw;
     background-size: cover;
@@ -57,6 +58,24 @@ body {
     width: 250px;
 //     position: absolute;
 //     transform: translate(-50%, -50%);
+}
+
+.under-search-bar {
+    display: flex;
+    width: 650px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.plumbers, .restaurants, .homeservice, .delivery, .blackOwned {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.plumbers:hover, .restaurants:hover, .homeservice:hover, .delivery:hover, .blackOwned:hover {
+    text-decoration: underline;
 }
 
 // .search-section {

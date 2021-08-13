@@ -69,52 +69,54 @@ class BusinessShow extends React.Component {
                     </button>
                   </div>
                 </div>
-                <div className="left-column">
-                  <div className="business-menu-container">
-                    <div className="business-menu-content">
-                      <h3>Menu</h3>
+                <div className="main-content-business-show-page">
+                  <div className="left-column">
+                    <div className="business-menu-container">
+                      <div className="business-menu-content">
+                        <h3>Menu</h3>
+                      </div>
                     </div>
-                  </div>
-                  <div className="business-page-covid-update">
-                    <p className="covid-title">COVID-19 Updates</p>
-                    <p className="updated-service">Updated Services</p>
-                    <div className="business-show-result-bools">
-                        {/* <p className="business-show-result-boolean">{this.props.business.delivery ? <img className="result-bool" src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Delivery</p>
-                        <p className="business-show-result-boolean">{this.props.business.takeout ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Takeout</p>
-                        <p className="business-show-result-boolean">{this.props.business.outdoor ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Outdoor seating</p> */}
+                    <div className="business-page-covid-update">
+                      <p className="covid-title">COVID-19 Updates</p>
+                      <p className="updated-service">Updated Services</p>
+                      <div className="business-show-result-bools">
+                          <p className="business-show-result-boolean">{this.props.business.delivery ? <img className="result-bool" src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Delivery</p>
+                          <p className="business-show-result-boolean">{this.props.business.takeout ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Takeout</p>
+                          <p className="business-show-result-boolean">{this.props.business.outdoor ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Outdoor seating</p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="location-and-hours-container">
-                    <div className="hours-content">
-                      <p className="location-hours-text">Location & Hours</p>
-                      <div className="address-content">
-                        <h3>Here is address and Google map</h3>
+                    <div className="location-and-hours-container">
+                      <div className="hours-content">
+                        <p className="location-hours-text">Location & Hours</p>
+                        <div className="address-content">
+                          <h3>Here is address and Google map</h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="reviews-container">
+                      <div>
+                        <h4 className="recommend-reviews">Recommended Reviews</h4>
+                        {/* <ReviewIndexContainer business={this.props.business} /> */}
                       </div>
                     </div>
                   </div>
 
-                  <div className="reviews-container">
-                    <div>
-                      <h4 className="recommend-reviews">Recommended Reviews</h4>
-                      {/* <ReviewIndexContainer business={this.props.business} /> */}
+                  <div className="right-column">
+                    <div className="sticky-content">
+                      <div className="sticky-info">
+                        <ul>
+                          <li><a>website</a></li>
+                          <li><a>{biz.phone_number}</a></li>
+                          <li><a>{biz.address}</a></li>
+                          <li><a href="#"> message this business</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="right-column">
-                  <div className="sticky-content">
-                    <div className="sticky-info">
-                      <h3>Here is sticky content</h3>
-                      <ul>
-                        <li><a>website</a></li>
-                        <li><a>{biz.phone_number}</a></li>
-                        <li><a>{biz.address}</a></li>
-                        <li><a href="#"> message this business</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
               </div>
             );

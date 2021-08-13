@@ -1,7 +1,7 @@
 // Place all the styles related to the api/businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
 .biz-show-container{
     // display: flex;
@@ -61,19 +61,40 @@
     width: 700px;
     color: white;
     font-weight: bolder;
+    ont-family: 'Poppins', sans-serif;;
 }
 
 .biz-info-text {
     min-width: 600px;
+    margin-left: 50px;
     
 }
 
+.main-content-business-show-page {
+    display: flex;
+    // justify-items: center;
+    // width: 1000px;
+    height: 2000px;
+    // padding-left: auto;
+    // padding-right: auto;
+    justify-content: center;
+}
+
+.left-column {
+    width: 800px;
+
+}
+
+.right-column {
+    width: 600px;
+
+}
 .categories {
     position: relative;
     // right: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    left: 50px;
-    margin-top: 10px;
+    // left: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
     color: white;
 }
@@ -152,8 +173,8 @@
 }
 
 .rating-star {
-    margin-left: 141px;
-    margin-top: -15px;
+    // margin-left: 141px;
+    // margin-top: -15px;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -168,9 +189,11 @@
 
 .sticky-content {
     height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: sticky;
+    top: 20px;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
     // width: 80%;
     // margin: auto;
 }
@@ -191,7 +214,9 @@
     flex-direction: column;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    color: rgb(132, 139, 147);
+    font-weight: bolder;
     border-radius: 5px;
     border-style: solid;
     border-color: lightgrey;
@@ -216,6 +241,11 @@
     text-align: left;
     width: 100%;
 
+}
+
+.business-show-result-bools {
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -280,9 +310,11 @@
 }
 .biz-index-main {
     display: flex;
+    // display: inline-flex ;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-right: 5%;
+    min-width: 1200px;
 }
 .biz-index-left {
     display: flex;
@@ -291,6 +323,9 @@
 
 .map-in-index {
     right: 0px;
+    // border: 10px solid;
+    // top: 20px;
+    height: fit-content;
     position: sticky;
 }
 
@@ -310,6 +345,7 @@
     margin-left: 80px;
 }
 .each-biz-containter {
+    cursor: pointer;
     width: 740px;
     margin-bottom: 30px;
     margin-right: 30px;
@@ -319,8 +355,11 @@
     margin-left: 80px;
 }
 
+
 .each-biz:hover {
-    box-shadow: #757280;
+    box-shadow: 0px 3px 10px #919191;
+    box-shadow: 0.5s;
+
 }
 
 .each-biz {
@@ -348,7 +387,7 @@
     object-fit: cover;
 }
 
-.biz-details-box {
+.right-index-business {
     margin-top: 25px;
     position: relative;
 }
@@ -365,16 +404,20 @@
 .biz-location {
     font-family: "Open Sans", Helvetica, "Helvetica Neue";
     font-size: 13px;
-    color: #757280;
+    color: #acacac;
     position: absolute;
-    left: 287px;
-    width: 180px;
-    top: 0px;
-    text-align: right;
+    /* left: 287px; */
+    width: 100%;
+    top: 95px;
+
 }
 
 .biz-phone-num {
     margin-bottom: 5px;
+}
+.biz-rating {
+    margin-top: 20px;
+    display: flex;
 }
 
 .biz-categories {
@@ -385,10 +428,6 @@
     margin-top: 10px;
 }
 
-.biz-rating {
-    margin-top: 10px;
-    display: flex;
-}
 
 .biz-num-review {
     font-family: "Open Sans", Helvetica, "Helvetica Neue";
@@ -413,7 +452,11 @@
     font-weight: 700;
     display: flex;
     color: black;
-    margin-top: 10px;
+    margin-top: 100px;
+}
+
+.img-result-bool {
+    padding-top: 10px;
 }
 
 .map-box-index-page {

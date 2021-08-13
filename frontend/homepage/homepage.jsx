@@ -19,7 +19,7 @@ const Homepage = () => {
                 <GreetingContainer/>
                 <img className="petday-logo" src="/petday_img/petday_logo_small.png" alt="petdaylogo"/>
                 <Search /> 
-                <div className="under-Search-Bar">
+                <div className="under-search-bar">
                     <Link className="plumbers"to="https://www.yelp.com/search?cflt=Plumbing&find_loc=Burlingame%2C+CA+94010">Plumbers</Link>
                     <Link className="restaurants"to="/businesses">Restaurants</Link>
                     <Link className="homeservice"to="https://www.yelp.com/search?cflt=hvac&find_loc=Burlingame%2C+CA+94010">Home Services</Link>

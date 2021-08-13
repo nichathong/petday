@@ -47,6 +47,7 @@ const Greeting = ({ currentUser, logout }) => {
             Sign Up
           </Link>
         </div>
+
       </nav>
     </hgroup>
   );
