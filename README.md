@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Petday logo](https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/petday_logo_small.pngg)
 
-Things you may want to cover:
+## Petday
+Petday is a yelp-clone project that focused on pet-friendly restaurants. Users are able to look up restaurants in their desire area to find out.
 
-* Ruby version
+Live [demo](https://petday.herokuapp.com/#/) 
 
-* System dependencies
+----
 
-* Configuration
+## Features
+* Browse and search for restaurants by location
+* The use of Google maps to filter the result search
+* Access to business information such as address, phone, hours, website and more.
+* Create and edit reviews
 
-* Database creation
+----
 
-* Database initialization
+## Technologies
+* Ruby on Rails - backend
+* React Redux - frontend
+* Google Map Api
 
-* How to run the test suite
+## Future Development
 
-* Services (job queues, cache servers, search engines, etc.)
+1. User Profile
+   * Able to create user profile with photos included
+2. Display categories on the homepage
+3. Recent Activiy on the homepage
+4. Create Footer
+  
+----
 
-* Deployment instructions
-
-* ...
