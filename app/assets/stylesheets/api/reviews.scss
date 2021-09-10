@@ -1,3 +1,101 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-form-navbar {
+    height: 96px;
+    width: 100%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-between;    
+}
+
+.pet-day-logo-index {
+    height: 40px;
+    margin: 27px;    
+}
+
+.navbar-review-space {
+    min-width: 700px;
+}
+.review-form-box {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.review-form-text {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+
+.review-form-business-name {
+    font-family: "Montserrat";
+    font-size: 28px;
+}
+
+.rating {
+    margin-left: 30px;
+}
+
+.filled{
+    color: red;
+    margin-top: 10px;
+}
+
+.un-filled{
+    color: lightgray;
+    margin-top: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
+    height: 300px;
+    border: none;
+    outline: none;
+    margin: 30px;
+}
+
+.text-area-text::-webkit-input-placeholder{
+    color: black;
+    opacity: 0.25;
+}
+
+.review-box {
+    border: rgb(189, 189, 189) solid 1px;
+    border-radius: 4px;
+    height: 450px;
+    width: 631px;
+}
+
+.review-post-button{
+    position: relative;
+    top: 40px;
+    height: 45px;
+    width: 200px;
+    background-color: #F43939;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+.review-post-button:hover{
+    cursor: pointer;
+    box-shadow: rgb(228, 228, 228) 2px 2px;
+}
+
+.select-your-rating {
+    color: rgb(117, 117, 117);
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-size: 14px;
+    position: relative;
+    left: 220px;
+    top: 35px;
+}
+

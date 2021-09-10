@@ -61,7 +61,7 @@ class BusinessShow extends React.Component {
                       className="biz-review-bttn"
                       onClick={() =>
                         this.props.history.push(
-                          `businesses/${this.props.business.id}/reviews/create`
+                          `/businesses/${this.props.business.id}/reviews/create`
                         )
                       }
                     >

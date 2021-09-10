@@ -4,7 +4,7 @@ import { createReview } from '../../actions/review_actions'
 import { fetchBusiness } from '../../actions/business_actions'
 import { logout } from '../../actions/session_actions';
 
-const msp = (state, ownProps) => {
+const mSTP = (state, ownProps) => {
     return {
         business: state.entities.businesses[ownProps.match.params.businessId],
         user_id: state.session.id,
@@ -13,9 +13,17 @@ const msp = (state, ownProps) => {
         errors: state.errors.review
     }
 }
+
+// const mSTP = ({entities}, {match}, {session}, {errors}) => ({
+//     business: entities.businesses[match.params.businessId],
+//     formType: "review_pages",
+//     user_id: session.id,
+//     currentUser: entities.users[state.session.id],
+//     errors: errors.review
+// })
     
 
-const mdp = dispatch =>(
+const mDTP = dispatch =>(
     {
         fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId)),
         createReview: (review, businessId) => dispatch(createReview(review, businessId)),
@@ -23,4 +31,4 @@ const mdp = dispatch =>(
     }
 )
 
-export default connect(msp, mdp)(ReviewForm)
+export default connect(mSTP, mDTP)(ReviewForm)
