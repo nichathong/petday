@@ -102,40 +102,59 @@ class ReviewForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="review-form-navbar">
-                    <Link to="/"><img className="pet-day-logo-index" src="/petday_img/petday_logo_small.png"></img></Link>
-                </div>
-                <div className="navbar-review-space"></div>
-                <div>need to import navbar</div>
-                <div className="review-form-box">
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="review-form-content">
-                            <div className="review-form-text">
-                                 <span className="review-form-business-name">{this.props.business.name}</span>
-                            </div>
-                            <div className="review-box">
-                                <p id="rating-text" className="select-your-rating">Select your rating</p>
-                                <Rating
+          <div>
+            <div className="review-form-navbar">
+              <Link to="/">
+                <img
+                  className="pet-day-logo-index"
+                  src="/petday_img/petday_logo_small.png"
+                ></img>
+              </Link>
+            </div>
+            <div className="navbar-review-space"></div>
+            <div>need to import navbar</div>
+            <div className="review-form-box">
+              <form onSubmit={this.handleSubmit}>
+                <div className="review-form-content">
+                  <div className="review-form-text">
+                    <span className="review-form-business-name">
+                      {this.props.business.name}
+                    </span>
+                  </div>
+                  <div className="review-box">
+                    <p id="rating-text" className="select-your-rating">
+                      Select your rating
+                    </p>
+                    <Rating
+                      className="rating"
+                      onChange={this.handleRatingChange}
+                      onHover={this.handleHover}
+                      stop={5}
+                    />
+                    {/* <Rating
                                     emptySymbol="fa fa-star fa-2x un-filled"
                                     initialRating={this.state.rating}
                                     fullSymbol="fa fa-star fa-2x filled"
                                     onChange={this.handleRatingChange}
                                     className="rating"
                                     onHover={this.handleHover}
-                                />
-                                <textarea className="text-area-text"value={this.state.message} onChange={this.handleChange("message")} 
-                                placeholder="It's amazing that they've added delivery due to COVID. The delivery wasn't perfert--they forgot one of my side dishes--but I understand this is a new operation for them at this time. Even so, the burrito was delicious and more than made up for it!"></textarea>
-                                {/* <div className={classNameErrors}>
+                                /> */}
+                    <textarea
+                      className="text-area-text"
+                      value={this.state.message}
+                      onChange={this.handleChange("message")}
+                      placeholder="It's amazing that they've added delivery due to COVID. The delivery wasn't perfert--they forgot one of my side dishes--but I understand this is a new operation for them at this time. Even so, the burrito was delicious and more than made up for it!"
+                    ></textarea>
+                    {/* <div className={classNameErrors}>
                                         {this.renderErrors()}
                                 </div> */}
-                            </div>
-                        </div>
-                        <button className="review-post-button">Post Review</button>
-                    </form>
+                  </div>
                 </div>
+                <button className="review-post-button">Post Review</button>
+              </form>
             </div>
-        )
+          </div>
+        );
         // const classNameErrors = (this.props.errors.length !== 0) ? "review-errors-box" : ""
         // if (!this.props.business) {
         //     return (
