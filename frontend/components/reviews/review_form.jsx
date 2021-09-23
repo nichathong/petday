@@ -1,6 +1,8 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom'; 
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -125,20 +127,15 @@ class ReviewForm extends React.Component {
                     <p id="rating-text" className="select-your-rating">
                       Select your rating
                     </p>
+
                     <Rating
-                      className="rating"
-                      onChange={this.handleRatingChange}
-                      onHover={this.handleHover}
-                      stop={5}
-                    />
-                    {/* <Rating
                                     emptySymbol="fa fa-star fa-2x un-filled"
                                     initialRating={this.state.rating}
                                     fullSymbol="fa fa-star fa-2x filled"
                                     onChange={this.handleRatingChange}
                                     className="rating"
                                     onHover={this.handleHover}
-                                /> */}
+                                />
                     <textarea
                       className="text-area-text"
                       value={this.state.message}
