@@ -45,4 +45,58 @@ class ReviewShow extends React.Component {
   componentDidMount() {
     this.props.fetchUsers();
   }
+
+  chooseProfile() {
+    //   if (this.props.user[this.props.review.user_id].profile_pic === ) 
+  }
+
+  render() {
+     if (this.props.users[this.props.review.user_id] === undefined) {
+         return (
+             <div>Opps! Something's wrong...</div>
+         )
+     } else {
+         return (
+           <div>
+                <div className="review-box">
+                    <div className="review-top-section">
+                        <div className="profile-info-section">
+                            <div className="profile-container">
+                                <img
+                                    className="user-profile-photo"
+                                    src={this.chooseProfile}
+                                    alt=""
+                                />
+                                <div className="user-info">
+                                        <li className="user-name">
+                                        {this.props.users[this.props.review.user_id].firstname +
+                                            " " +
+                                            this.props.users[this.props.review.user_id].lastname}
+                                        </li>
+                                        <li>{this.props.users[this.props.review.user_id].zipcode}</li>
+                                </div>
+                            </div>
+                            <div className="rating-date-box">
+                                <span className="review-rating">
+                                    <img src={this.ratingStar} alt="" />
+                                </span>
+                                <span className="review-created-time">{this.realDate}</span>
+                            </div>
+
+                        </div>
+                        {/* {this.editandDelete()} */}
+                    </div>
+                    <div className="review-main-content">
+                        <div className="review-main-box">
+                            {this.props.review.message}
+                        </div>
+                    </div>
+                </div>
+           </div>
+           
+         )
+     }
+  }
+
+
 }
