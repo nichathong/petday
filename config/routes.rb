@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     end
     
     resources :reviews, only: [:index, :create, :destroy, :update]
-    resources :searches, only: [:index]
     
   end
   root "static_pages#root"
