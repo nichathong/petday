@@ -7,8 +7,10 @@ Rails.application.routes.draw do
     resources :businesses, only: [:index, :show] do 
       resources :reviews, only: [:show, :create, :index, :update, :destroy]
     end
-
-    # resources :reviews, only: [:index, :create, :destroy, :update]
+    
+    resources :reviews, only: [:index, :create, :destroy, :update]
+    resources :searches, only: [:index]
+    
   end
   root "static_pages#root"
 end

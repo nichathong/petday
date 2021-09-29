@@ -1,4 +1,5 @@
 import React from 'react';
+import 
 
 const posts = [
   { id: "1", name: "This first post is about React" },
