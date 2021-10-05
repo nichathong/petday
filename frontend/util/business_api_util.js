@@ -22,6 +22,14 @@ export const fetchReviews = business_id => (
     })
 );
 
+// export const search = query => (
+//   $.ajax({
+//     method: 'GET',
+//     url: 'api/omnisearch',
+//     data: {query}
+//   })
+// );
+
 // export const fetchAllReviews = () => (
 //     $.ajax({
 //         method: 'GET',

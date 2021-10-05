@@ -38,7 +38,7 @@ class Map extends React.Component {
         northEast: { lat: north, long: east },
         southWest: { lat: south, long: west },
       };
-      this.props.updateFilter("bounds", bounds);
+      this.props.changeFilter("bounds", bounds);
     });
     // google.maps.event.addListener(this.map, 'click', (event) => {
     //   const coords = getCoordsObj(event.latLng);

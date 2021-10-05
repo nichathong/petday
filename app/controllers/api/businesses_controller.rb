@@ -1,7 +1,6 @@
 class Api::BusinessesController < ApplicationController
     def index
-
-        bound = params[:filters][:bounds]
+        bounds = params[:filters][:bounds]
         near = params[:filters][:near]
         find = params[:filters][:find]
 
@@ -37,13 +36,13 @@ class Api::BusinessesController < ApplicationController
             end
         end
 
-        render :index
         # @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
 
         # @businesses = params[:search] ? Business.seach(params[:search][:find], params[:search][:near]) : Business.all
         # if params[:search]
         #     @businesses = Business.seach(params[:search][:find], params[:search][:near])
         # end
+        render :index
     end
     
     def show
@@ -56,13 +55,6 @@ class Api::BusinessesController < ApplicationController
         # render json: BusinessSerializer.new(business, options).serialized_json
     end
     
-    # private
-
-    # def business_params
-    #     params.require(:business).permit(:name, :image_url, :slug, :address, :hours, :categories, :cost, :review_count, :phone_number)
-    # end
-
-
     # def omnisearch
     #     @businesses = Business
     #                     .where("LOWER(name) LIKE ? OR LOWER(category) LIKE ?",
@@ -70,6 +62,13 @@ class Api::BusinessesController < ApplicationController
     #                     .limit(10)
     #     render :index
     # end
+    # private
+
+    # def business_params
+    #     params.require(:business).permit(:name, :image_url, :slug, :address, :hours, :categories, :cost, :review_count, :phone_number)
+    # end
+
+
 
     # def create
     #     business = Business.new(business_params)

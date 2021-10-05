@@ -15,12 +15,18 @@ class BusinessIndex extends React.Component {
         //  }
     }
 
+    // componentDidMount() {
+    //     this.props.fetchBusinesses();
+    // }
+
     componentDidMount() {
-        this.props.fetchBusinesses();
+        let near = this.props.near;
+        let find = this.props.find;
+        
     }
 
     render() { 
-        const { businesses, updateFilter } = this.props;
+        const { businesses, changeFilter } = this.props;
 
         return (
           <div className="">
@@ -42,7 +48,7 @@ class BusinessIndex extends React.Component {
                 </div>
                 </div>
                 <div className="map-in-index">
-                <Map businesses={businesses} updateFilter={updateFilter}/>
+                <Map businesses={businesses} changeFilter={changeFilter}/>
 
                 </div>
             </div>

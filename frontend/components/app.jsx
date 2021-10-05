@@ -34,6 +34,8 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/businesses" component={BusinessIndexContainer} />
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
+      {/* <Route exact path="/search/:businessId" component={BusinessShowContainer} />
+      <Route exact path="/search" component={BusinessIndexContainer} /> */}
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/businesses/:businessId/reviews/create" component={ReviewFormContainer} />

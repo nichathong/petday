@@ -21,7 +21,18 @@ class Business < ApplicationRecord
         .where("long > ?", bounds[:southWest][:long])
         .where("long < ?", bounds[:northEast][:long])
     end
+    
+    def self.near_location(location)
+        Business.where("lower(address) LIKE ? ", "%#{location.downcase}%")
+    end
 
+    def self.find_business(categories)
+        Business.where(
+            "lower(categories) LIKE ? or lower(name) LIKE ?",
+            "%#{categories[1..3].downcase}%", 
+            "%#{categories[1..3].downcase}%" 
+        )
+    end
     # def self.search(find, near)
     #     if find==nil 
     #         Business.where("lower(city) LIKE ? OR lower(address) LIKE ? ", "%#{find.downcase}%", "%#{find.downcase}%")
@@ -32,18 +43,6 @@ class Business < ApplicationRecord
     #     end
     # end
 
-    def self.near_location(location)
-        Business.where("lower(city) LIKE ? or lower(address) LIKE ? ")
-    end
-
-    def self.find_business(category)
-        Business.where(
-            "lower(category) LIKE ? or lower(name) LIKE ?",
-            "%#{category[1..3].downcase}%", 
-            "%#{category[1..3].downcase}%", 
-            "%#{category[1..3].downcase}%"
-        )
-    end
 
 
 end

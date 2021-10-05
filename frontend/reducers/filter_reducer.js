@@ -6,7 +6,7 @@ const defaultFilters = Object.freeze({
   near: "",
 });
 
-const FiltersReducer = (state = defaultFilters, action) => {
+const filtersReducer = (state = defaultFilters, action) => {
   Object.freeze(state);
   switch (action.type) {
     case UPDATE_FILTER: 
@@ -16,4 +16,4 @@ const FiltersReducer = (state = defaultFilters, action) => {
   }
 };
 
-export default FiltersReducer;
+export default filtersReducer;

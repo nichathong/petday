@@ -6,38 +6,40 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      searchBody: "",
+      // searchBody: "",
       find: "",
       near: this.props.near
     };
 
-    this.handleFilter = this.handleFilter.bind(this);
+    // this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);        
   }
 
-  handleInput(type) {
+  handleInput(field) {
     return (e) => {
-      this.setState({ [type]: e.target.value})
+      this.setState({ [field]: e.currentTarget.value})
     }
   }
 
-  handleFilter(e, filter) {
-    e.preventDefault();
+  // handleFilter(e, filter) {
+  //   e.preventDefault();
 
-    if (!this.props.near) {
-      this.props.near = 'san francisco';
-      this.props.changeFilter('near', this.props.near)
-        .then(() => {
-          this.props.changeFilter('find', filter)
-            .then(() => { this.props.history.push(
-              `/search?find=${filter}&near=${this.props.near}`
-            )})
-        });
-    } else {
-      this.props.changeFilter('find', filter)
-        .then(() => { this.props.history.push(`/search?find=${filter}&near=${this.props.near}`) })
-    }
-  };
+  //   if (!this.props.near) {
+  //     this.props.near = 'san francisco';
+  //     this.props.changeFilter('near', this.props.near)
+  //       .then(() => {
+  //         this.props.changeFilter('find', filter)
+  //           .then(() => { this.props.history.push(
+  //             `/search?find=${filter}&near=${this.props.near}`
+  //           )})
+  //       });
+  //   } else {
+  //     this.props.changeFilter('find', filter)
+  //       .then(() => { this.props.history.push(
+  //         `/search?find_desc=${filter}&find_loc=${this.props.near}`
+  //       ); })
+  //   }
+  // };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -53,16 +55,15 @@ class Search extends React.Component {
     this.props.changeFilter('near', near)
       .then(() => {
         this.props.changeFilter('find', this.state.find)
-          .then(() => { this.props.history.push(`/search?find=${find}&near=${near}`);})
+          .then(() => { this.props.history.push(`/search?find_desc=${find}&find_loc=${near}`);})
       });
     }
 
-    
     render() {
     
       return (
         <div>
-          <form className="the-whole-search-box" action="/" method="get">
+          <form className="the-whole-search-box">
             <div className="search-box-homepage-container">
               <label htmlFor="header-search">
                 <span className="visually-hidden">Search blog posts</span>
@@ -72,16 +73,22 @@ class Search extends React.Component {
                 type="text"
                 id="header-search"
                 placeholder="  e.g. taco, pancake, boba.."
-                name="s"
+                onChange={this.handleInput('find')}
+                value={this.state.find}
               />
               <input
                 className="search-box-home"
                 type="text"
                 id="header-search"
                 placeholder="  City, town.. "
-                name="s"
+                onChange={this.handleInput('near')}
+                value={this.state.near}
               />
-              <button type="submit" className="search-box-submit-bttn-home">
+              <button 
+                type="submit" 
+                className="search-box-submit-bttn-home"
+                onClick={this.handleSubmit}
+                >
                 <img className="submit-icon-petday" src="/petday_img/petday_icon.png" alt="" />
               </button>
             </div>
