@@ -3,15 +3,15 @@ import * as APIUtil from '../util/business_api_util';
 
 export const UPDATE_FILTER = 'UPDATE_FILTER';
 
-export const updateFilter = (filter, value) => ({
+export const updateFilter = (value, near) => ({
   type: UPDATE_FILTER,
-  filter,
-  value
+  value,
+  near
 });
 
-export const changeFilter = (filter, value) => (dispatch, getState) => {
-  dispatch(updateFilter(filter, value));
-  return fetchBusinesses(getState().filters)(dispatch);
+export const changeFilter = (value, near) => (dispatch, getState) => {
+  dispatch(updateFilter(value, near));
+  return fetchBusinesses(getState().ui.filters)(dispatch);
 };
 
 // export const omnisearch = query => dispatch => (

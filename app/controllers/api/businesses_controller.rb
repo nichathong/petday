@@ -1,5 +1,6 @@
 class Api::BusinessesController < ApplicationController
     def index
+        # debugger
         bounds = params[:filters][:bounds]
         near = params[:filters][:near]
         find = params[:filters][:find]

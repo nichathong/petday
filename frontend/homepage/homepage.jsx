@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import BusinessIndexContainer from '../components/business/business_index/business_index_container';
 
 import GreetingContainer from '../components/greeting/greeting_container';
-import Search from '../components/search/search';
+import SearchContainer from '../components/search/search_container';
 
 
 
@@ -18,7 +18,7 @@ const Homepage = () => {
             <div className="main-div">
                 <GreetingContainer/>
                 <img className="petday-logo" src="/petday_img/petday_logo_small.png" alt="petdaylogo"/>
-                <Search /> 
+                <SearchContainer/> 
                 <div className="under-search-bar">
                     <Link className="plumbers"to="https://www.yelp.com/search?cflt=Plumbing&find_loc=Burlingame%2C+CA+94010">Plumbers</Link>
                     <Link className="restaurants"to="/businesses">Restaurants</Link>

@@ -17,6 +17,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BusinessShowContainer from './business/business_show/business_show_container';
 import BusinessIndexContainer from './business/business_index/business_index_container';
 import ReviewFormContainer from './reviews/review_form_container';
+import SearchResult from './search/search_result';
 // import BusinessShow from './business/business_show/business_show';
 
 const App = () => (
@@ -34,6 +35,7 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/businesses" component={BusinessIndexContainer} />
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
+      {/* <Route exact path="/search_results" component={SearchResult}/> */}
       {/* <Route exact path="/search/:businessId" component={BusinessShowContainer} />
       <Route exact path="/search" component={BusinessIndexContainer} /> */}
       <AuthRoute exact path="/login" component={LogInFormContainer} />

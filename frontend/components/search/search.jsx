@@ -4,13 +4,12 @@ import { withRouter } from 'react-router-dom';
 class Search extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
       // searchBody: "",
       find: "",
       near: this.props.near
     };
-
     // this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);        
   }
@@ -43,20 +42,24 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
+    const {find, near} = this.state;
+    this.props.changeFilter(find, near).then(() => {
+      this.props.history.push(`/search_results`);
+    });
 
-    let find = this.state.find.split(' ').join('-');
-    let near;
-    if (!this.state.near) {
-      near = 'san francisco';
-    } else {
-      near = this.state.near.split(' ').join('-');
-    }
-
-    this.props.changeFilter('near', near)
-      .then(() => {
-        this.props.changeFilter('find', this.state.find)
-          .then(() => { this.props.history.push(`/search?find_desc=${find}&find_loc=${near}`);})
-      });
+    // let find = this.state.find.split(' ').join('-');
+    // let near;
+    // if (!this.state.near) {
+    //   near = 'san francisco';
+    // } else {
+    //   near = this.state.near.split(' ').join('-');
+    // }
+    // this.props.changeFilter('near', near)
+    //   .then(() => {
+    //     this.props.changeFilter('find', this.state.find)
+    //       .then(() => { this.props.history.push(`/search?find_desc=${find}&find_loc=${near}`);})
+    //   });
     }
 
     render() {

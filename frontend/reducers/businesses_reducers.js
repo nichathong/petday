@@ -10,6 +10,7 @@ const BusinessReducer = (oldState = {}, action) => {
     // debugger
     switch(action.type) {
         case RECEIVE_BUSINESSES:
+            debugger
             return merge({}, action.businesses);
         case RECEIVE_BUSINESS:
             return merge({}, oldState, {[action.business.id]: action.business});

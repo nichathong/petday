@@ -9,7 +9,10 @@ import Map from '../../map/map';
 
 class BusinessIndex extends React.Component {
     constructor(props) {
-        super(props);
+        super(props) 
+        this.state = {
+            find: this.props.find
+        }
         // this.state = { 
         //     search: this.props.location.search.split("=")[1]
         //  }
@@ -20,9 +23,14 @@ class BusinessIndex extends React.Component {
     // }
 
     componentDidMount() {
-        let near = this.props.near;
-        let find = this.props.find;
-        
+        window.scrollTo(0,0);
+        if (this.props.businesses.length === 0) {
+            this.props.changeFilter('near', this.props.near)
+            .then(() => {
+                this.props.changeFilter('find', this.state.find)
+            });
+        }
+
     }
 
     render() { 
@@ -34,7 +42,10 @@ class BusinessIndex extends React.Component {
                 <div className="biz-top-page">
                 {/* <img className="pet-day-logo-index" src="/petday_img/petday_logo_small.png"></img> */}
                 <Link to="/"><img className="pet-day-logo-index" src="/petday_img/petday_logo_small.png"></img></Link>
-                <Search />
+                <Search
+                    find={this.props.find}
+                    near={this.props.near} 
+                />
                 </div>
             </div>
             <div className="biz-index-main">
@@ -48,7 +59,7 @@ class BusinessIndex extends React.Component {
                 </div>
                 </div>
                 <div className="map-in-index">
-                <Map businesses={businesses} changeFilter={changeFilter}/>
+                <Map businesses={businesses} changeFilter={changeFilter} find={this.props.find} near={this.props.near}/>
 
                 </div>
             </div>
