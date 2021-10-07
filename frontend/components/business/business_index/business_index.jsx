@@ -30,6 +30,7 @@ class BusinessIndex extends React.Component {
                 this.props.changeFilter('find', this.state.find)
             });
         }
+        window.scrollTo(0, 0);
 
     }
 
