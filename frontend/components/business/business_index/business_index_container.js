@@ -11,8 +11,8 @@ const mSTP = (state, ownProps) => {
     return (
         {
             businesses,
-            near: state.filters.near,
-            find: state.filters.find,
+            value: state.ui.filters.value,
+            near: state.ui.filters.near,
             formType: "other_pages"
         }
     )

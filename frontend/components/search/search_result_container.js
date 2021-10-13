@@ -4,7 +4,9 @@ import SearchResult from './search_result';
 
 
 const mSTP = (state) => ({
-  businesses: state.entities.businesses,
+    value: state.ui.filters.value,
+    near: state.ui.filters.near,
+    businesses: state.entities.businesses
 });
 
 export default connect(mSTP)(SearchResult);

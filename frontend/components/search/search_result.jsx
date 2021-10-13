@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import BusinessIndex from "../business/business_index/business_index";
 import Map from '../map/map'
 import Footer from "../footer/footer";
+import Search from "./search";
 
 class SearchResult extends React.Component {
     render () {
         return (
+          // <div>
+          //   Hello
+          // </div>
           <div className="">
             <div className="biz-page-top-index">
               <div className="biz-top-page">
@@ -17,7 +21,11 @@ class SearchResult extends React.Component {
                     src="/petday_img/petday_logo_small.png"
                   ></img>
                 </Link>
-                <Search find={this.props.find} near={this.props.near} />
+                <Search
+                  find={this.props.find}
+                  near={this.props.near}
+                  changeFilter={this.props.chageFilter}
+                />
               </div>
             </div>
             <div className="biz-index-main">
@@ -29,7 +37,7 @@ class SearchResult extends React.Component {
                 <div className="all-results">All results</div>
                 <div>
                   <BusinessIndex
-                    business={this.props.businesses}
+                    businesses={this.props.businesses}
                     changeFilter={this.props.chageFilter}
                     find={this.props.find}
                     near={this.props.near}
@@ -45,7 +53,7 @@ class SearchResult extends React.Component {
                 />
               </div>
             </div>
-            <Footer/>
+            <Footer />
           </div>
         );
     }
