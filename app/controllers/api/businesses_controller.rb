@@ -19,9 +19,12 @@ class Api::BusinessesController < ApplicationController
             @finds = Business.find_business(cookies[:find])
             @businesses = @business.select { |business| @finds.include?(business) }
 
+            # debugger
+
             if bound_filter
-                @businesses = Business.near_location(cookies[:near])
+                @businesses = @businesses.select { |business| bound_filter.include?(business) }
             end
+
         elsif find == ""
             @businesses = Business.near_location(cookies[:near])
 

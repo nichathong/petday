@@ -18,6 +18,7 @@ import BusinessShowContainer from './business/business_show/business_show_contai
 import BusinessIndexContainer from './business/business_index/business_index_container';
 import ReviewFormContainer from './reviews/review_form_container';
 import SearchResult from './search/search_result';
+import searchResultContainer from './search/search_result_container';
 // import BusinessShow from './business/business_show/business_show';
 
 const App = () => (
@@ -35,9 +36,8 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/businesses" component={BusinessIndexContainer} />
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
-      <Route exact path="/search_results" component={SearchResult}/>
-      {/* <Route exact path="/search/:businessId" component={BusinessShowContainer} />
-      <Route exact path="/search" component={BusinessIndexContainer} /> */}
+      <Route exact path="/search_results" component={searchResultContainer}/>
+      <Route exact path="/search_results/:businessId" component={BusinessShowContainer} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/businesses/:businessId/reviews/create" component={ReviewFormContainer} />

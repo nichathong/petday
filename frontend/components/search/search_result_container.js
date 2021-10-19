@@ -1,12 +1,18 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import SearchResult from './search_result';
+import { withRouter } from 'react-router';
+import { changeFilter } from '../../actions/filter_actions';
 
 
 const mSTP = (state) => ({
     value: state.ui.filters.value,
     near: state.ui.filters.near,
-    businesses: state.entities.businesses
+    businesses: Object.values(state.entities.businesses)
 });
 
-export default connect(mSTP)(SearchResult);
+const mDTP = (dispatch) => ({
+    changeFilter: (value, near) => dispatch(changeFilter(value, near))
+})
+
+export default withRouter(connect(mSTP,mDTP)(SearchResult));
