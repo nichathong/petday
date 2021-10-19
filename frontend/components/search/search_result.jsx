@@ -27,7 +27,7 @@ class SearchResult extends React.Component {
                 <Search
                   find={this.props.find}
                   near={this.props.near}
-                  changeFilter={this.props.chageFilter}
+                  changeFilter={changeFilter}
                 />
               </div>
             </div>

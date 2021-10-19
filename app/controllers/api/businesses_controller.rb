@@ -5,9 +5,9 @@ class Api::BusinessesController < ApplicationController
         near = params[:filters][:near]
         find = params[:filters][:find]
 
-        if near.downcase == "sf"
-            near = "san francisco"
-        end
+        # if near.downcase == "sf"
+        #     near = "san francisco"
+        # end
 
         cookies[:near] = params[:filters][:near]
         cookies[:find] = params[:filters][:find]
