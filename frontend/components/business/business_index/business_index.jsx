@@ -5,6 +5,7 @@ import BusinessIndexItem from './business_index_item';
 // BusinessIndexItem = withRouter(BusinessIndexItem);
 import Search from '../../search/search';
 import Map from '../../map/map';
+import Footer from '../../footer/footer';
 
 
 class BusinessIndex extends React.Component {
@@ -80,6 +81,9 @@ class BusinessIndex extends React.Component {
                   near={this.props.near}
                 />
               </div>
+            </div>
+            <div className="footer-content">
+            <Footer/>
             </div>
           </div>
         );

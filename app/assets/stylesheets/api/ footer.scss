@@ -1,0 +1,37 @@
+.footer-container {
+
+}
+
+.footer-content {
+   height: 537px;
+   background-color: #F5F5F5;
+   border-top: lightgrey 1px solid; 
+   width: 100%;
+    justify-content: center;
+}
+
+.footer-section {
+    margin: 10px 50px 10px 50px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer-title {
+    font: bold 21px Arial, Helvetica, "Helvetica Neue";
+    color: #d32323;
+    text-align: center;
+    margin: 30px 0 0 0;
+
+}
+
+.about-links {
+    text-align: center;
+    margin: 10px;
+
+}
+
+.sub-link {
+    margin: 10px;
+}

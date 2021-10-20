@@ -48,7 +48,6 @@ class SearchResult extends React.Component {
                       near={this.props.near}
                     />
                   ))}
-
                 </div>
                 {/* <div>
                   <BusinessIndex
@@ -68,7 +67,9 @@ class SearchResult extends React.Component {
                 />
               </div>
             </div>
-            <Footer />
+            <div className="footer-content">
+              <Footer />
+            </div>
           </div>
         );
     }

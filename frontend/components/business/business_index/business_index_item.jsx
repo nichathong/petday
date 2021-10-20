@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import Footer from '../../footer/footer';
 
 const BusinessIndexItem = ( {business, history} ) => {
     return (
@@ -55,6 +56,7 @@ const BusinessIndexItem = ( {business, history} ) => {
                             
                         </div>
                 </div>
+
             </div>
 
         </div>  
