@@ -5,6 +5,7 @@ import BusinessIndex from './business_index';
 import { logout } from '../../../actions/session_actions';
 
 import { changeFilter } from '../../../actions/filter_actions';
+import { fetchReviews } from '../../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
     let businesses = Object.values(state.entities.businesses);

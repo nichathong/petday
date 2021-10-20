@@ -3,19 +3,20 @@ import ReviewIndex from './review_index';
 import {fetchReviews, updateReview, deleteReview } from '../../actions/review_actions'
 import {fetchUsers} from '../../actions/user_actions'
 
-const msp = (state, ownProps) => {
+const mSTP = (state, {businessId}) => {
     return(
         {
-            reviews: state.entities.reviews,
+            reviews: Object.values(state.entities.reviews),
             users: state.entities.users,
-            currentUser: state.entities.users[state.session.id]
+            currentUser: state.entities.users[state.session.id],
+            businessId: businessId
             // business_id: ownProps.match.params.businessId
         }
     )
     
 }
 
-const mdp = dispatch => (
+const mDTP = dispatch => (
     {
         fetchUsers: () => dispatch(fetchUsers()),
         fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
@@ -24,4 +25,4 @@ const mdp = dispatch => (
     }
 )
 
-export default connect(msp, mdp)(ReviewIndex)
+export default connect(mSTP, mDTP)(ReviewIndex)

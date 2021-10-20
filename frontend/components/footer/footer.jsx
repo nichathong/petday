@@ -47,20 +47,20 @@ class Footer extends React.Component {
                   </div>
                 </p>
                 <p className="footer-title">
-                  Project
+                  My Pets
                   <div className="about-links">
                     <div className="sub-link">
-                      <a href="https://nichathong.github.io/javascript_project/">
-                        Bay House Price
+                      <a href="#">
+                        Snow
                       </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://sprout-plant-app.herokuapp.com/#/">
-                        Sprout
+                      <a href="#">
+                        Casper
                       </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://github.com/nichathong/petday">Petday</a>
+                      <a href="#">Sua</a>
                     </div>
                   </div>
                 </p>

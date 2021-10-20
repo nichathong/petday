@@ -4,6 +4,7 @@ import { fetchBusiness } from '../../../actions/business_actions';
 import { logout } from '../../../actions/session_actions';
 // import { fetchBusiness, fetchReviews } from '../../../util/business_api_util';
 import BusinessShow from './business_show';
+import { fetchReviews } from '../../../actions/review_actions';
 
 const mSTP = ({entities}, {match}) => ({
     business: entities.businesses[match.params.businessId],
@@ -26,7 +27,8 @@ const mSTP = ({entities}, {match}) => ({
 const mDTP = dispatch => ({
     fetchBusiness: id => dispatch(fetchBusiness(id)),
     fetchBusinesses: () => dispatch(fetchBusinesses()),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    fetchReviews: (businessId) => dispatch(fetchReviews(businessId))
 });
 
 export default connect(mSTP, mDTP)(BusinessShow);
