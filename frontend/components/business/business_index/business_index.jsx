@@ -51,7 +51,7 @@ class BusinessIndex extends React.Component {
                     src="/petday_img/petday_logo_small.png"
                   ></img>
                 </Link>
-                <Search find={this.props.find} near={this.props.near} />
+                <Search find={this.props.find} near={this.props.near} changeFilter={changeFilter}/>
               </div>
             </div>
             <div className="biz-index-main">

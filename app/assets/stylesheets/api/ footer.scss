@@ -22,7 +22,8 @@
     font: bold 21px Arial, Helvetica, "Helvetica Neue";
     color: #d32323;
     text-align: center;
-    margin: 30px 0 0 0;
+    margin: 10px 50px 10px 50px;
+    min-width: 150px;
 
 }
 
@@ -30,6 +31,20 @@
     text-align: center;
     margin: 10px;
 
+}
+
+.sub-link a{
+    font: 14px Arial, Helvetica, "Helvetica Neue";
+    text-decoration: none;    
+    color: #0073BB
+}
+.sub-link a:hover{
+    text-decoration: underline;
+}
+
+.sub-link:visited{
+    text-decoration: none;
+    color: #0073BB
 }
 
 .sub-link {

@@ -50,10 +50,10 @@ const Homepage = () => {
               Black Owned
             </Link>
           </div>
-          <div className="footer-content">
-            <Footer />
-          </div>
           {/* <BusinessIndexContainer /> */}
+        </div>
+        <div className="footer-content">
+        <Footer />
         </div>
       </div>
     );
