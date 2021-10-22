@@ -6,7 +6,6 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import Homepage from '../homepage/homepage';
-import Reviews from './reviews/reviews';
 import Search from './search/search';
 import Map from './map/map';
 import Greeting from './greeting/greeting';

@@ -11,10 +11,11 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %> 
     <%= javascript_include_tag 'application' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    
-    <script type="text/javascript">  
-      window.oneStar = "<%= image_url('stars/onestar.png')%>"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+
+    <script type="text/javascript">
+      window.oneStar = "<%= image_url('stars/onestar.png') %>"
       window.oneHalfStar = "<%= image_url('stars/onehalf_star.png')%>"
       window.twoStar = "<%= image_url('stars/twostar.png')%>"
       window.twoHalfStar = "<%= image_url('stars/twohalf_star.png')%>"
@@ -24,6 +25,7 @@
       window.fourHalfStar = "<%= image_url('stars/fourhalf_star.png')%>"
       window.fiveStar = "<%= image_url('stars/fivestar.png')%>"
     </script>
+
     </head>
 
   <body>
