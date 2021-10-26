@@ -5,11 +5,14 @@ import { Link } from 'react-router-dom';
 import GreetingContainer from '../components/greeting/greeting_container';
 import SearchContainer from '../components/search/search_container';
 import Footer from '../components/footer/footer';
+import PopularSearch from '../components/business/poplular_search/popular_search';
 
+class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-
-const Homepage = () => {
-
+  render () {
     return (
       <div className="home">
         {/* <div className="top-img-frame">
@@ -50,6 +53,7 @@ const Homepage = () => {
               Black Owned
             </Link>
           </div>
+          <PopularSearch changeFilter={this.props.changeFilter}/>
           {/* <BusinessIndexContainer /> */}
         </div>
         <div className="footer-content">
@@ -57,6 +61,7 @@ const Homepage = () => {
         </div>
       </div>
     );
-};
+  }
+}
 
 export default Homepage;

@@ -11,24 +11,47 @@ class Map extends React.Component {
 
   componentDidMount() {
     // set the map to show SF
-    const mapOptions = {
-      center: { 
-        lat: 37.5655, 
-        lng: -122.321 
-      }, // this is SF
-      zoom: 11,
-    };
+    let mapOptions 
+    if (this.props.singleBusiness === true) {
+      // debugger
+      mapOptions = {
+        center: { 
+          lat: this.props.business.lat, 
+          lng: this.props.business.long
+        },
+        zoom: 15
+      };
+    } else {
+      mapOptions = {
+        center: { 
+          lat: 37.5655, 
+          lng: -122.321 
+        }, // this is SF
+        zoom: 11,
+      };
+    }
 
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     // this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.registerListeners();
-    this.MarkerManager.updateMarkers(this.props.businesses);
+    if (this.props.singleBusiness) {
+      this.MarkerManager.updateMarkers([this.props.business])
+    } else {
+      this.MarkerManager.updateMarkers(this.props.businesses);
+
+    }
+     $("#map-container").css("position", "none !important");
   }
 
   componentDidUpdate() {
-    this.MarkerManager.updateMarkers(this.props.businesses);
+    if (this.props.singleBusiness) {
+      this.MarkerManager.updateMarkers(this.props.business)
+    } else {
+      this.MarkerManager.updateMarkers(this.props.businesses);
+    }
+
   }
 
   registerListeners() {

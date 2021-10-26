@@ -5,7 +5,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 // import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import Homepage from '../homepage/homepage';
+import HomepageContainer from '../homepage/homepage_container';
 import Search from './search/search';
 import Map from './map/map';
 import Greeting from './greeting/greeting';
@@ -32,7 +32,7 @@ const App = () => (
     {/* <Reviews /> */}
     {/* <Greeting /> */}
     <Switch>
-      <Route exact path="/" component={Homepage} />
+      <Route exact path="/" component={HomepageContainer} />
       <Route exact path="/businesses" component={BusinessIndexContainer} />
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
       <Route exact path="/search_results" component={searchResultContainer}/>

@@ -55,12 +55,12 @@
     position: relative;
     display: flex;
     bottom: 257px;
-    padding-left: 270px;
-    padding-top: 100px;    
+    padding-left: 100px;
+    padding-top: 65px;    
 }
 
 .biz-info-text {
-    width: 700px;
+    // width: 700px;
     color: white;
     font-weight: bolder;
     ont-family: 'Poppins', sans-serif;;
@@ -330,9 +330,11 @@
 
 .map-in-index {
     right: 0px;
+    width: 600px;
+    height: 800px;
     // border: 10px solid;
     // top: 20px;
-    height: fit-content;
+    // height: fit-content;
     position: sticky;
 }
 
@@ -481,4 +483,48 @@
     height: 25%;
     padding-left: -60px;
 }
+.map-box-biz-show {
+    width: 315px;
+    height: 150px;
+    position: sticky;
+    top: 122px;
+    align-self: flex-start;
 
+}
+.business-hours {
+    display: flex;
+    position: relative;
+    top: -28px;
+    line-height: 25px;
+//     display: flex;
+//     widows: 40%;
+
+//     p {
+//     margin-bottom: 5px;
+//     }
+//     .weeks {
+//     margin-right: 15px;
+//     font-weight: 700;
+//   }
+}
+
+.weeks, .hours {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    margin-bottom: 11px;
+    font-weight: 540;
+}
+
+.weeks {
+    width: 50px;
+    margin-left: 30px;
+}
+.biz-st {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B273C;
+    font-family: "Open Sans", Helvetica, "Helvetica Neue", Arial;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}
