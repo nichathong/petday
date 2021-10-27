@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 .home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/petday_img/photo10.jpeg") ;
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/petday_img/photo10.jpeg") ;
     // opacity: 95%;
     min-height: 500px;
     // height: 45vw;
@@ -14,11 +14,12 @@ body {
     background-repeat: no-repeat;
 }
 .main-div {
-
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/petday_img/photo10.jpeg") ;
+    background-size: cover;
     width: 100%;
     min-width: 1100px;
     height: auto;
-    max-width: 1280px;
+    // max-width: 1280px;
     align-items: center;
     // justify-content: center;
     display: flex;
