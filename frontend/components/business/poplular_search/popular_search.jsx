@@ -60,24 +60,53 @@ class PopularSeach extends React.Component {
     render () {
         return (
           <div>
-            <button onClick={(e) => this.handleCategory(e, "american")}>
-              handle American
-            </button>
-            <button onClick={(e) => this.handleCategory(e, "korean")}>
-              handle Korean
-            </button>
-            <button onClick={(e) => this.handleCategory(e, "asian")}>
-              handle Asian
-            </button>
-            <button onClick={(e) => this.handleCategory(e, "mexican")}>
-              handle Mexican
-            </button>
-            <button onClick={(e) => this.handleCity(e, "burlingame")}>
-              handle Burlingame
-            </button>
-            <button onClick={(e) => this.handleCity(e, "san francisco")}>
-              handle San Francisco
-            </button>
+            <h1 className="popular-search-title">
+              Find pet-friendly restaurants by popular search
+            </h1>
+            <div className="popular-search-container">
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCategory(e, "american")}>
+                  <img src={window.americanFood} className="category-img" />
+                  <p className="pop-search-text">American</p>
+                </div>
+              </div>
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCategory(e, "korean")}>
+                  <img src={window.koreanFood} className="category-img" />
+                  <br />
+                  <p className="pop-search-text">Korean</p>
+                </div>
+              </div>
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCategory(e, "asian")}>
+                  <img src={window.japaneseFood} className="category-img" />
+                  <br />
+                  <p className="pop-search-text">Asian</p>
+                </div>
+              </div>
+
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCategory(e, "mexican")}>
+                  <img src={window.mexicanFood} className="category-img" />
+                  <br />
+                  <p className="pop-search-text">Mexican</p>
+                </div>
+              </div>
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCity(e, "San mateo")}>
+                  <img src={window.sanMateoFood} className="category-img" />
+                  <br />
+                  <p className="pop-search-text">San Mateo</p>
+                </div>
+              </div>
+              <div className="popular-search-items">
+                <div onClick={(e) => this.handleCity(e, "san francisco")}>
+                  <img src={window.sanFranFood} className="category-img" />
+                  <br />
+                  <p className="pop-search-text">San Francisco</p>
+                </div>
+              </div>
+            </div>
           </div>
         );
     }

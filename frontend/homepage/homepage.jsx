@@ -53,8 +53,10 @@ class Homepage extends React.Component {
               Black Owned
             </Link>
           </div>
-          <PopularSearch changeFilter={this.props.changeFilter}/>
           {/* <BusinessIndexContainer /> */}
+        </div>
+        <div className="pop-search-homepage">
+          <PopularSearch changeFilter={this.props.changeFilter}/>
         </div>
         <div className="footer-content">
         <Footer />

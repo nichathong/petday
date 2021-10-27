@@ -26,6 +26,7 @@ body {
     margin: auto;
     height: 100%;
     padding-top: 40px;
+    padding-bottom: 50px;
 }
 .top-img-frame {
     width: 110%;
@@ -80,6 +81,14 @@ body {
 
 .plumbers:hover, .restaurants:hover, .homeservice:hover, .delivery:hover, .blackOwned:hover {
     text-decoration: underline;
+}
+
+.pop-search-homepage {
+    height: 400px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 // .search-section {
