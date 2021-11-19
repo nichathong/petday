@@ -10,6 +10,7 @@ require 'net/http'
 
 Business.destroy_all
 User.destroy_all
+Review.destroy_all
 
 # user1 = User.create!(email: "andy@hotmail.com", password: "ilovepasta", zipcode: "94010")
 # user2 = User.create!(email: "namfom@gmail.com", password: "ilovetoeat", zipcode: "94010")
@@ -18,8 +19,104 @@ User.destroy_all
 # user5 = User.create!(email: "veronika@gmail.com", password: "nycpartylife", zipcode: "94010")
 # user6 = User.create!(email: "jenny@gmail.com", password: "raspberrychocolate", zipcode: "94010")
 user7 = User.create!(firstname: "guest", lastname: "test", email: "guest@gmail.com", password: "1234567", zipcode: "94010")
+user1 = User.create!(
+    firstname: "Harry",
+    lastname: "Potter",
+    email: "harrypotter@aa.com",
+    zipcode: "94010",
+    password: "harrypotter",
+    profile_pic: "harry"
 
-business1 = Business.create!(
+)
+user2 = User.create!(
+    firstname: "Ronald",
+    lastname: "Weasley",
+    email: "ronweasley@aa.com",
+    zipcode: "91020",
+    password: "ronweasley",
+    profile_pic: "ron"
+
+)
+user3 = User.create!(
+    firstname: "Hermione",
+    lastname: "Granger",
+    email: "hermionegrander@aa.com",
+    zipcode: "94124",
+    password: "hermionegrandger",
+    profile_pic: "hermione"
+
+)
+
+user4 = User.create!(
+    firstname: "Albus",
+    lastname: "Dumbledore",
+    email: "albusdumbledore@aa.com",
+    zipcode: "94124",
+    password: "albusdumbledore",
+    profile_pic: "dumbledore"
+
+)
+
+user5 = User.create!(
+    firstname: "Severus",
+    lastname: "Snape",
+    email: "severussnape@aa.com",
+    zipcode: "94010",
+    password: "severussnape",
+    profile_pic: "snape"
+
+)
+
+user6 = User.create!(
+    firstname: "George",
+    lastname: "Wesley",
+    email: "georgeweasley@aa.com",
+    zipcode: "90021",
+    password: "georgewesley",
+    profile_pic: "george"
+
+)
+
+user8 = User.create!(
+    firstname: "Minerva",
+    lastname: "McGonagall",
+    email: "mmcgalnagall@aa.com",
+    zipcode: "94011",
+    password: "mcmcgonagall",
+    profile_pic: "mcgonagall"
+    
+    )
+    
+user9 = User.create!(
+    firstname: "Dobby",
+    lastname: "Elf",
+    email: "dobbyelf@aa.com",
+    zipcode: "90020",
+    password: "dobbyelf",
+    profile_pic: "dobby"
+    
+    )
+
+user10 = User.create!(
+    firstname: "Drago",
+    lastname: "Malfoy",
+    email: "dragomalfoy@aa.com",
+    zipcode: "90020",
+    password: "dragomalfoy",
+    profile_pic: "malfoy"
+    
+    )
+            
+user11 = User.create!(
+    firstname: "Hagrid",
+    lastname: "Rubius",
+    email: "hagridrubius@aa.com",
+    zipcode: "92506",
+    password: "hagridrubius",
+    profile_pic: "hagrid"
+
+)
+    business1 = Business.create!(
     name: "New England Lobster Market & Eatery",
     img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/eIEvQKEdybaW7Xx3ZYRsyw/ls.jpg",
     address: "824 Cowan Rd, Burlingame, California, 94010",
@@ -43,6 +140,48 @@ business1.photo.attach(io: file3, filename: 'food4.jpeg')
 business1.photo.attach(io: file4, filename: 'food5.jpeg')
 business1.photo.attach(io: file5, filename: 'food6.jpeg')
 
+review1a = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user1.id,
+    business_id: business1.id
+)
+
+review1b = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user2.id,
+    business_id: business1.id
+)
+
+review1c = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user3.id,
+    business_id: business1.id
+)
+
+review1d = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user4.id,
+    business_id: business1.id
+)
+
+review1f = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user6.id,
+    business_id: business1.id
+)
+
+review1e = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 3,
+    user_id: user5.id,
+    business_id: business1.id
+)
+
 business2 = Business.create!(
     name: "Crepevine Restaurants",
     img_url: "https://www.yelp.com/biz/crepevine-restaurants-burlingame-2?osq=Pet+Friendly+Restaurant",
@@ -65,6 +204,40 @@ business2.photo.attach(io: file7, filename: 'o.jpeg')
 business2.photo.attach(io: file8, filename: 'spaghetti_meatball.jpeg')
 business2.photo.attach(io: file9, filename: 'waffle.jpeg')
 
+review2a = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user4.id,
+    business_id: business2.id
+)
+
+review2b = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 3,
+    user_id: user5.id,
+    business_id: business2.id
+)
+
+review2c = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user6.id,
+    business_id: business2.id
+)
+
+review2d = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user8.id,
+    business_id: business2.id
+)
+
+review2f = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 2,
+    user_id: user9.id,
+    business_id: business2.id
+)
 
 business3 = Business.create!(
     name: "Maverick Jack's",
@@ -90,6 +263,40 @@ business3.photo.attach(io: file12, filename: 'marverick3.jpeg')
 business3.photo.attach(io: file13, filename: 'marverick4.jpeg')
 business3.photo.attach(io: file14, filename: 'marverick5.jpeg')
 
+review3a = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user9.id,
+    business_id: business3.id
+)
+
+review3b = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user3.id,
+    business_id: business3.id
+)
+
+review3c = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user9.id,
+    business_id: business3.id
+)
+
+review3d = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user4.id,
+    business_id: business3.id
+)
+
+review3f = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 1,
+    user_id: user1.id,
+    business_id: business3.id
+)
 
 
 business4 = Business.create!(
@@ -117,6 +324,41 @@ business4.photo.attach(io: file17, filename: 'woodfire3.jpeg')
 business4.photo.attach(io: file18, filename: 'woodfire4.jpeg')
 business4.photo.attach(io: file19, filename: 'woodfire5.jpeg')
 
+review4a = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user8.id,
+    business_id: business4.id
+)
+
+review4b = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user10.id,
+    business_id: business4.id
+)
+
+review4c = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user3.id,
+    business_id: business4.id
+)
+
+review4d = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user4.id,
+    business_id: business4.id
+)
+
+review4f = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 1,
+    user_id: user5.id,
+    business_id: business4.id
+)
+
 
 business5 = Business.create!(
     name: "Hula Hoops",
@@ -142,6 +384,41 @@ business5.photo.attach(io: file21, filename: 'hulahoop2.jpeg')
 business5.photo.attach(io: file22, filename: 'hulahoop3.jpeg')
 business5.photo.attach(io: file23, filename: 'hulahoop4.jpeg')
 business5.photo.attach(io: file24, filename: 'hulahoop5.jpeg')
+
+review5a = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user10.id,
+    business_id: business5.id
+)
+
+review5b = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user1.id,
+    business_id: business5.id
+)
+
+review5c = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 5,
+    user_id: user2.id,
+    business_id: business5.id
+)
+
+review5d = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 4,
+    user_id: user3.id,
+    business_id: business5.id
+)
+
+review5f = Review.create!(
+    message: "Or hollow were tones. My into who rather from decisions, the in were its had homeless, he wrong is carpeting in way was it away, time. Were where back he yards from the each competitive would parent, to of even which apparently this dedicated well, like…. The not like round.",
+    rating: 1,
+    user_id: user1.id,
+    business_id: business5.id
+)
 
    #     description:
         #     img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/xZAaAOXByCGjDAUkNsM_ew/348s.jpg"

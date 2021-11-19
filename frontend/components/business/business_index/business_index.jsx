@@ -11,7 +11,7 @@ import Footer from '../../footer/footer';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
-        console.log(props) 
+        // console.log(props) 
         this.state = {
           find: "",
           near: this.props.near,
@@ -19,11 +19,9 @@ class BusinessIndex extends React.Component {
         // this.state = { 
         //     search: this.props.location.search.split("=")[1]
         //  }
+        // this.handleClick = this.handleClick.bind(this)
     }
 
-    // componentDidMount() {
-    //     this.props.fetchBusinesses();
-    // }
 
     componentDidMount() {
         const { find, near } = this.state;
@@ -35,11 +33,21 @@ class BusinessIndex extends React.Component {
         // }
         this.props.changeFilter(find, near);
         window.scrollTo(0, 0);
+        this.props.fetchBusinesses();
 
     }
+    // handleClick(e) {
+    //   console.log('click')
+    //   this.props.history.push(`/businesses/${e.target.id}`)
+    // } 
+
 
     render() { 
-        console.log(this.props.businesses);
+      // console.log(this.props.businesses)
+      if (this.props.businesses.length === 0) {
+        return null
+      }
+        const biz = (Object.values(this.props.businesses[0]));
         const { businesses, changeFilter } = this.props;
         return (
           <div className="">
@@ -62,7 +70,7 @@ class BusinessIndex extends React.Component {
                 </div>
                 <div className="all-results">All results</div>
                 <div>
-                  {this.props.businesses.map((b, i) => (
+                  {biz.map((b, i) => (
                     <BusinessIndexItem
                       key={i}
                       business={b}
@@ -70,6 +78,8 @@ class BusinessIndex extends React.Component {
                       find={this.props.find}
                       near={this.props.near}
                     />
+                    // </div>
+                    // </div>
                   ))}
                 </div>
               </div>

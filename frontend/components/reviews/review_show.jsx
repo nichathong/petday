@@ -33,22 +33,34 @@ class ReviewShow extends React.Component {
       .then(() => window.location.reload());
   }
 
-  handleClick(id) {
-    if (
-      document.getElementById(`myReviewDropdown${id}`).style.display === "block"
-    ) {
-      document.getElementById(`myReviewDropdown${id}`).style.display = "none";
-    } else {
-      document.getElementById(`myReviewDropdown${id}`).style.display = "block";
-    }
-  }
   componentDidMount() {
     this.props.fetchUsers();
   }
 
   chooseProfile() {
-    //   if (this.props.user[this.props.review.user_id].profile_pic === ) 
-  }
+    if (this.props.users[this.props.review.user_id].profile_pic === "harry") {
+        return window.harry
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "ron") {
+        return window.ron
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "hermione") {
+        return window.hermione
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "hagrid") {
+        return window.hagrid
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "drago") {
+        return window.drago
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "george") {
+        return window.george
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "dumbledore") {
+        return window.dumbledore
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "snape") {
+        return window.snape
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "mcgonagall") {
+        return window.mcgonagall
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "dobby") {
+        return window.dobby
+    }
+  } 
+
 
   render() {
      if (this.props.users[this.props.review.user_id] === undefined) {
@@ -69,9 +81,9 @@ class ReviewShow extends React.Component {
                                 />
                                 <div className="user-info">
                                         <li className="user-name">
-                                        {this.props.users[this.props.review.user_id].firstname +
+                                        {this.props.users[this.props.review.user_id].firstname.slice(0,1).toUpperCase() + this.props.users[this.props.review.user_id].firstname.slice(1).toUpperCase() +
                                             " " +
-                                            this.props.users[this.props.review.user_id].lastname}
+                                            this.props.users[this.props.review.user_id].lastname.slice(0).toUpperCase()}
                                         </li>
                                         <li>{this.props.users[this.props.review.user_id].zipcode}</li>
                                 </div>
@@ -100,3 +112,5 @@ class ReviewShow extends React.Component {
 
 
 }
+
+export default ReviewShow;

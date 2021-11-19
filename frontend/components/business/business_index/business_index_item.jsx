@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import Footer from '../../footer/footer';
 
 const BusinessIndexItem = ( {business, history} ) => {
+    // console.log("business-index", business)
     return (
             // <Link className="link-to-business" to={`/businesses/${business.id}`} />
         <div className="each-biz-containter" onClick={() => history.push(`/businesses/${business.id}`)}>
@@ -11,18 +12,18 @@ const BusinessIndexItem = ( {business, history} ) => {
                 <img className="biz-img" src={business.photoUrls[0]} alt="" />
                 <div className="right-index-business">
                     <div className="biz-details-box">
-                    <p className="biz-name">{business.name}</p>
+                    <div className="biz-name">{business.name}</div>
                     </div>
                     <div className="biz-location">
                         <div className="map-on-index">
 
                         </div>
-                    <p className="biz-phone-num">{business.phone_number}</p>
-                    <p>{business.address}</p>
+                    <div className="biz-phone-num">{business.phone_number}</div>
+                    <div>{business.address}</div>
                     </div>
                     <div className="biz-rating">
-                    <p></p>
-                    <p className="biz-num-reviews"></p>
+                    <div></div>
+                    <div className="biz-num-reviews"></div>
                     </div>
                     <div className="biz-categories">
 
@@ -47,12 +48,12 @@ const BusinessIndexItem = ( {business, history} ) => {
                         }
                     })} */}
                         <div className="result-booleans">
-                            <p className="result-boolean">{business.delivery ? <img className="result-bool" src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Delivery</p>
-                            <p className="result-boolean">{business.takeout ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Takeout</p>
-                            <p className="result-boolean">{business.outdoor ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Outdoor seating</p>
+                            <div className="result-boolean">{business.delivery ? <img className="result-bool" src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Delivery</div>
+                            <div className="result-boolean">{business.takeout ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Takeout</div>
+                            <div className="result-boolean">{business.outdoor ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Outdoor seating</div>
                         </div>
                         <div className="biz-review">
-                            {/* <p className="biz-review-text">"{business.reviews.length !== 0 ? `${business.reviews[0].message.split(" ").filter((w, i) => i < 30).join(" ")}...` : "Write the first review!"}"<span className="result-review-more">more</span></p> */}
+                            {/* <div className="biz-review-text">"{business.reviews.length !== 0 ? `${business.reviews[0].message.split(" ").filter((w, i) => i < 30).join(" ")}...` : "Write the first review!"}"<span className="result-review-more">more</span></div> */}
                             
                         </div>
                 </div>

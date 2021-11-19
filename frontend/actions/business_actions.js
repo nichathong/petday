@@ -28,13 +28,28 @@ export const receiveBusiness = business => {
 
 export const fetchBusinesses = (filters) => dispatch => (
     APIUtil.fetchBusinesses(filters)
-    .then( businesses => dispatch(receiveBusinesses(businesses)))
+    .then( businesses => {
+      // debugger
+      return dispatch(receiveBusinesses(businesses))
+    })
+      
 );
 
 export const fetchBusiness = id => dispatch => (
     APIUtil.fetchBusiness(id)
     .then( business => dispatch(receiveBusiness(business)))
 );
+
+export const updateBusiness = business => dispatch => (
+  APIUtil.updateBusiness(business)
+  .then(business => dispatch(receiveBusiness(business)) )
+)
+
+// export const updateBusiness = (business,businessId) => (dispatch) =>(
+//     BusinessAPIUtil.updateBusiness(business,businessId)
+//       .then(business => dispatch(receiveBusiness(business)))
+// )
+
 
 // export const fetchReviews = business_id => dispatch => (
 //     APIUtil.fetchReviews(business_id)

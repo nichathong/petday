@@ -34,7 +34,25 @@
     font-family: "Montserrat";
     font-size: 28px;
 }
+.photo-form-business-name {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    border-radius: 3px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-weight: 500;
+    color: rgba(0,131,143,1);
+    font-size: inherit;
+    font-size: xx-large;
+    margin-left: -20px;
 
+
+}
+
+.photo-form-add-photo-title {
+    font-family: "Montserrat";
+    font-size: 28px;
+    color: black;
+}
 .rating {
     margin-left: 30px;
 
@@ -85,6 +103,32 @@ textarea {
     border-radius: 4px;
     margin-bottom: 40px;
     margin-top: -15px;
+}
+
+.review-post-button-photo-cancel {
+    position: relative;
+    top: 40px;
+    height: 45px;
+    width: 200px;
+    background-color: #ffffff;
+    color:rgb(41, 41, 41);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    border: 2px solid;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-top: -15px;
+    margin-left: 20px;
+
+}
+
+.review-post-button-photo-cancel:hover {
+    transition:all .5s ease-in-out;
+    border: 3px solid rgb(196, 195, 195);
+    border-radius: 5px;
+    padding: 7px 24px 8px;
+    margin-top: -10px;
 }
 .review-post-button:hover{
     cursor: pointer;

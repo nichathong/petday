@@ -41,6 +41,7 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const {find, near} = this.state;
+    // console.log(find);
     this.props.changeFilter(find, near).then(() => {
       this.props.history.push(`/search_results`);
     });

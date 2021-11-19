@@ -14,6 +14,25 @@ export const fetchBusiness = id => {
     })
 };
 
+export const updateBusiness = (business) => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `api/businesses/${business.id}`,
+        data: {business}
+    })
+}
+// export const updateBusiness = (businessForm, businessId) => (
+//     $.ajax({
+//         method: 'PATCH',
+//         url: `api/businesses/${businessId}`,
+//         data: businessForm,
+//         contentType: false,
+//         processData: false
+//     })
+// );
+
+
+
 export const fetchReviews = business_id => (
     $.ajax({
         method: 'GET',

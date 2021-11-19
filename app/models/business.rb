@@ -23,10 +23,12 @@ class Business < ApplicationRecord
     end
     
     def self.near_location(location)
-        Business.where("lower(address) LIKE ? ", "%#{location.downcase}%")
+        # debugger
+        Business.where("lower(address) LIKE ? ", "%#{location}%")
     end
 
     def self.find_business(categories)
+        # debugger
         Business.where(
             "lower(categories) LIKE ? or lower(name) LIKE ?",
             "%#{categories[1..3].downcase}%", 

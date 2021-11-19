@@ -36,7 +36,10 @@ class Map extends React.Component {
     // this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.registerListeners();
+    // debugger
     if (this.props.singleBusiness) {
+      // console.log("map component", this.props);
+      // debugger
       this.MarkerManager.updateMarkers([this.props.business])
     } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
@@ -47,7 +50,7 @@ class Map extends React.Component {
 
   componentDidUpdate() {
     if (this.props.singleBusiness) {
-      this.MarkerManager.updateMarkers(this.props.business)
+      this.MarkerManager.updateMarkers([this.props.business])
     } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
@@ -55,14 +58,17 @@ class Map extends React.Component {
   }
 
   registerListeners() {
+    let newbounds;
     google.maps.event.addListener(this.map, "idle", () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, long: east },
         southWest: { lat: south, long: west },
       };
-      this.props.changeFilter("bounds", bounds);
+      newbounds = bounds
     });
+    // debugger
+    this.props.changeFilter("bounds", newbounds);
     // google.maps.event.addListener(this.map, 'click', (event) => {
     //   const coords = getCoordsObj(event.latLng);
     //   this.handleClick(coords);

@@ -8,6 +8,7 @@ import { changeFilter } from '../../../actions/filter_actions';
 import { fetchReviews } from '../../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
+    // debugger
     let businesses = Object.values(state.entities.businesses);
     return (
         {

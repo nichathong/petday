@@ -1,44 +1,51 @@
 class Api::BusinessesController < ApplicationController
     def index
         # debugger
-        bounds = params[:filters][:bounds]
-        near = params[:filters][:near]
-        find = params[:filters][:find]
+        # bounds = params[:filters][:bounds]
+        # near = params[:filters][:near]
+        # find = params[:filters][:find]
 
-        # if near.downcase == "sf"
-        #     near = "san francisco"
+        # # if near.downcase == "sf"
+        # #     near = "san francisco"
+        # # end
+
+        # bound_filter = Business.in_bounds(bounds) if bounds
+
+        # if near != "" && find != ""
+        #     @business = Business.near_location(params[:filters][:near])
+        #     @finds = Business.find_business(params[:filters][:find])
+        #     @businesses = @business.select { |business| @finds.include?(business) }
+
+        #     # debugger
+
+        #     if bound_filter
+        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
+        #     end
+        # # elsif near == "" && find == ""
+        # #     # debugger
+        # #     @businesses = Business.all
+
+        # #     if bound_filter
+        # #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
+        # #     end
+
+        # elsif find == ""
+        #     # debugger
+        #     @businesses = Business.near_location(params[:filters][:near])
+
+        #     if bound_filter
+        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
+        #     end
+        # elsif near == ""
+        #     @finds = Business.find_business(params[:filters][:find])
+        #     @businesses = Business.select { |business| @finds.include?(business) } 
+
+        #     if bound_filter
+        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
+        #     end
+
         # end
 
-        cookies[:near] = params[:filters][:near]
-        cookies[:find] = params[:filters][:find]
-
-        bound_filter = Business.in_bounds(bounds) if bounds
-
-        if near != "" && find != ""
-            @business = Business.near_location(cookies[:near])
-            @finds = Business.find_business(cookies[:find])
-            @businesses = @business.select { |business| @finds.include?(business) }
-
-            # debugger
-
-            if bound_filter
-                @businesses = @businesses.select { |business| bound_filter.include?(business) }
-            end
-
-        elsif find == ""
-            @businesses = Business.near_location(cookies[:near])
-
-            if bound_filter
-                @businesses = @businesses.select { |business| bound_filter.include?(business) }
-            end
-        elsif near == ""
-            @finds = Business.find_business(cookies[:find])
-            @businesses = Business.select { |business| @finds.include?(business) } 
-
-            if bound_filter
-                @businesses = @businesses.select { |business| bound_filter.include?(business) }
-            end
-        end
 
         # @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
 
@@ -46,31 +53,46 @@ class Api::BusinessesController < ApplicationController
         # if params[:search]
         #     @businesses = Business.seach(params[:search][:find], params[:search][:near])
         # end
+        @businesses = Business.all
         render :index
     end
     
     def show
         # debugger
-        # @business = Business.find_by(slug: params[:slug])
-        @business = Business.find(params[:id])
+        @business = Business.with_attached_photo.find(params[:id])
         
         render :show
         
         # render json: BusinessSerializer.new(business, options).serialized_json
     end
-    
-    # def omnisearch
-    #     @businesses = Business
-    #                     .where("LOWER(name) LIKE ? OR LOWER(category) LIKE ?",
-    #                     "%#{params[:query]}%".downcase, "%#{params[:query]}%".downcase)
-    #                     .limit(10)
-    #     render :index
-    # end
-    # private
 
-    # def business_params
-    #     params.require(:business).permit(:name, :image_url, :slug, :address, :hours, :categories, :cost, :review_count, :phone_number)
-    # end
+    def create
+        # debugger
+        @business = Business.new(business_params)
+        if @business.save
+            render json: {message: "I did it - create"}
+        else
+            render json: @business.errors.full_messages, status: 422
+        end
+    end
+
+    def update 
+        @business = Business.find(params[:id])
+        debugger
+        if @business.update(business_params)
+            if @business.save
+                render json: {message: "I did it - update "}
+            else
+                render json: @business.errors.full_messages, status: 401
+            end
+        end
+    end
+    
+    private
+
+    def business_params
+        params.require(:business).permit(:name, :image_url, :lat, :long, :slug, :address, :hours, :categories, :cost, :review_count, :phone_number, :photo)
+    end
 
 
 
