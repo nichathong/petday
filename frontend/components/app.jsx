@@ -24,15 +24,7 @@ import AllPhotosContainer from './business/business/all_photos_container';
 
 const App = () => (
   <div>
-    {/* <header>
-      <Link to="/" className="header-link">
-        <h1>PetDay</h1>
-      </Link>
-    </header> */}
-    {/* <Search /> */}
-    {/* <Map /> */}
-    {/* <Reviews /> */}
-    {/* <Greeting /> */}
+
     <Switch>
       <Route exact path="/" component={HomepageContainer} />
       <Route exact path="/businesses" component={BusinessIndexContainer} />

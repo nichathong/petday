@@ -56,7 +56,10 @@
     display: flex;
     bottom: 257px;
     padding-left: 100px;
-    padding-top: 65px;    
+    padding-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;    
 }
 
 .biz-info-text {
@@ -122,9 +125,28 @@
     height: 97px;
     border-bottom: 1px solid lightgrey;
     margin-right: 141px;
-    padding-left: 130px;
+    padding-left: 210px;
+}
+.biz-add-photo-bttn {
+    transition:all .8s ease-in;
+    background-color: transparent;
+    border: 1px solid rgba(200,201,202,1);
+    color: rgba(45,46,47,1);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    height: 40px;
+    width: 180px;
+    outline: none;
+    margin-top: 26px;
+    padding-bottom: 6px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
+.biz-add-photo-bttn:hover {
+    background-color: grayscale($color: #7272725a);
+}
 .biz-review-bttn {
     font-family: "Open Sans", "Helvetica Neue", Helvetica;
     font-size: 16px;
@@ -139,10 +161,10 @@
     margin-top: 26px;
     padding-bottom: 6px;
     margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .business-menu-container {
-    border-bottom: 1px solid lightgrey;
     margin-left: 141px;
     margin-right: 141px;
 }
@@ -278,6 +300,25 @@
     padding-right: 5px;
 }
 
+.see-photo-bttn {
+    background-color: inherit;
+    cursor: pointer;
+    transition:all .8s ease-in-out;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 12px;
+    border: 1px solid rgba(200,201,202,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.see-photo-bttn:hover {
+    background: rgba(255, 255, 255, 0.29);
+}
 
 
 // .biz-info :first-child{
@@ -550,4 +591,8 @@
     font-family: "Open Sans", Helvetica, "Helvetica Neue", Arial;
     margin-top: 22px;
     margin-bottom: 5px;
+}
+
+.all-photo-bttn-main {
+    padding-top: 100px;
 }

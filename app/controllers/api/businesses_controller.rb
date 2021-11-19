@@ -70,7 +70,7 @@ class Api::BusinessesController < ApplicationController
         # debugger
         @business = Business.new(business_params)
         if @business.save
-            render json: {message: "I did it - create"}
+            render :show
         else
             render json: @business.errors.full_messages, status: 422
         end
@@ -78,10 +78,10 @@ class Api::BusinessesController < ApplicationController
 
     def update 
         @business = Business.find(params[:id])
-        debugger
+        # debugger
         if @business.update(business_params)
             if @business.save
-                render json: {message: "I did it - update "}
+                render :show
             else
                 render json: @business.errors.full_messages, status: 401
             end

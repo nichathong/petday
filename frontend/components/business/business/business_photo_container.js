@@ -5,7 +5,7 @@ import { updateBusiness } from '../../../actions/business_actions';
 
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return ({
         user: state.session.id,
         business: state.entities.businesses.businesses[ownProps.match.params.businessId]

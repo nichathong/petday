@@ -103,7 +103,7 @@ class BusinessShow extends React.Component {
 
     render() {         
         // debugger
-        // console.log("show compoment", this.props)
+        
         const biz = this.props.business;
         const { changeFilter } = this.props;
         if (!biz) {
@@ -141,8 +141,7 @@ class BusinessShow extends React.Component {
             this.avgStar = this.oneStar;
           }
             return (
-
-              <div className="biz-show-container"> 
+              <div className="biz-show-container">
                 <div className="biz-top-page">
                   <Link to="/">
                     <img
@@ -174,13 +173,18 @@ class BusinessShow extends React.Component {
                       <div className="categories">
                         <div>{biz.categories}</div>
                       </div>
-                      <div className="all-photo-bttn-main">
-                        <button className="all-photo-bttn"
-                        onClick={() => this.props.history.push(`/business/biz_photos/${this.props.business.id}`)}>See Photos
-
-                        </button>
-
-                      </div>
+                    </div>
+                    <div className="all-photo-bttn-main">
+                      <button
+                        className="see-photo-bttn"
+                        onClick={() =>
+                          this.props.history.push(
+                            `/business/biz_photos/${this.props.business.id}`
+                          )
+                        }
+                      >
+                        See {biz.photoUrls.length} Photos
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -194,27 +198,22 @@ class BusinessShow extends React.Component {
                         )
                       }
                     >
-                      Write a Review
+                      <i class="far fa-star"></i> Write a Review
                     </button>
                     <button
-                      className="biz-review-bttn"
+                      className="biz-add-photo-bttn"
                       onClick={() =>
                         this.props.history.push(
                           `/businesses/${this.props.business.id}/upload/photos`
                         )
                       }
                     >
-                      Upload Photos
+                      <i class="fas fa-camera"></i>  Add Photo
                     </button>
                   </div>
                 </div>
                 <div className="main-content-business-show-page">
                   <div className="left-column">
-                    <div className="business-menu-container">
-                      <div className="business-menu-content">
-                        <h3>Menu</h3>
-                      </div>
-                    </div>
                     <div className="business-page-covid-update">
                       <div className="covid-title">COVID-19 Updates</div>
                       <div className="updated-service">Updated Services</div>
@@ -266,11 +265,18 @@ class BusinessShow extends React.Component {
 
                     <div className="location-and-hours-container">
                       <div className="hours-content">
-                        <div className="location-hours-text">Location & Hours</div>
+                        <div className="location-hours-text">
+                          Location & Hours
+                        </div>
                         <div className="address-content">
                           <div className="business-location">
                             <div className="map-box-biz-show">
-                              <Map businesses="" singleBusiness={true} business={this.props.business} changeFilter={changeFilter} />
+                              <Map
+                                businesses=""
+                                singleBusiness={true}
+                                business={this.props.business}
+                                changeFilter={changeFilter}
+                              />
                             </div>
                           </div>
                           <ul className="biz-st">{biz.address}</ul>
