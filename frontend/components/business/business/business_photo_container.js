@@ -5,10 +5,11 @@ import { updateBusiness } from '../../../actions/business_actions';
 
 
 const mSTP = (state, ownProps) => {
+    let business = state.entities.businesses.businesses ? state.entities.businesses.businesses[ownProps.match.params.businessId] : "";
     // debugger
     return ({
         user: state.session.id,
-        business: state.entities.businesses.businesses[ownProps.match.params.businessId]
+        business
     })
 }
 

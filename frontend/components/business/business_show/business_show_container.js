@@ -17,7 +17,7 @@ import { changeFilter } from '../../../actions/filter_actions';
 const mSTP = (state, ownProps) => {
     //  let businesses = Object.values(state.entities.business)
     // debugger
-    let business = state.entities.businesses.businesses[ownProps.match.params.businessId];
+    let business = state.entities.businesses.businesses ? state.entities.businesses.businesses[ownProps.match.params.businessId] : "" ;
     return (
         {
             business,

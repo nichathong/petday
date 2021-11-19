@@ -66,7 +66,7 @@
     // width: 700px;
     color: white;
     font-weight: bolder;
-    ont-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;;
 }
 
 .biz-info-text {
@@ -124,8 +124,12 @@
 .biz-below-photo-container {
     height: 97px;
     border-bottom: 1px solid lightgrey;
-    margin-right: 141px;
-    padding-left: 210px;
+    position: relative;
+    height: 97px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 150px;
 }
 .biz-add-photo-bttn {
     transition:all .8s ease-in;
@@ -245,6 +249,7 @@
 }
 
 .sticky-info ul {
+    padding-right: 15px;
     position: absolute;
     // background-color: blue;
     margin-top: 10px;

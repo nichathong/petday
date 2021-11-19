@@ -4,7 +4,6 @@ import { withRouter } from 'react-router';
 import Footer from '../../footer/footer';
 
 const BusinessIndexItem = ( {business, history} ) => {
-    // console.log("business-index", business)
     return (
             // <Link className="link-to-business" to={`/businesses/${business.id}`} />
         <div className="each-biz-containter" onClick={() => history.push(`/businesses/${business.id}`)}>

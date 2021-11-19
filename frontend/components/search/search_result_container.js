@@ -3,7 +3,7 @@ import React from 'react';
 import SearchResult from './search_result';
 import { withRouter } from 'react-router';
 import { changeFilter } from '../../actions/filter_actions';
-
+import { fetchBusinesses } from '../../actions/business_actions';
 
 const mSTP = (state) => ({
     value: state.ui.filters.value,
@@ -12,7 +12,8 @@ const mSTP = (state) => ({
 });
 
 const mDTP = (dispatch) => ({
-    changeFilter: (value, near) => dispatch(changeFilter(value, near))
+    changeFilter: (value, near) => dispatch(changeFilter(value, near)),
+    fetchBusinesses: () => dispatch(fetchBusinesses())
 })
 
 export default withRouter(connect(mSTP,mDTP)(SearchResult));

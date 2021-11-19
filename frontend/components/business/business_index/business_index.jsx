@@ -78,8 +78,6 @@ class BusinessIndex extends React.Component {
                       find={this.props.find}
                       near={this.props.near}
                     />
-                    // </div>
-                    // </div>
                   ))}
                 </div>
               </div>

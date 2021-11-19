@@ -100,6 +100,10 @@ class BusinessShow extends React.Component {
 
     }
 
+    // componentDidUpdate(prevProp) {
+    // debugger      
+    // }
+
 
     render() {         
         // debugger
@@ -208,7 +212,7 @@ class BusinessShow extends React.Component {
                         )
                       }
                     >
-                      <i class="fas fa-camera"></i>  Add Photo
+                      <i class="fas fa-camera"></i> Add Photo
                     </button>
                   </div>
                 </div>
@@ -319,17 +323,26 @@ class BusinessShow extends React.Component {
                       <div className="sticky-info">
                         <ul>
                           <li>
-                            <a>website</a>
+                            <a>
+                              Website{" "}
+                              <i class="fas fa-external-link-alt fa-pull-right"></i>
+                            </a>
                           </li>
                           <li>
-                            <a>{biz.phone_number}</a>
+                            <a>
+                              {biz.phone_number}{" "}
+                              <i class="fas fa-phone-square-alt fa-lg fa-pull-right"></i>
+                            </a>
                           </li>
                           <li>
-                            <a>{biz.address}</a>
+                            <a>
+                              {biz.address}{" "}
+                              <i class="fas fa-directions fa-pull-right"></i>
+                            </a>
                           </li>
-                          <li>
+                          {/* <li>
                             <a href="#"> message this business</a>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
                     </div>

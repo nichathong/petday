@@ -68,7 +68,7 @@ class Map extends React.Component {
       newbounds = bounds
     });
     // debugger
-    this.props.changeFilter("bounds", newbounds);
+    // this.props.changeFilter("bounds", newbounds);
     // google.maps.event.addListener(this.map, 'click', (event) => {
     //   const coords = getCoordsObj(event.latLng);
     //   this.handleClick(coords);

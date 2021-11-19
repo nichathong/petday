@@ -10,6 +10,10 @@ class SearchResult extends React.Component {
     render () {
       // console.log(this.props.businesses);
       // debugger
+      if (this.props.businesses.length === 0) {
+        return null;
+      }
+      const biz = Object.values(this.props.businesses[0]);
       const { businesses, changeFilter } = this.props;
         return (
           // <div>
@@ -39,7 +43,7 @@ class SearchResult extends React.Component {
                 </div>
                 <div className="all-results">All results</div>
                 <div>
-                  {businesses.map((b, i) => (
+                  {biz.map((b, i) => (
                     <BusinessIndexItem
                       key={i}
                       business={b}

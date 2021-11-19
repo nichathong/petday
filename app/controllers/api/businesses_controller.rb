@@ -1,50 +1,48 @@
 class Api::BusinessesController < ApplicationController
     def index
         # debugger
-        # bounds = params[:filters][:bounds]
-        # near = params[:filters][:near]
-        # find = params[:filters][:find]
+        bounds = params[:filters][:bounds]
+        near = params[:filters][:near]
+        find = params[:filters][:find]
 
-        # # if near.downcase == "sf"
-        # #     near = "san francisco"
-        # # end
-
-        # bound_filter = Business.in_bounds(bounds) if bounds
-
-        # if near != "" && find != ""
-        #     @business = Business.near_location(params[:filters][:near])
-        #     @finds = Business.find_business(params[:filters][:find])
-        #     @businesses = @business.select { |business| @finds.include?(business) }
-
-        #     # debugger
-
-        #     if bound_filter
-        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
-        #     end
-        # # elsif near == "" && find == ""
-        # #     # debugger
-        # #     @businesses = Business.all
-
-        # #     if bound_filter
-        # #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
-        # #     end
-
-        # elsif find == ""
-        #     # debugger
-        #     @businesses = Business.near_location(params[:filters][:near])
-
-        #     if bound_filter
-        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
-        #     end
-        # elsif near == ""
-        #     @finds = Business.find_business(params[:filters][:find])
-        #     @businesses = Business.select { |business| @finds.include?(business) } 
-
-        #     if bound_filter
-        #         @businesses = @businesses.select { |business| bound_filter.include?(business) }
-        #     end
-
+        # if near.downcase == "sf"
+        #     near = "san francisco"
         # end
+
+        bound_filter = Business.in_bounds(bounds) if bounds
+
+        if near != "" && find != ""
+            @business = Business.near_location(params[:filters][:near])
+            @finds = Business.find_business(params[:filters][:find])
+            @businesses = @business.select { |business| @finds.include?(business) }
+
+            # debugger
+
+            if bound_filter
+                @businesses = @businesses.select { |business| bound_filter.include?(business) }
+            end
+
+        elsif find == ""
+            # debugger
+            @businesses = Business.near_location(params[:filters][:near])
+
+            if bound_filter
+                @businesses = @businesses.select { |business| bound_filter.include?(business) }
+            end
+        elsif near == ""
+            @finds = Business.find_business(params[:filters][:find])
+            @businesses = Business.select { |business| @finds.include?(business) } 
+
+            if bound_filter
+                @businesses = @businesses.select { |business| bound_filter.include?(business) }
+            end
+        else
+            @businesses = Business.all
+            if bound_filter
+                @businesses = @businesses.select { |business| bound_filter.include?(business) }
+            end
+
+        end
 
 
         # @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
@@ -53,7 +51,7 @@ class Api::BusinessesController < ApplicationController
         # if params[:search]
         #     @businesses = Business.seach(params[:search][:find], params[:search][:near])
         # end
-        @businesses = Business.all
+        # @businesses = Business.all
         render :index
     end
     

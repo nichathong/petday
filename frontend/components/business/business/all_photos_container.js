@@ -5,10 +5,10 @@ import { changeFilter } from '../../../actions/filter_actions';
 
 
 const mSTP = (state, ownProps) => {
-    // debugger
+    let business = state.entities.businesses.businesses ? state.entities.businesses.businesses[ownProps.match.params.businessId] : "";
     return ({
         id: state.session.id,
-        business: state.entities.businesses.businesses[ownProps.match.params.businessId],
+        business,
         value: state.ui.filters.value,
         near: state.ui.filters.near,
 
