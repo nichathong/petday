@@ -110,7 +110,7 @@ class BusinessPhoto extends React.Component {
 
   render() {
 
-    const preview = this.state.photoUrl ? (<img src={this.state.photoUrl} />) : null;
+    const preview = this.state.photoUrl ? (<img className="preview-image" src={this.state.photoUrl} />) : null;
     if (this.props.business === undefined) return null;
     // if (this.props.business === undefined) return "Opps, something is worng!"; // if (this.props.business === undefined) return null;
     return (
@@ -142,7 +142,7 @@ class BusinessPhoto extends React.Component {
                     </span>
                   </div>
                 </div>
-                <div className="review-box">
+                <div className="photo-box">
                   <label className="upload-photo-text">
                     Upload
                     <input
@@ -150,6 +150,7 @@ class BusinessPhoto extends React.Component {
                       onChange={this.handleFile}
                       className="upload-icon"
                     />
+                    <div className="preview-photo">{preview}</div>
                   </label>
                 </div>
               </div>
@@ -164,7 +165,6 @@ class BusinessPhoto extends React.Component {
               </button>
             </form>
           </div>
-          <div className="preview-photo">{preview}</div>
         </div>
 
       </div>

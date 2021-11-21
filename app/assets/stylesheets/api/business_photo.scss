@@ -1,0 +1,42 @@
+.preview-photo-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.preview-photo {
+    display: flex;
+    justify-content: center;
+}
+.preview-image {
+    max-width: 100%;
+    height: 413px;
+}
+
+.photo-box {
+    border: rgb(189, 189, 189) dashed 2px;
+    border-radius: 4px;
+    height: 450px;
+    width: 631px;
+}
+// .upload-icon {
+//     width: 0.1px;
+// 	height: 0.1px;
+// 	opacity: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// 	z-index: -1;
+// }
+
+// .upload-icon + .upload-photo-text {
+//     font-size: 1.25em;
+//     font-weight: 700;
+//     color: white;
+//     background-color: black;
+//     display: inline-block;
+//     cursor: pointer;
+// }
+
+// .upload-icon:focus + .upload-photo-text, .upload-icon + .upload-photo-text:hover {
+//     background-color: red;
+// }

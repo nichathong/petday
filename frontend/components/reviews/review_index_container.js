@@ -4,6 +4,7 @@ import {fetchReviews, updateReview, deleteReview } from '../../actions/review_ac
 import {fetchUsers} from '../../actions/user_actions'
 
 const mSTP = (state, {businessId}) => {
+    // debugger
     return(
         {
             reviews: Object.values(state.entities.reviews),

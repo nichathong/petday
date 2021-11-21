@@ -25,7 +25,7 @@ user1 = User.create!(
     email: "harrypotter@aa.com",
     zipcode: "94010",
     password: "harrypotter",
-    profile_pic: "harry"
+    # profile_pic: "harry"
 
 )
 user2 = User.create!(
@@ -34,7 +34,7 @@ user2 = User.create!(
     email: "ronweasley@aa.com",
     zipcode: "91020",
     password: "ronweasley",
-    profile_pic: "ron"
+    # profile_pic: "ron"
 
 )
 user3 = User.create!(
@@ -43,7 +43,7 @@ user3 = User.create!(
     email: "hermionegrander@aa.com",
     zipcode: "94124",
     password: "hermionegrandger",
-    profile_pic: "hermione"
+    # profile_pic: "hermione"
 
 )
 
@@ -53,7 +53,7 @@ user4 = User.create!(
     email: "albusdumbledore@aa.com",
     zipcode: "94124",
     password: "albusdumbledore",
-    profile_pic: "dumbledore"
+    # profile_pic: "dumbledore"
 
 )
 
@@ -63,7 +63,7 @@ user5 = User.create!(
     email: "severussnape@aa.com",
     zipcode: "94010",
     password: "severussnape",
-    profile_pic: "snape"
+    # profile_pic: "snape"
 
 )
 
@@ -73,7 +73,7 @@ user6 = User.create!(
     email: "georgeweasley@aa.com",
     zipcode: "90021",
     password: "georgewesley",
-    profile_pic: "george"
+    # profile_pic: "george"
 
 )
 
@@ -83,7 +83,7 @@ user8 = User.create!(
     email: "mmcgalnagall@aa.com",
     zipcode: "94011",
     password: "mcmcgonagall",
-    profile_pic: "mcgonagall"
+    # profile_pic: "mcgonagall"
     
     )
     
@@ -93,7 +93,7 @@ user9 = User.create!(
     email: "dobbyelf@aa.com",
     zipcode: "90020",
     password: "dobbyelf",
-    profile_pic: "dobby"
+    # profile_pic: "dobby"
     
     )
 
@@ -103,7 +103,7 @@ user10 = User.create!(
     email: "dragomalfoy@aa.com",
     zipcode: "90020",
     password: "dragomalfoy",
-    profile_pic: "malfoy"
+    # profile_pic: "malfoy"
     
     )
             
@@ -113,7 +113,7 @@ user11 = User.create!(
     email: "hagridrubius@aa.com",
     zipcode: "92506",
     password: "hagridrubius",
-    profile_pic: "hagrid"
+    # profile_pic: "hagrid"
 
 )
     business1 = Business.create!(
@@ -306,7 +306,7 @@ business4 = Business.create!(
     phone_number: "(650) 389-6918",
     categories: "Bars, American (Traditional), Pizza",
     cost: "$$",
-    hours: "Mon	11:00 am - 9:00 pm, Tue	11:00 am - 9:00 pm, Wed	11:00 am - 9:00 pm, Thu	11:00 am - 9:00 pm, Fri	11:00 am - 10:00 pm, Sat	11:00 am - 10:00 pm, Sun	11:00 am - 9:00 pm",
+    hours: "Mon	11:00 am - 9:00 pm \n Tue	11:00 am - 9:00 pm \n Wed	11:00 am - 9:00 pm \n Thu	11:00 am - 9:00 pm \n Fri	11:00 am - 10:00 pm \n Sat	11:00 am - 10:00 pm \n Sun	11:00 am - 9:00 pm",
     lat: "37.568163439635676",
     long: "-122.3240314007304"
 

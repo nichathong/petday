@@ -5,6 +5,7 @@ import Search from '../../search/search';
 import ReviewIndexContainer from '../../reviews/review_index_container';
 import Map from '../../map/map';
 import { changeFilter } from '../../../actions/filter_actions';
+import BusinessHours from './business_hours';
 
 
 class BusinessShow extends React.Component {
@@ -285,7 +286,11 @@ class BusinessShow extends React.Component {
                           </div>
                           <ul className="biz-st">{biz.address}</ul>
                           <div className="business-hour">
-                            <div className="weeks">
+                            <div>
+                              {/* <BusinessHours hours={this.props.business.showHours}/> */}
+                              {/* {biz.hours.split(",") + "</br>"} */}
+                            </div>
+                            {/* <div className="weeks">
                               <div>Mon</div>
                               <div>Tue</div>
                               <div>Wed</div>
@@ -302,7 +307,7 @@ class BusinessShow extends React.Component {
                               <div>9:00 am - 10:00 pm</div>
                               <div>9:00 am - 10:00 pm</div>
                               <div>9:00 am - 10:00 pm</div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
