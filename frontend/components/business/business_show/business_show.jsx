@@ -303,7 +303,7 @@ class BusinessShow extends React.Component {
                 <div className="sticky-info">
                   <ul>
                     <li>
-                      <a className="link-to-website" href={biz.website}><span>{biz.website}</span>
+                      <a className="link-to-website" href={biz.website}><span id="biz-web">{biz.website}</span>
                         
                         {" "}
                         <i className="fas fa-external-link-alt fa-pull-right"></i>

@@ -29,7 +29,7 @@ const BusinessIndexItem = ( {business, history} ) => {
                 </div>
                     <span className="biz-cost">{business.cost}</span>
                     <span className="biz-bullet">&#8226;</span>
-                    {business.categories}
+                    <span className="biz-bullet">{business.categories}</span>
                     {/* {console.log(Object.values(business.categories))} */}
                     {/* {business.categories.map((category, i) => {
                         if (i === business.categories.length - 1) {
@@ -47,9 +47,9 @@ const BusinessIndexItem = ( {business, history} ) => {
                         }
                     })} */}
                         <div className="result-booleans">
-                            <div className="result-boolean">{business.delivery ? <img className="result-bool" src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Delivery</div>
-                            <div className="result-boolean">{business.takeout ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Takeout</div>
-                            <div className="result-boolean">{business.outdoor ? <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"/> : <img className="result-bool"src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"/>} Outdoor seating</div>
+                            <div className="result-boolean">{business.delivery ? (<i className="fas fa-check fa-lg fa-pull-left"></i>) : (<i className="fas fa-times fa-lg fa-pull-left"></i>)}{"  "} Delivery</div>
+                            <div className="result-boolean">{business.takeout ? (<i className="fas fa-check fa-lg fa-pull-left"></i>) : (<i className="fas fa-times fa-lg fa-pull-left"></i>)}{"  "} Takeout</div>
+                            <div className="result-boolean">{business.outdoor ? (<i className="fas fa-check fa-lg fa-pull-left"></i>) : (<i className="fas fa-times fa-lg fa-pull-left"></i>)}{"  "} Outdoor seating</div>
                         </div>
                         <div className="biz-review">
                             {/* <div className="biz-review-text">"{business.reviews.length !== 0 ? `${business.reviews[0].message.split(" ").filter((w, i) => i < 30).join(" ")}...` : "Write the first review!"}"<span className="result-review-more">more</span></div> */}

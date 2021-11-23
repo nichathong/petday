@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
-import Search from "../../search/search";
+import Search from "../../search/search_container";
 
 class AllPhotos extends React.Component {
     constructor(props) {

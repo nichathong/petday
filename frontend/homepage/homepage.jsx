@@ -28,30 +28,30 @@ class Homepage extends React.Component {
           />
           <SearchContainer />
           <div className="under-search-bar">
-            <Link
+            <a
               className="plumbers"
-              to="https://www.yelp.com/search?cflt=Plumbing&find_loc=Burlingame%2C+CA+94010"
+              href="https://www.yelp.com/search?cflt=Plumbing&find_loc=Burlingame%2C+CA+94010"
             >
               Plumbers
-            </Link>
+            </a>
             <Link className="restaurants" to="/businesses">
               Restaurants
             </Link>
-            <Link
+            <a
               className="homeservice"
-              to="https://www.yelp.com/search?cflt=hvac&find_loc=Burlingame%2C+CA+94010"
+              href="https://www.yelp.com/search?cflt=hvac&find_loc=Burlingame%2C+CA+94010"
             >
               Home Services
-            </Link>
+            </a>
             <Link className="delivery" to="/businesses">
               Delivery
             </Link>
-            <Link
+            <a
               className="blackOwned"
-              to="https://www.yelp.com/search?find_desc=Black+Owned+Restaurants&find_loc=Burlingame%2C+CA+94010"
+              href="https://www.yelp.com/search?find_desc=Black+Owned+Restaurants&find_loc=Burlingame%2C+CA+94010"
             >
               Black Owned
-            </Link>
+            </a>
           </div>
           {/* <BusinessIndexContainer /> */}
         </div>

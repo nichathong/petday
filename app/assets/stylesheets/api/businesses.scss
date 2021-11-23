@@ -96,9 +96,9 @@
 }
 
 .all-results {
-    font-family: "Open Sans", Helvetica, "Helvetica Neue";
-    font-size: 16px;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
     margin-bottom: 40px;
     margin-left: 80px;
 }
@@ -156,7 +156,7 @@
     font-weight: bold;
     color: #2B273C;
     display: flex;
-    margin-left: 5px;
+    // margin-left: 5px;
 }
 
 .biz-location {
@@ -196,22 +196,33 @@
 }
 
 .biz-cost {
+    font-family: 'Poppins', sans-serif;
+    color: #2B273C;
 
 }
 
 .biz-bullet {
     margin-left: 10px;
-    margin-right: 10px;
+    // margin-right: 10px;
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    color: #2B273C;
 }
 
 .result-booleans{
-    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 700;
     display: flex;
     color: black;
     margin-top: 100px;
+    
 }
+
+.result-boolean {
+    padding-right: 10px;
+    
+}
+
 
 .img-result-bool {
     padding-top: 20px;
