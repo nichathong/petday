@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom'; 
+import Search from '../search/search';
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,7 +12,9 @@ class ReviewForm extends React.Component {
             message: '',
             rating: '',
             user_id: this.props.user_id,
-            business_id: this.props.match.params.businessId
+            business_id: this.props.match.params.businessId,
+            find: '',
+            near: this.props.near
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleHover = this.handleHover.bind(this);
@@ -25,6 +28,8 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount(){
+        const { find, near} = this.state;
+        this.props.changeFilter(find, near);
         this.props.fetchBusiness(this.props.match.params.businessId)
     }
 
@@ -103,54 +108,58 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        const { changeFilter } = this.props; 
         return (
           <div>
             <div className="navbar-review-space">
-
-                <div className="review-form-navbar">
+              <div className="review-form-navbar">
                 <Link to="/">
-                    <img
+                  <img
                     className="pet-day-logo-index"
                     src="/petday_img/petday_logo_small.png"
-                    ></img>
+                  ></img>
                 </Link>
-                </div>
-            <div>need to import navbar</div>
-            <div className="review-form-box">
-            <form onSubmit={this.handleSubmit}>
-                <div className="review-form-content">
-                <div className="review-form-text">
-                    <span className="review-form-business-name">
-                    {this.props.business.name}
-                    </span>
-                </div>
-                <div className="review-box">
-                    <p id="rating-text" className="select-your-rating">
-                    Select your rating
-                    </p>
+                <Search
+                  find={this.props.find}
+                  near={this.props.near}
+                  changeFilter={changeFilter}
+                />
+              </div>
+              <div className="review-form-box">
+                <form onSubmit={this.handleSubmit}>
+                  <div className="review-form-content">
+                    <div className="review-form-text">
+                      <span className="review-form-business-name">
+                        {this.props.business.name}
+                      </span>
+                    </div>
+                    <div className="review-box">
+                      <p id="rating-text" className="select-your-rating">
+                        Select your rating
+                      </p>
 
-                    <Rating
-                                    emptySymbol="fa fa-star fa-2x un-filled"
-                                    initialRating={this.state.rating}
-                                    fullSymbol="fa fa-star fa-2x filled"
-                                    onChange={this.handleRatingChange}
-                                    className="rating"
-                                    onHover={this.handleHover}
-                                />
-                    <textarea
-                    className="text-area-text"
-                    value={this.state.message}
-                    onChange={this.handleChange("message")}
-                    placeholder="It's amazing that they've added delivery due to COVID. The delivery wasn't perfert--they forgot one of my side dishes--but I understand this is a new operation for them at this time. Even so, the burrito was delicious and more than made up for it!"
-                    ></textarea>
-                    {/* <div className={classNameErrors}>
+                      <Rating
+                        emptySymbol="fa fa-star fa-2x un-filled"
+                        initialRating={this.state.rating}
+                        fullSymbol="fa fa-star fa-2x filled"
+                        onChange={this.handleRatingChange}
+                        className="rating"
+                        onHover={this.handleHover}
+                      />
+                      <textarea
+                        className="text-area-text"
+                        value={this.state.message}
+                        onChange={this.handleChange("message")}
+                        placeholder="It's amazing that they've added delivery due to COVID. The delivery wasn't perfert--they forgot one of my side dishes--but I understand this is a new operation for them at this time. Even so, the burrito was delicious and more than made up for it!"
+                      ></textarea>
+                      {/* <div className={classNameErrors}>
                                         {this.renderErrors()}
                                 </div> */}
-                </div>
-                </div>
-                <button className="review-post-button">Post Review</button>
-            </form>
-            </div>
+                    </div>
+                  </div>
+                  <button className="review-post-button">Post Review</button>
+                </form>
+              </div>
             </div>
           </div>
         );

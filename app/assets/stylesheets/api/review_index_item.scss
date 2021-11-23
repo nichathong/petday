@@ -1,17 +1,37 @@
 .review-container {
     min-width: 700px;
+    margin-top: 30px;
+
 }
 
 .review-profile-container {
     display: flex;
     justify-content: space-between;
+    
+}
+
+.review-created-date {
+        margin-left: 10px;
+    position: relative;
+    bottom: 6px;
+    font-size: 14px;
+    color: #757280;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
 }
 
 .profile-box {
     display: flex;
 }
 
+.user-profile-photo {
+    width: 65px;
+    border-radius: 32px;
+    margin-bottom: 10px;
+    height: 65px;
+    object-fit: cover;
+}
 .user-info {
+    padding-top: 10px;
     margin-left: 20px;
     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 16px;
@@ -24,14 +44,16 @@
 }
 
 .rating-date-container {
+    display: flex;
 
 }
 
 .review-rating {
-
+ display: flex;
 }
 
 .review-created-date {
+    top: 6px;
     margin-left: 10px;
     position: relative;
     bottom: 6px;

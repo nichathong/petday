@@ -30,6 +30,31 @@ class ReviewIndexItem extends React.Component {
         this.props.fetchUsers();
     }
 
+    chooseProfile() {
+    console.log(this.props.users[this.props.review.user_id]);
+    if (this.props.users[this.props.review.user_id].profile_pic === "harry") {
+        return window.harry
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "ron") {
+        return window.ron
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "hermione") {
+        return window.hermione
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "hagrid") {
+        return window.hagrid
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "drago") {
+        return window.drago
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "george") {
+        return window.george
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "dumbledore") {
+        return window.dumbledore
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "snape") {
+        return window.snape
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "mcgonagall") {
+        return window.mcgonagall
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "dobby") {
+        return window.dobby
+    }
+  } 
+
 
     render () {
         
@@ -42,37 +67,49 @@ class ReviewIndexItem extends React.Component {
             );
         } else { 
             return (
+              <div>
+                <div className="review-container">
+                  <div className="review-profile-container">
+                      <div className="profile-component-box">
 
-                <div>
-                    <div className="review-container">
-                        <div className="review-profile-container">
-                            <div className="profile-box">
-                                <div className="user-info">
-                                    <li className="user-username">{this.props.users[review.user_id].firstname.slice(0, 1).toUpperCase() + this.props.users[review.user_id].firstname.slice(1)} {this.props.users[review.user_id].lastname.slice(0,1).toUpperCase()}.</li>
-                                    <li>{this.props.users[review.user_id].zip_code}</li>
-                                </div>
+                        <div className="profile-box">
+                            <img
+                                className="user-profile-photo"
+                                src={this.chooseProfile()}
+                                alt=""
+                            />
+                            <div className="user-info">
+                                <li className="user-username">
+                                {this.props.users[review.user_id].firstname
+                                    .slice(0, 1)
+                                    .toUpperCase() +
+                                    this.props.users[review.user_id].firstname.slice(
+                                    1
+                                    )}{" "}
+                                {this.props.users[review.user_id].lastname
+                                    .slice(0, 1)
+                                    .toUpperCase()}
+                                .
+                                </li>
+                                <li >{this.props.users[review.user_id].zipcode}</li>
                             </div>
+                        </div>
                             <div className="rating-date-container">
-                                <div className="review-rating">
-                                    <img src={this.ratingStar} alt="" />
-                                </div>
-                                <div className="review-created-date">
-                                    {this.realDate}
-                                </div>
-                            </div>
+                        <div className="review-rating">
+                            <img src={this.ratingStar} alt="" />
+                            <div className="review-created-date">{this.realDate}</div>
                         </div>
-                        <div className="review-message-container">
-                            <div className="review-message-box">
-                                {this.props.review.message}
-                            </div>
                         </div>
-
-
+                      </div>
+                  </div>
+                  <div className="review-message-container">
+                    <div className="review-message-box">
+                      {this.props.review.message}
                     </div>
-                    
+                  </div>
                 </div>
-
-            )
+              </div>
+            );
         }
     }
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_12_041848) do
+ActiveRecord::Schema.define(version: 2021_11_22_231630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 2021_08_12_041848) do
     t.float "lat", null: false
     t.float "long", null: false
     t.string "site_url"
+    t.boolean "delivery"
+    t.boolean "takeout"
+    t.boolean "outdoor"
     t.index ["cost"], name: "index_businesses_on_cost"
     t.index ["name"], name: "index_businesses_on_name"
   end
@@ -78,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_08_12_041848) do
     t.string "birthmonth"
     t.string "birthday"
     t.string "birthyear"
+    t.string "profile_pic"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

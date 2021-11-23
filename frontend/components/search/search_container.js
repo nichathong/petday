@@ -22,11 +22,16 @@ import { changeFilter } from "../../actions/filter_actions";
 //     )
 
 // };
-const mSTP = (state) => ({
-    value: state.ui.filters.value,
-    near: state.ui.filters.near,
-    businesses: Object.values(state.entities.businesses)
-})
+const mSTP = (state) => {
+    return (
+        {
+            value: state.ui.filters.value,
+            near: state.ui.filters.near,
+            businesses: Object.values(state.entities.businesses)
+
+        }
+    )
+}
 
 const mDTP = (dispatch) => ({
     changeFilter: (value, near) => dispatch(changeFilter(value, near))

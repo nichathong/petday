@@ -8,7 +8,7 @@ import BusinessIndexItem from "../business/business_index/business_index_item";
 
 class SearchResult extends React.Component {
     render () {
-      // console.log(this.props.businesses);
+      console.log("search-results", this.props.businesses);
       // debugger
       if (this.props.businesses.length === 0) {
         return null;

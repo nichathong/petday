@@ -11,7 +11,7 @@ class BusinessHours extends React.Component {
         let str = ""
 
         for (let i = 0; i < hour.lenght; i++) {
-            hour[i] = hour[i] + "<br>";
+            hour[i] = hour[i] + "/n";
             str += hour[i];
 
         }
@@ -23,7 +23,9 @@ class BusinessHours extends React.Component {
         console.log(this.props);
         <div>
             <div>
-                {this.props.showHours()}
+               <div>
+                   {this.props.showHours()}
+                </div> 
             </div>
         </div>
     }
