@@ -5,7 +5,6 @@ import Search from '../../search/search';
 import ReviewIndexContainer from '../../reviews/review_index_container';
 import Map from '../../map/map';
 import { changeFilter } from '../../../actions/filter_actions';
-import BusinessHours from './business_hours';
 
 
 class BusinessShow extends React.Component {
@@ -331,7 +330,8 @@ class BusinessShow extends React.Component {
                     <li>
                       <a>
                         {biz.address}{" "}
-                        <i className="fas fa-directions fa-pull-right"></i>
+                          <i className="fas fa-directions fa-lg fa-pull-right"></i>
+                        
                       </a>
                     </li>
                     {/* <li>
