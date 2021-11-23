@@ -228,48 +228,34 @@ class BusinessShow extends React.Component {
             <div className="left-column">
               <div className="business-page-covid-update">
                 <div className="covid-title">COVID-19 Updates</div>
+                <br />
                 <div className="updated-service">Updated Services</div>
                 <div className="business-show-result-bools">
                   <div className="business-show-result-boolean">
                     {this.props.business.delivery ? (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"
-                      />
+                      <i class="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"
-                      />
-                    )}{" "}
+                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                    )}
+                    {"  "}
                     Delivery
                   </div>
                   <div className="business-show-result-boolean">
                     {this.props.business.takeout ? (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"
-                      />
+                      <i class="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"
-                      />
-                    )}{" "}
+                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                    )}
+                    {"  "}
                     Takeout
                   </div>
                   <div className="business-show-result-boolean">
                     {this.props.business.outdoor ? (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/yes.png"
-                      />
+                      <i class="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <img
-                        className="result-bool"
-                        src="http://d5yem10y0aabn.cloudfront.net/business_boolean/no.png"
-                      />
-                    )}{" "}
+                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                    )}
+                    {"  "}
                     Outdoor seating
                   </div>
                 </div>
@@ -317,7 +303,8 @@ class BusinessShow extends React.Component {
                   <ul>
                     <li>
                       <a>
-                        Website{" "}
+                        <Link to={`${biz.website}`} />
+                        {biz.website}{" "}
                         <i className="fas fa-external-link-alt fa-pull-right"></i>
                       </a>
                     </li>
@@ -330,8 +317,7 @@ class BusinessShow extends React.Component {
                     <li>
                       <a>
                         {biz.address}{" "}
-                          <i className="fas fa-directions fa-lg fa-pull-right"></i>
-                        
+                        <i className="fas fa-directions fa-lg fa-pull-right"></i>
                       </a>
                     </li>
                     {/* <li>

@@ -42,6 +42,7 @@ class Search extends React.Component {
     e.preventDefault();
     const {find, near} = this.state;
     // console.log(find, near);
+    console.log("search",this.props)
     this.props.changeFilter(find, near).then(() => {
       this.props.history.push(`/search_results`);
     });

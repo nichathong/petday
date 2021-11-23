@@ -31,7 +31,7 @@ class ReviewIndexItem extends React.Component {
     }
 
     chooseProfile() {
-    console.log(this.props.users[this.props.review.user_id]);
+    
     if (this.props.users[this.props.review.user_id].profile_pic === "harry") {
         return window.harry
     } else if (this.props.users[this.props.review.user_id].profile_pic === "ron") {
@@ -52,6 +52,8 @@ class ReviewIndexItem extends React.Component {
         return window.mcgonagall
     } else if (this.props.users[this.props.review.user_id].profile_pic === "dobby") {
         return window.dobby
+    } else if (this.props.users[this.props.review.user_id].profile_pic === "guest") {
+        return window.guest
     }
   } 
 

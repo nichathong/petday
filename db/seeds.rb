@@ -18,7 +18,7 @@ Review.destroy_all
 # user4 = User.create!(email: "mara@gmail.com", password: "ilovemylife", zipcode: "94010")
 # user5 = User.create!(email: "veronika@gmail.com", password: "nycpartylife", zipcode: "94010")
 # user6 = User.create!(email: "jenny@gmail.com", password: "raspberrychocolate", zipcode: "94010")
-user7 = User.create!(firstname: "guest", lastname: "test", email: "guest@gmail.com", password: "1234567", zipcode: "94010")
+user7 = User.create!(firstname: "guest", lastname: "test", email: "guest@gmail.com", password: "1234567", zipcode: "94010", profile_pic: "guest")
 user1 = User.create!(
     firstname: "Harry",
     lastname: "Potter",
@@ -128,7 +128,8 @@ user11 = User.create!(
     long: "-122.37481763068352",
     delivery: false,
     takeout: true,
-    outdoor: true
+    outdoor: true,
+    website: "https://newenglandlobster.net/"
 
 )
 
@@ -258,7 +259,8 @@ business3 = Business.create!(
     long: "-122.36289300072987",
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: true,
+    website: "http://www.maverickjacks.com"
 
 )
 file10 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/marverick1.jpeg')
@@ -321,7 +323,8 @@ business4 = Business.create!(
     long: "-122.3240314007304",
     delivery: true,
     takeout: true,
-    outdoor: true
+    outdoor: true,
+    website: "http://www.risewoodfire.com"
 
 )
 
@@ -385,7 +388,8 @@ business5 = Business.create!(
     long: "-122.45258191606997",
     delivery: false,
     takeout: true,
-    outdoor: true
+    outdoor: true,
+    website: "https://www.myhulahoops.com"
     
 )
 
