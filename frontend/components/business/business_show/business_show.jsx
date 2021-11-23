@@ -1,7 +1,7 @@
 // import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../../search/search';
+import Search from '../../search/search_container';
 import ReviewIndexContainer from '../../reviews/review_index_container';
 import Map from '../../map/map';
 import { changeFilter } from '../../../actions/filter_actions';
@@ -113,6 +113,7 @@ class BusinessShow extends React.Component {
   }
 
   render() {
+    
     const biz = this.props.business;
     const { changeFilter } = this.props;
     if (!biz) {
@@ -233,27 +234,27 @@ class BusinessShow extends React.Component {
                 <div className="business-show-result-bools">
                   <div className="business-show-result-boolean">
                     {this.props.business.delivery ? (
-                      <i class="fas fa-check fa-lg fa-pull-left"></i>
+                      <i className="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                      <i className="fas fa-times fa-lg fa-pull-left"></i>
                     )}
                     {"  "}
                     Delivery
                   </div>
                   <div className="business-show-result-boolean">
                     {this.props.business.takeout ? (
-                      <i class="fas fa-check fa-lg fa-pull-left"></i>
+                      <i className="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                      <i className="fas fa-times fa-lg fa-pull-left"></i>
                     )}
                     {"  "}
                     Takeout
                   </div>
                   <div className="business-show-result-boolean">
                     {this.props.business.outdoor ? (
-                      <i class="fas fa-check fa-lg fa-pull-left"></i>
+                      <i className="fas fa-check fa-lg fa-pull-left"></i>
                     ) : (
-                      <i class="fas fa-times fa-lg fa-pull-left"></i>
+                      <i className="fas fa-times fa-lg fa-pull-left"></i>
                     )}
                     {"  "}
                     Outdoor seating
@@ -302,9 +303,9 @@ class BusinessShow extends React.Component {
                 <div className="sticky-info">
                   <ul>
                     <li>
-                      <a>
-                        <Link to={`${biz.website}`} />
-                        {biz.website}{" "}
+                      <a className="link-to-website" href={biz.website}><span>{biz.website}</span>
+                        
+                        {" "}
                         <i className="fas fa-external-link-alt fa-pull-right"></i>
                       </a>
                     </li>

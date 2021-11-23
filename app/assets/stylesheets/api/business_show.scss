@@ -149,7 +149,7 @@
 
 .address-content {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .business-hour {
@@ -260,6 +260,12 @@
     width: 100%;
 
 }
+.sticky-info li:first-child {
+    font-weight: bold;
+}
+span {
+    color: rgba(2,122,151,1);
+}
 
 
 .business-show-result-bools {
@@ -304,6 +310,9 @@
     background: rgba(255, 255, 255, 0.29);
 }
 
+.business-location {
+    width: 300px;
+}
 
 // .biz-info :first-child{
 //     font-size: 48px;

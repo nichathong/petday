@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BusinessIndex from "../business/business_index/business_index";
 import Map from '../map/map'
 import Footer from "../footer/footer";
-import Search from "./search";
+import Search from "./search_container";
 import BusinessIndexItem from "../business/business_index/business_index_item";
 
 class SearchResult extends React.Component {

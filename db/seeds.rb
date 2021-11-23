@@ -103,7 +103,7 @@ user10 = User.create!(
     email: "dragomalfoy@aa.com",
     zipcode: "90020",
     password: "dragomalfoy",
-    profile_pic: "malfoy"
+    profile_pic: "drago"
     
     )
             

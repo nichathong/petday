@@ -62,7 +62,7 @@ class AllPhotos extends React.Component {
                 <div className="all-photo-grid-container">
 
                   <div className="all-photo-grid">
-                      {this.props.business.photoUrls.map( (url, idx) => <img src={url} key={idx} className='each-all-photos'/> )}
+                      {this.props.business.photoUrls.map( (url, phoid) => <img src={url} key={phoid} className='each-all-photos'/> )}
 
                   </div>
                 </div>

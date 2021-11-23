@@ -3,7 +3,7 @@ import { withRouter } from "react-router";
 import Footer from "../../footer/footer";
 import GreetingContainer from "../../greeting/greeting_container"
 import { Link } from "react-router-dom";
-import axios from "axios";
+import Search from "../../search/search_container";
 class BusinessPhoto extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +12,8 @@ class BusinessPhoto extends React.Component {
       business: this.props.business,
       photoFile: null,
       photoUrl: null,
+      find: "",
+      near: this.props.near
     };
 
     this.handleFile = this.handleFile.bind(this);
@@ -22,6 +24,8 @@ class BusinessPhoto extends React.Component {
   };
 
   componentDidMount() {
+    const { find, near} = this.state;
+    this.props.changeFilter(find, near);
     this.props.fetchBusiness(this.props.match.params.businessId);
     window.scrollTo(0, 0);
   }
@@ -109,23 +113,27 @@ class BusinessPhoto extends React.Component {
 //   }
 
   render() {
-
+    const { changeFilter } = this.props;
     const preview = this.state.photoUrl ? (<img className="preview-image" src={this.state.photoUrl} />) : null;
     if (this.props.business === undefined) return null;
     // if (this.props.business === undefined) return "Opps, something is worng!"; // if (this.props.business === undefined) return null;
     return (
       <div>
-        <div className="navbar-review-space"></div>
-        <div className="review-form-navbar">
-          <Link to="/">
-            <img
-              className="pet-day-logo-index"
-              src="/petday_img/petday_logo_small.png"
-            ></img>
-          </Link>
-          <div>
-            <GreetingContainer />
-            <div className="review-form-box"></div>
+        <div className="navbar-review-space">
+          <div className="review-form-navbar">
+            <Link to="/">
+              <img
+                className="pet-day-logo-index"
+                src="/petday_img/petday_logo_small.png"
+              ></img>
+            </Link>
+            <Search
+              find={this.props.find}
+              near={this.props.near}
+              changeFilter={changeFilter}
+            />
+          </div>
+          <div className="review-form-box">
             <form onSubmit={this.handleSubmit}>
               <div className="review-form-content">
                 <div className="review-form-text">
@@ -166,7 +174,6 @@ class BusinessPhoto extends React.Component {
             </form>
           </div>
         </div>
-
       </div>
     );
   }
