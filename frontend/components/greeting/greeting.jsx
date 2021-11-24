@@ -17,24 +17,9 @@ const Greeting = ({ currentUser, logout }) => {
     <hgroup className="header-group">
       <nav className="nav-bar">
         <div className="left-nave">
-          <Link
-            to="https://www.yelp.com/writeareview"
-            className="write-a-review"
-          >
-            Write a Review
-          </Link>
-          <Link
-            to="https://www.yelp.com/events/burlingame-ca-us"
-            className="events"
-          >
-            Events
-          </Link>
-          <Link
-            to="https://www.yelp.com/talk/burlingame-ca-us"
-            className="talk"
-          >
-            Talk
-          </Link>
+          <a href="https://www.yelp.com/writeareview" className="write-a-review">Write a Review</a>
+          <a href="https://www.yelp.com/events/burlingame-ca-us" className="events">Events</a>
+          <a href="https://www.yelp.com/talk/burlingame-ca-us" className="talk">Talk</a>
         </div>
         <div className="login-nav">
           <Link to="/login" className="login-bttn-nav">
