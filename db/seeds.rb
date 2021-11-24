@@ -318,7 +318,7 @@ business4 = Business.create!(
     phone_number: "(650) 389-6918",
     categories: "Bars, American (Traditional), Pizza",
     cost: "$$",
-    hours: "Mon	11:00 am - 9:00 pm \n Tue	11:00 am - 9:00 pm \n Wed	11:00 am - 9:00 pm \n Thu	11:00 am - 9:00 pm \n Fri	11:00 am - 10:00 pm \n Sat	11:00 am - 10:00 pm \n Sun	11:00 am - 9:00 pm",
+    hours: "Mon	11:00 am - 9:00 pm, Tue	11:00 am - 9:00 pm, Wed	11:00 am - 9:00 pm, Thu	11:00 am - 9:00 pm, Fri	11:00 am - 10:00 pm, Sat	11:00 am - 10:00 pm, Sun	11:00 am - 9:00 pm",
     lat: "37.568163439635676",
     long: "-122.3240314007304",
     delivery: true,
