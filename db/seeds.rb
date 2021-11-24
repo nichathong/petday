@@ -200,7 +200,7 @@ business2 = Business.create!(
     delivery: false,
     takeout: true,
     outdoor: true,
-    website: "https://crepevine.com/locations/burlingame/"
+    website: "https://crepevine.com/"
 )
 
 file6 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/egg_benedict.jpeg')
