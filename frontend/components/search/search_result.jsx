@@ -53,18 +53,10 @@ class SearchResult extends React.Component {
                     />
                   ))}
                 </div>
-                {/* <div>
-                  <BusinessIndex
-                    businesses={businesses}
-                    changeFilter={changeFilter}
-                    find={this.props.find}
-                    near={this.props.near}
-                  />
-                </div> */}
               </div>
               <div className="map-in-index">
                 <Map
-                  businesses={businesses}
+                  businesses={biz}
                   changeFilter={changeFilter}
                   find={this.props.find}
                   near={this.props.near}

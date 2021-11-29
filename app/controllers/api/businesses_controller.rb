@@ -1,6 +1,7 @@
 class Api::BusinessesController < ApplicationController
     def index
         # debugger
+        @businesses = Business.all
         bounds = params[:filters][:bounds]
         near = params[:filters][:near]
         find = params[:filters][:find]
@@ -37,10 +38,10 @@ class Api::BusinessesController < ApplicationController
                 @businesses = @businesses.select { |business| bound_filter.include?(business) }
             end
         else
-            @businesses = Business.all
-            if bound_filter
-                @businesses = @businesses.select { |business| bound_filter.include?(business) }
-            end
+            @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
+            # if bound_filter
+            #     @businesses = @businesses.select { |business| bound_filter.include?(business) }
+            # end
 
         end
 

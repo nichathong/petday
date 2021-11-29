@@ -5,9 +5,9 @@ export default class MarkerManager {
     this.markers = {};
 
     }
-
+    
     updateMarkers(businesses) {
-      // debugger
+      debugger
       // console.log(businesses)
       const bizObj = {};
       businesses.forEach((biz) => bizObj[biz.id] = biz);

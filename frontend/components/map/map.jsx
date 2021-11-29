@@ -2,10 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom'
 import MarkerManager from '../../util/marker_manager';
 
-const getCoordsObj = latLng => ({
-lat: latLng.lat(),
-lng: latLng.lng()
-});
 
 class Map extends React.Component {
 

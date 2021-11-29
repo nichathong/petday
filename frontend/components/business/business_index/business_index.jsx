@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router'; 
 import BusinessIndexItem from './business_index_item';
-// BusinessIndexItem = withRouter(BusinessIndexItem);
-import Search from '../../search/search';
+import SearchContainer from '../../search/search_container';
 import Map from '../../map/map';
 import Footer from '../../footer/footer';
+
 
 
 class BusinessIndex extends React.Component {
@@ -16,39 +16,26 @@ class BusinessIndex extends React.Component {
           find: "",
           near: this.props.near,
         };
-        // this.state = { 
-        //     search: this.props.location.search.split("=")[1]
-        //  }
-        // this.handleClick = this.handleClick.bind(this)
     }
 
 
     componentDidMount() {
         const { find, near } = this.state;
-        // if (this.props.businesses.length === 0) {
-        //     this.props.changeFilter('near', this.props.near)
-        //     .then(() => {
-        //         this.props.changeFilter('find', this.state.find)
-        //     });
-        // }
         this.props.changeFilter(find, near);
         window.scrollTo(0, 0);
         this.props.fetchBusinesses();
 
     }
-    // handleClick(e) {
-    //   console.log('click')
-    //   this.props.history.push(`/businesses/${e.target.id}`)
-    // } 
 
 
     render() { 
-      // console.log(this.props.businesses)
+      console.log(this.props.businesses)
       if (this.props.businesses.length === 0) {
         return null
       }
         const biz = (Object.values(this.props.businesses[0]));
-        const { businesses, changeFilter } = this.props;
+        // console.log(biz)
+        const { changeFilter } = this.props;
         return (
           <div className="">
             <div className="biz-page-top-index">
@@ -59,7 +46,11 @@ class BusinessIndex extends React.Component {
                     src="/petday_img/petday_logo_small.png"
                   ></img>
                 </Link>
-                <Search find={this.props.find} near={this.props.near} changeFilter={changeFilter}/>
+                <SearchContainer
+                  find={this.props.find}
+                  near={this.props.near}
+                  changeFilter={changeFilter}
+                />
               </div>
             </div>
             <div className="biz-index-main">
@@ -83,7 +74,7 @@ class BusinessIndex extends React.Component {
               </div>
               <div className="map-in-index">
                 <Map
-                  businesses={businesses}
+                  businesses={biz}
                   changeFilter={changeFilter}
                   find={this.props.find}
                   near={this.props.near}
@@ -91,7 +82,7 @@ class BusinessIndex extends React.Component {
               </div>
             </div>
             <div className="footer-content">
-            <Footer/>
+              <Footer />
             </div>
           </div>
         );
