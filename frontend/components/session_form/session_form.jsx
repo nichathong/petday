@@ -28,17 +28,17 @@ class SessionForm extends React.Component {
       password: "1234567"
     });
   }
-  // renderErrors() {
-  //   return(
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
 
   render() {
@@ -55,6 +55,7 @@ class SessionForm extends React.Component {
         <div className="main-session-form">
           <div className="session-form-box">
             <div className="fillout-form">
+              <div className="err-container">{this.renderErrors()}</div>
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <div className="login-to-petday">Log in to Petday</div>
                 <br />
@@ -84,7 +85,9 @@ class SessionForm extends React.Component {
                     value={this.props.buttonMessage}
                   />
 
-                  <button className="session-submit" onClick={this.guestLogin}>Demo Log in</button>
+                  <button className="session-submit" onClick={this.guestLogin}>
+                    Demo Log in
+                  </button>
                   <div className="new-to-petday">{this.props.navlink}</div>
                 </div>
               </form>

@@ -28,6 +28,18 @@ class SignUpForm extends React.Component {
         this.props.processForm(user);
     };
 
+    renderErrors() {
+      return (
+        <ul className="errors">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
     render() { 
         return (
           <div className="login-form-container">
@@ -40,90 +52,96 @@ class SignUpForm extends React.Component {
               </Link>
             </div>
             <div className="main-session-form">
-                <div className="session-form-box">
-                    <div className="fillout-form">
-                        <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <div className="signup-for-petday">Sign Up for Petday</div>
-                        <br />
-                        <div>Connect with great local businesses</div>
-                        <div className="login-form">
-                            <br />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="First name"
-                            value={this.state.firstname}
-                            onChange={this.update("firstname")}
-                            />
-                            <br />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="Last name"
-                            value={this.state.lastname}
-                            onChange={this.update("lastname")}
-                            />
-                            <br />
-                            <input
-                            className="login-input"
-                            type="email"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange={this.update("email")}
-                            />
-                            <br />
-                            <input
-                            className="login-input"
-                            type="password"
-                            placeholder="Password"
-                            value={this.state.password}
-                            onChange={this.update("password")}
-                            />
-                            <br />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="ZIP code"
-                            value={this.state.zipcode}
-                            onChange={this.update("zipcode")}
-                            />
-                            <br />
-                            <br />
-                            Birthday optional
-                            <br />
-                            <br />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="Month"
-                            value={this.state.birthmonth}
-                            onChange={this.update("birthmonth")}
-                            />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="Day"
-                            value={this.state.birthyear}
-                            onChange={this.update("birthyear")}
-                            />
-                            <input
-                            className="login-input"
-                            type="text"
-                            placeholder="Year"
-                            value={this.state.birthday}
-                            onChange={this.update("birthday")}
-                            />
-                            <br />
-                            <input
-                            className="session-submit"
-                            type="submit"
-                            value={this.props.buttonMessage}
-                            />
-                            <div className="already-on-petday">{this.props.navlink}</div>
-                        </div>
-                        </form>
+              <div className="session-form-box">
+                <div className="fillout-form">
+                  <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <div className="signup-for-petday">Sign Up for Petday</div>
+                    <br />
+                    <div>Connect with great local businesses</div>
+                    <div className="err-container">
+                      {this.renderErrors()}
                     </div>
+                    <div className="login-form">
+                      <br />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="First name"
+                        value={this.state.firstname}
+                        onChange={this.update("firstname")}
+                      />
+                      <br />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="Last name"
+                        value={this.state.lastname}
+                        onChange={this.update("lastname")}
+                      />
+                      <br />
+                      <input
+                        className="login-input"
+                        type="email"
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.update("email")}
+                      />
+                      <br />
+                      <input
+                        className="login-input"
+                        type="password"
+                        autoComplete="new-password"
+                        placeholder="Password"
+                        value={this.state.password}
+                        onChange={this.update("password")}
+                      />
+                      <br />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="ZIP code"
+                        value={this.state.zipcode}
+                        onChange={this.update("zipcode")}
+                      />
+                      <br />
+                      <br />
+                      Birthday optional
+                      <br />
+                      <br />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="Month"
+                        value={this.state.birthmonth}
+                        onChange={this.update("birthmonth")}
+                      />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="Day"
+                        value={this.state.birthyear}
+                        onChange={this.update("birthyear")}
+                      />
+                      <input
+                        className="login-input"
+                        type="text"
+                        placeholder="Year"
+                        value={this.state.birthday}
+                        onChange={this.update("birthday")}
+                      />
+                      <br />
+                      <input
+                        className="session-submit"
+                        type="submit"
+                        value={this.props.buttonMessage}
+                      />
+                      <div className="already-on-petday">
+                        {this.props.navlink}
+                      </div>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
           </div>
         );

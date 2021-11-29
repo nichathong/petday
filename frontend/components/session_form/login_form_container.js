@@ -6,7 +6,7 @@ import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => {
   return {
-    // errors: errors.session,
+    errors: errors.session,
     welcomeMessage: "By logging in, you agree to Petday's Term of Service and Privacy Policy",
     formType: 'Login',
     buttomMessage: "Log In",
