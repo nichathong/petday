@@ -441,151 +441,110 @@ review5f = Review.create!(
     business_id: business5.id
 )
 
-   #     description:
-        #     img_url: "https://s3-media0.fl.yelpcdn.com/bphoto/xZAaAOXByCGjDAUkNsM_ew/348s.jpg"
-        #     address: "1000 El Camino Real, Belmont, California, 94002",
-        #     phone_number: "(650) 453-3748",
-    #     categories: "American (New), ",
-    #     cost: "$$",
+business6 = Business.create!(
+    name: "K.Grill & Tofu House ",
+    img_url: "https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill01.jpeg",
+    address: "617 San Mateo Ave San Bruno, CA 94066",
+    phone_number: "(650) 873-3030",
+    categories: "Korean, Asian",
+    cost: "$$",
+    hours: "Mon	11:00 am - 3:00 pm, Mon 5.00 pm - 9.00 pm, Tue	11:00 am - 3:00 pm, Tue 5.00 pm - 9.00 pm, Wed	11:00 am - 3:00 pm, Wed 5.00 pm - 9.00 pm, Thu	11:00 am - 3:00 pm, Thu 5.00 pm - 9.00 pm, Fri	11:00 am - 3:00 pm, Fri 5.00 pm - 9.00 pm, Sat	11:00 am - 3:00 pm, Sat 5.00 pm - 9.00 pm, Sun	Closed",
+    lat: "37.62689323887663", 
+    long: "-122.41146688504459",
+    delivery: true,
+    takeout: true,
+    outdoor: true,
+    website: "https://www.yelp.com/biz/k-grill-and-tofu-house-san-bruno"
+    
+)
 
-    # }
-    # {
-    #     name:
-    #     description:
-    #     img_url:
-    #     address: 
-    #     hours:
-    #     categories:
-    #     cost:
+file25 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill01.jpeg')
+file26 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill02.jpeg')
+file27 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill03.jpeg')
+file28 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill04.jpeg')
+file29 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill05.jpeg')
+file30 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill06.jpeg')
 
-    # },
-    # {
-    #     name:
-    #     description:
-    #     img_url:
-    #     address: 
-    #     hours:
-    #     categories:
-    #     cost:
+business6.photo.attach(io: file25, filename: 'kgrill01.jpeg')
+business6.photo.attach(io: file26, filename: 'kgrill02.jpeg')
+business6.photo.attach(io: file27, filename: 'kgrill03.jpeg')
+business6.photo.attach(io: file28, filename: 'kgrill04.jpeg')
+business6.photo.attach(io: file29, filename: 'kgrill05.jpeg')
+business6.photo.attach(io: file30, filename: 'kgrill06.jpeg')
 
-    # },
-    # {
-    #     name:
-    #     description:
-    #     img_url:
-    #     address: 
-    #     hour:
-    #     categories:
-    #     cost:
+review6a = Review.create!(
+    message: "Amazing food. Good service, will return again!!",
+    rating: 5,
+    user_id: user4.id,
+    business_id: business6.id
+)
+review6b = Review.create!(
+    message: "I thought it would be better. I feel like this is overrated",
+    rating: 3,
+    user_id: user2.id,
+    business_id: business6.id
+)
+review6c = Review.create!(
+    message: "The parking was easy, the staff are ethusiactic. We love all the food that we had but I wish the service would be a little faster. I need to take sometimes to be able to get staffs attention. Howeer, it was busy so it was understandable",
+    rating: 4,
+    user_id: user8.id,
+    business_id: business6.id
+)
 
-    # }
+business7 = Business.create!(
+    name: "El Palenque Taqueria",
+    img_url: "https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/kgrill01.jpeg",
+    address: "15 N Kingston St San Mateo, CA 94401",
+    phone_number: "(650) 342-4040",
+    categories: "Mexican, Seafood",
+    cost: "$",
+    hours: "Mon	10:00 am - 8:00 pm, Tue	10:00 am - 8:00 pm, Wed	10:00 am - 8:00 pm, Thu	10:00 am - 8:00 pm, Fri	10:00 am - 8:00 pm, Sat	10:00 am - 8:00 pm, Sun	10:00 am - 8:00 pm",
+    lat: "37.6656562607137", 
+    long: "-122.40858123983598",
+    delivery: false,
+    takeout: true,
+    outdoor: true,
+    website: "http://taqueriaelpalenquesanmateo.com/"
+    
+)
 
+file31 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican1.jpeg')
+file32 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican2.jpeg')
+file33 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican3.jpeg')
+file34 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican4.jpeg')
+file35 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican5.jpeg')
+file36 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican6.jpeg')
+file37 = open('https://petday-seed.s3.us-west-1.amazonaws.com/petday_img/mexican7.jpeg')
 
-# review1a = Review.create!(
-#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
-#     rating: 5,
-#     user_id: user2.id,
-#     business_id: 1
-# )
-# review1b = Review.create!(
-#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
-#     rating: 5,
-#     user_id: user2.id,
-#     business_id: 2
-# )
-# review1c = Review.create!(
-#     message: "I've been to more than a few Taco trucks in North Hollywood and this one by far is my Favorite Go-To spot. The food always tastes fresh and the staff is very attentive. The asada is great and so is the al pastor do yourself a favor and spend the extra .25 cents to get the handmade tortillas. Tacos are 1.25 regular or 1.50 for handmade tortillas. Recently they've been giving away a free fresh of either Horcharta, Jamaica or Strawberry juice with every purchase. They are happy to give you grilled jalapeños or onions upon request and with every order they give you a tostada with beans . This truck is open til 3am so it's a great after club spot to grab a bite. When you stop by please make sure to tip the staff they are awesome and seriously go above and beyond. Beware that there is another taco truck nearby that really isn't anywhere near as good",
-#     rating: 4,
-#     user_id: user3.id,
-#     business_id: 3
-# )
-# review1d = Review.create!(
-#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-#     rating: 5,
-#     user_id: user4.id,
-#     business_id: 4
-# )
-# review1e = Review.create!(
-#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-#     rating: 2,
-#     user_id: user5.id,
-#     business_id: 5
-# )
-# review1f = Review.create!(
-#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-#     rating: 5,
-#     user_id: user6.id,
-#     business_id: 6
-# )
-# review1g = Review.create!(
-#     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-#     rating: 5,
-#     user_id: user6.id,
-#     business_id: 2
-# )
+business7.photo.attach(io: file31, filename: 'mexican1.jpeg')
+business7.photo.attach(io: file32, filename: 'mexican2.jpeg')
+business7.photo.attach(io: file33, filename: 'mexican3.jpeg')
+business7.photo.attach(io: file34, filename: 'mexican4.jpeg')
+business7.photo.attach(io: file35, filename: 'mexican5.jpeg')
+business7.photo.attach(io: file36, filename: 'mexican6.jpeg')
+business7.photo.attach(io: file37, filename: 'mexican7.jpeg')
 
-# user1 = User.create!(
-#     fname: "Chandler",
-#     lname: "Bing",
-#     email: "chandlerbing@email.com",
-#     zip_code: 90020,
-#     password: "chandlerbing",
-#     profile_pic: "chandler"
-# )
-# user2 = User.create!(
-#     fname: "Phoebe",
-#     lname: "Buffay",
-#     email: "phoebebuffay@email.com",
-#     zip_code: 90020,
-#     password: "phoebebuffay",
-#     profile_pic: "phoebe"
-# )
-# user3 = User.create!(
-#     fname: "Rachel",
-#     lname: "Green",
-#     email: "rachelgreen@email.com",
-#     zip_code: 90005,
-#     password: "rachelgreen",
-#     profile_pic: "rachel"
-# )
-# user4 = User.create!(
-#     fname: "Ross",
-#     lname: "Geller",
-#     email: "rossgeller@email.com",
-#     zip_code: 90022,
-#     password: "rossgeller",
-#     profile_pic: "ross"
-# )
-# user5 = User.create!(
-#     fname: "Joey",
-#     lname: "Tribbiani",
-#     email: "joeytribbiani@email.com",
-#     zip_code: 90020,
-#     password: "joeytribbiani",
-#     profile_pic: "joey"
-# )
-# user6 = User.create!(
-#     fname: "Monica",
-#     lname: "Geller",
-#     email: "monicageller@email.com",
-#     zip_code: 90020,
-#     password: "monicageller",
-#     profile_pic: "monica"
-# )
-
-# # reviews = Review.create([
-# #     {
-# #         title: 'Great Atmosphere',
-# #         description: 'I have such an amazaing experience there',
-# #         score: 5,
-# #         business: Business.first
-
-# #     },
-# #     {
-# #         title: 'Awesome!',
-# #         description: 'food is delicious and the servers are very nice',
-# #         score: 4,
-# #         business: Business.first
-
-# #     }
-# # ])
+review7a = Review.create!(
+    message: "Awesome Awesome Awesome!.",
+    rating: 5,
+    user_id: user7.id,
+    business_id: business7.id
+)
+review7b = Review.create!(
+    message: "Poor service but food is good and authentic",
+    rating: 4,
+    user_id: user11.id,
+    business_id: business7.id
+)
+review7c = Review.create!(
+    message: "Everything taste good. Spicy but I love it!",
+    rating: 5,
+    user_id: user10.id,
+    business_id: business7.id
+)
+review7d = Review.create!(
+    message: "I ordered take out. The food came out fast and delicious. Definitely going to return",
+    rating: 5,
+    user_id: user4.id,
+    business_id: business7.id
+)
