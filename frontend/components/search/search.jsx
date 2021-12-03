@@ -47,6 +47,8 @@ class Search extends React.Component {
       this.props.history.push(`/search_results`);
     });
 
+    window.scrollTo(0,0)
+
     // let find = this.state.find.split(' ').join('-');
     // let near;
     // if (!this.state.near) {

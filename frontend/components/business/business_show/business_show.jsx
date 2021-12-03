@@ -110,6 +110,7 @@ class BusinessShow extends React.Component {
     const { find, near } = this.state;
     this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.changeFilter(find, near);
+    window.scrollTo(0,0)
   }
 
   render() {

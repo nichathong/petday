@@ -8,7 +8,8 @@ import { fetchBusinesses } from '../../actions/business_actions';
 const mSTP = (state) => ({
     value: state.ui.filters.value,
     near: state.ui.filters.near,
-    businesses: Object.values(state.entities.businesses)
+    businesses: Object.values(state.entities.businesses),
+    
 });
 
 const mDTP = (dispatch) => ({
