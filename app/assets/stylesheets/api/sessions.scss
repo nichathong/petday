@@ -5,6 +5,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.errors {
+    color: red;
+    padding-top: 15px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.err-container {
+    color: red;
+    font-weight: bold;
+}
+
+.login-message {
+    margin: 20px;
+}
+
+.errors li {
+    margin-bottom: 5px;
+}
 .session-top-tap {
     // justify-content: center;
     background-color: #d32323;
@@ -96,7 +115,7 @@ p {
     z-index: 1;
     background-color: #ffffff;
     max-width: 450px;
-    padding: 50px;
+    padding: 0 50px 50px 50px;
     text-align: left;
     font-size: 13px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +33,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="error.text" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -55,13 +56,19 @@ class SessionForm extends React.Component {
         <div className="main-session-form">
           <div className="session-form-box">
             <div className="fillout-form">
-              <div className="err-container">{this.renderErrors()}</div>
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <div className="login-to-petday">Log in to Petday</div>
                 <br />
                 <div className="top-new-to-petday">{this.props.navlink}</div>
                 <br />
-                {this.props.welcomeMessage}
+
+                <div className="login-message">
+                  {this.props.welcomeMessage}
+                </div>
+
+                <div className="err-container">{this.renderErrors()}</div>
+                <br/>
+                <br/>
                 <div className="login-form">
                   <input
                     className="login-input"
