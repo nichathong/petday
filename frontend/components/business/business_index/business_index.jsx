@@ -17,7 +17,6 @@ class BusinessIndex extends React.Component {
         };
     }
 
-
     componentDidMount() {
         const { find, near } = this.state;
         this.props.changeFilter(find, near);
@@ -33,7 +32,6 @@ class BusinessIndex extends React.Component {
         return null
       }
         const biz = (Object.values(this.props.businesses[0]));
-        // console.log(biz)
         const { changeFilter } = this.props;
         return (
           <div className="">
