@@ -5,7 +5,6 @@ import Footer from '../../footer/footer';
 
 const BusinessIndexItem = ( {business, history} ) => {
     return (
-            // <Link className="link-to-business" to={`/businesses/${business.id}`} />
         <div className="each-biz-containter" onClick={() => history.push(`/businesses/${business.id}`)}>
             <div className="each-biz">
                 <img className="biz-img" src={business.photoUrls[0]} alt="" />
