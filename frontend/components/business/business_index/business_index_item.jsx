@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import Footer from '../../footer/footer';
 
 const BusinessIndexItem = ( {business, history} ) => {
     return (
@@ -29,22 +28,6 @@ const BusinessIndexItem = ( {business, history} ) => {
                     <span className="biz-cost">{business.cost}</span>
                     <span className="biz-bullet">&#8226;</span>
                     <span className="biz-bullet">{business.categories}</span>
-                    {/* {console.log(Object.values(business.categories))} */}
-                    {/* {business.categories.map((category, i) => {
-                        if (i === business.categories.length - 1) {
-                        return (
-                            <span className="result-category-name" key={i}>
-                            {category.category}{" "}
-                            </span>
-                        );
-                        } else {
-                        return (
-                            <span className="result-category-name" key={i}>
-                            {category.category},{" "}
-                            </span>
-                        );
-                        }
-                    })} */}
                         <div className="result-booleans">
                             <div className="result-boolean">{business.delivery ? (<i className="fas fa-check fa-lg fa-pull-left"></i>) : (<i className="fas fa-times fa-lg fa-pull-left"></i>)}{"  "} Delivery</div>
                             <div className="result-boolean">{business.takeout ? (<i className="fas fa-check fa-lg fa-pull-left"></i>) : (<i className="fas fa-times fa-lg fa-pull-left"></i>)}{"  "} Takeout</div>
