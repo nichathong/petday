@@ -41,7 +41,6 @@ const BusinessIndexItem = ( {business, history} ) => {
 
             </div>
             {/* <Footer/> */}
-
         </div>  
     );
 }
