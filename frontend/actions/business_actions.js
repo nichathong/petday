@@ -5,6 +5,7 @@ export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 // export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 // export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
+//action creator functions
 export const receiveBusinesses = businesses => ({
   type: RECEIVE_BUSINESSES,
   businesses
@@ -27,10 +28,10 @@ export const receiveBusiness = business => {
 // });
 
 export const fetchBusinesses = (filters) => dispatch => (
-    APIUtil.fetchBusinesses(filters)
-    .then( businesses => {
+    APIUtil.fetchBusinesses(filters) //gave us ajx request
+    .then( businesses => { //jbuilder response from database
       // debugger
-      return dispatch(receiveBusinesses(businesses))
+      return dispatch(receiveBusinesses(businesses)) //dispatch action
     })
       
 );

@@ -4,6 +4,8 @@ import configureStore from "./store/store";
 import Root from './components/root';
 import { updateFilter } from './actions/filter_actions'
 
+//this is entry file
+//
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -14,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       session: { id: window.currentUser.id },
     };
-    store = configureStore(preloadedState);
+    store = configureStore(preloadedState); //setup redux and react
     delete window.currentUser;
   } else {
     store = configureStore();
   }
   window.store = store;
   window.updateFilter = updateFilter;
-  const root = document.getElementById("root");
-  ReactDOM.render(<Root store={store}/> , root);
+  const root = document.getElementById("root"); //find the div called 'root'
+  ReactDOM.render(<Root store={store}/> , root); //render root component inside root div
 });

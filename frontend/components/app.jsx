@@ -22,6 +22,14 @@ import BusinessPhotoContainer from './business/business/business_photo_container
 import AllPhotosContainer from './business/business/all_photos_container';
 // import BusinessShow from './business/business_show/business_show';
 
+/*
+- Switch from libaries: find routes that matched and render it, only render the first one that matched and found
+- 
+
+*/
+
+
+
 const App = () => (
   <div>
 
