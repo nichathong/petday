@@ -11,10 +11,12 @@ class Footer extends React.Component {
                   <div className="about-links">
                     <div className="sub-link">
                       {/* need to change the link to porforlio  */}
-                      <a href="https://nichathong.github.io/portfolio/">Portforlio</a> 
+                      <a href="https://nichathong.github.io/portfolio/">
+                        Portforlio
+                      </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://github.com/nichathong/">Github</a>
+                      <a href="https://github.com/nichathong/petday">Github</a>
                     </div>
                     <div className="sub-link">
                       <a href="https://angel.co/u/nicha-thongpanchang">
@@ -50,14 +52,10 @@ class Footer extends React.Component {
                   My Pets
                   <div className="about-links">
                     <div className="sub-link">
-                      <a href="#">
-                        Snow
-                      </a>
+                      <a href="#">Snow</a>
                     </div>
                     <div className="sub-link">
-                      <a href="#">
-                        Casper
-                      </a>
+                      <a href="#">Casper</a>
                     </div>
                     <div className="sub-link">
                       <a href="#">Sua</a>
