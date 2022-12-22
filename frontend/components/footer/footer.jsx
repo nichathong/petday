@@ -11,19 +11,19 @@ class Footer extends React.Component {
                   <div className="about-links">
                     <div className="sub-link">
                       {/* need to change the link to porforlio  */}
-                      <a href="https://nichathong.github.io/portfolio/">
+                      <a href="https://nichathong.github.io/portfolio/"  target="_blank">
                         Portforlio
                       </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://github.com/nichathong/petday">Github</a>
+                      <a href="https://github.com/nichathong/petday" target="_blank">Github</a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://angel.co/u/nicha-thongpanchang">
+                      <a href="https://angel.co/u/nicha-thongpanchang" target="_blank">
                         AngleList
                       </a>
                     </div>
-                    <div className="sub-link">
+                    <div className="sub-link" target="_blank">
                       <a href="https://www.linkedin.com/in/nicha-thpng/">
                         LinkedIn
                       </a>
@@ -34,17 +34,17 @@ class Footer extends React.Component {
                   Project
                   <div className="about-links">
                     <div className="sub-link">
-                      <a href="https://nichathong.github.io/Javascript_project/">
+                      <a href="https://nichathong.github.io/Javascript_project/" target="_blank">
                         Bay House Price
                       </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://sprout-plant-app.herokuapp.com/#/">
+                      <a href="https://sprout-plant-app.herokuapp.com/#/" target="_blank">
                         Sprout
                       </a>
                     </div>
                     <div className="sub-link">
-                      <a href="https://github.com/nichathong/petday">Petday</a>
+                      <a href="https://github.com/nichathong/petday" target="_blank">Petday</a>
                     </div>
                   </div>
                 </p>
