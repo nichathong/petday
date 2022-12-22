@@ -50,3 +50,23 @@
 .sub-link {
     margin: 10px;
 }
+
+.sub-link-mypet a {
+    font: 14px Arial, Helvetica, "Helvetica Neue";
+    text-decoration: none;
+    color: #0073BB
+}
+
+.sub-link-mypet a:hover {
+    text-decoration: underline;
+}
+
+.sub-link-mypet:visited {
+    text-decoration: none;
+    color: #0073BB
+}
+
+.sub-link-mypet {
+    margin: 10px;
+    cursor: not-allowed;
+}
