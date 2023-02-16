@@ -10,9 +10,6 @@ class PopularSeach extends React.Component {
             near: this.props.near,
         };
 
-        // this.handleAmerican = this.handleAmerican.bind(this);
-        // this.handleKorean =this.handleKorean.bind(this);
-        // this.handleAsian =this.handleAsian.bind(this);
         this.handleCity = this.handleCity.bind(this);
         this.handleCategory = this.handleCategory.bind(this);
 
@@ -26,28 +23,6 @@ class PopularSeach extends React.Component {
     }
 
 
-    // handleKorean(e, filter) {
-    //     e.preventDefault();
-    //     this.state.find = filter   
-    //     this.props.changeFilter(filter, '')
-    //         .then(() => {this.props.history.push(`/search_results`)})
-
-    // }
-    // handleAsian(e, filter) {
-    //     e.preventDefault();
-    //     this.state.find = filter   
-    //     this.props.changeFilter(filter, '')
-    //         .then(() => {this.props.history.push(`/search_results`)})
-
-    // }
-
-    // handleMexican(e, filter) {
-    //     e.preventDefault();
-    //      this.state.find = filter;   
-    //     this.props.changeFilter(filter, '')
-    //         .then(() => {this.props.history.push(`/search_results`)})
-
-    // }
     handleCity(e, filter) {
         e.preventDefault();
          this.state.near = filter;   

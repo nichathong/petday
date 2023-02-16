@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import Homepage from '../../homepage/homepage';
-// import Dropdown from './dropdown';
-
-
 
 const Greeting = ({ currentUser, logout }) => {
-//   const [visible, setVisible] = useState(false);//set default state 
-//   const handleDropDown = () => {
-//     setVisible(!visible)
-//   }
-//   useEffect(() => {}, [visible])
-
-  
   const sessionLinks = () => (
     <hgroup className="header-group">
       <nav className="nav-bar">
@@ -52,22 +41,11 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
       </nav>
     </hgroup>
-    // <hgroup className="header-group">
-    //   <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    //   <button className="header-button" onClick={logout}>
-    //     Log Out
-    //   </button>
-    // </hgroup>
+
   );
-    return currentUser ? personalGreeting() : sessionLinks();
+  return currentUser ? personalGreeting() : sessionLinks();
   };
   
   
   export default Greeting;
   
-  {/* <Link to="/signup" className="signup-bttn-nav">Log out</Link>         */}
-  {/* <h2 className="header-name">Hi, {currentUser.email}!</h2>
-  <button className="header-button" onClick={handleDropDown}>
-    Drop down menu
-  </button>
-  {visible && <Dropdown />} */}

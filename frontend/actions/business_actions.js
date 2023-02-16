@@ -17,16 +17,6 @@ export const receiveBusiness = business => {
   business
 }};
 
-// export const receiveReviews = reviews => ({
-//   type: RECEIVE_REVIEWS,
-//   reviews
-// });
-
-// export const receiveReview = review => ({
-//   type: RECEIVE_REVIEW,
-//   review
-// });
-
 export const fetchBusinesses = (filters) => dispatch => (
     APIUtil.fetchBusinesses(filters) //gave us ajx request
     .then( businesses => { //jbuilder response from database

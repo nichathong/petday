@@ -1,14 +1,9 @@
 class Api::BusinessesController < ApplicationController
     def index
-        # debugger
         @businesses = Business.all #
         bounds = params[:filters][:bounds]
         near = params[:filters][:near]
         find = params[:filters][:find]
-
-        # if near.downcase == "sf"
-        #     near = "san francisco"
-        # end
 
         bound_filter = Business.in_bounds(bounds) if bounds
 
@@ -17,14 +12,11 @@ class Api::BusinessesController < ApplicationController
             @finds = Business.find_business(params[:filters][:find])
             @businesses = @business.select { |business| @finds.include?(business) }
 
-            # debugger
-
             if bound_filter
                 @businesses = @businesses.select { |business| bound_filter.include?(business) }
             end
 
         elsif find == ""
-            # debugger
             @businesses = Business.near_location(params[:filters][:near])
 
             if bound_filter
@@ -39,30 +31,17 @@ class Api::BusinessesController < ApplicationController
             end
         else
             @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
-            # if bound_filter
-            #     @businesses = @businesses.select { |business| bound_filter.include?(business) }
-            # end
 
         end
 
-
-        # @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
-
-        # @businesses = params[:search] ? Business.seach(params[:search][:find], params[:search][:near]) : Business.all
-        # if params[:search]
-        #     @businesses = Business.seach(params[:search][:find], params[:search][:near])
-        # end
-        # @businesses = Business.all
         render :index
     end
     
     def show
-        # debugger
+
         @business = Business.with_attached_photo.find(params[:id])
         
         render :show
-        
-        # render json: BusinessSerializer.new(business, options).serialized_json
     end
 
     def create

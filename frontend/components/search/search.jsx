@@ -18,25 +18,6 @@ class Search extends React.Component {
     }
   }
 
-  // handleFilter(e, filter) {
-  //   e.preventDefault();
-
-  //   if (!this.props.near) {
-  //     this.props.near = 'san francisco';
-  //     this.props.changeFilter('near', this.props.near)
-  //       .then(() => {
-  //         this.props.changeFilter('find', filter)
-  //           .then(() => { this.props.history.push(
-  //             `/search?find=${filter}&near=${this.props.near}`
-  //           )})
-  //       });
-  //   } else {
-  //     this.props.changeFilter('find', filter)
-  //       .then(() => { this.props.history.push(
-  //         `/search?find_desc=${filter}&find_loc=${this.props.near}`
-  //       ); })
-  //   }
-  // };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -48,19 +29,6 @@ class Search extends React.Component {
     });
 
     window.scrollTo(0,0)
-
-    // let find = this.state.find.split(' ').join('-');
-    // let near;
-    // if (!this.state.near) {
-    //   near = 'san francisco';
-    // } else {
-    //   near = this.state.near.split(' ').join('-');
-    // }
-    // this.props.changeFilter('near', near)
-    //   .then(() => {
-    //     this.props.changeFilter('find', this.state.find)
-    //       .then(() => { this.props.history.push(`/search?find_desc=${find}&find_loc=${near}`);})
-    //   });
     }
 
     render() {
