@@ -34,7 +34,7 @@ const Greeting = ({ currentUser, logout }) => {
           <a href="https://www.yelp.com/talk/burlingame-ca-us" className="talk">Talk</a>
         </div>
         <div className="login-nav">
-          <Link to="/businsses" className="login-bttn-nav">Hello, {currentUser.firstname}</Link>
+          <Link to="/businesses" className="login-bttn-nav">Hello, {currentUser.firstname}</Link>
         </div>
         <div className="signup-nav">
             <button className="signup-bttn-nav" onClick={logout}>Log out</button>
