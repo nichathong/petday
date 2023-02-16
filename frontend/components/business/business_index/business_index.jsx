@@ -11,13 +11,12 @@ import Footer from '../../footer/footer';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
-        //local component state
         this.state = {
           find: "",
           near: this.props.near,
         };
     }
-
+    
     componentDidMount() {
         const { find, near } = this.state;
         this.props.changeFilter(find, near);
@@ -25,7 +24,6 @@ class BusinessIndex extends React.Component {
         this.props.fetchBusinesses(); 
 
     }
-
 
     render() { 
       console.log(this.props.businesses)

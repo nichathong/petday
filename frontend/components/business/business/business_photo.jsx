@@ -42,9 +42,6 @@ class BusinessPhoto extends React.Component {
     }
   }
   handleSubmit(e) {
-    // console.log("this is photoFile", this.state.photoFile)
-    // console.log("this is photoUrl",this.state.photoUrl)
-    // console.log("this is prop.business",this.props.business)
     e.preventDefault();
     if (!this.props.user) {
       this.props.history.push("/login");
@@ -66,30 +63,6 @@ class BusinessPhoto extends React.Component {
       );
     }
   }
-  //   handleSubmit(e) {
-  //     e.preventDefault();
-  //     const { name, address, hours, categories, phone_number, cost, lat, long } =
-  //       this.props.business;
-  //     const { photos } = this.state;
-  //     const formData = new FormData();
-  //     formData.append("business[name]", name);
-  //     formData.append("business[address]", address);
-  //     formData.append("business[hours]", hours);
-  //     formData.append("business[categories]", categories);
-  //     formData.append("business[cost]", cost);
-  //     formData.append("business[phone_number]", phone_number);
-  //     formData.append("business[lat]", lat);
-  //     formData.append("business[long]", long);
-  //     // formData.append("business[delivery]", delivery);
-  //     // formData.append("business[takeout]", takeout);
-  //     // formData.append("business[outdoor]", outdoor);
-  //     for (let i = 0; i < photos.length; i++) {
-  //       formData.append("business[photos][]", photos[i]);
-  //     }
-
-  //     this.props.updateBusiness(formData, this.props.match.params.businessId);
-  //     this.navigateBack();
-  //   }
 
   navigateBack() {
     this.props.history.push(
@@ -97,20 +70,6 @@ class BusinessPhoto extends React.Component {
     );
   }
 
-//   handleFile(e) {
-//     let files = e.currentTarget.files;
-
-//     for (let i = 0; i < files.length; i++) {
-//       let reader = new FileReader();
-//       reader.onloadend = () => {
-//         this.setState({
-//           photo: [...this.state.photo, files[i]],
-//           url: [...this.state.url, reader.result],
-//         });
-//       };
-//       reader.readAsDataURL(files[i]);
-//     }
-//   }
 
   render() {
     const { changeFilter } = this.props;
