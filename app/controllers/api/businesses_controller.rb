@@ -78,40 +78,4 @@ class Api::BusinessesController < ApplicationController
     end
 
 
-
-    # def create
-    #     business = Business.new(business_params)
-    #     if business.save
-    #         render json: BusinessSerializer.new(business).serialized_json
-    #     else
-    #         render json: { error: business.errors.messages }, status: 422
-    #     end
-    # end
-    
-    # def update
-    #     business = Business.find_by(slug: params[:slug])
-        
-    #     if business.update(business_params)
-    #         render json: BusinessSerializer.new(business).serialized_json
-    #     else
-    #         render json: { error: business.errors.messages }, status: 422
-    #     end
-    # end
-
-    # def destroy
-    #     business = Business.find_by(slug: params[:slug])
-
-    #     if business.destroy(business_params)
-    #         render :index 
-    #     else
-    #         render json: { error: business.errors.messages }, status: 422
-    #     end
-    # end
-    # private
-
-
-    # def options
-    #     @options ||= { include: %i[reviews] }
-    # end
-
 end
