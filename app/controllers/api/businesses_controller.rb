@@ -1,6 +1,9 @@
 class Api::BusinessesController < ApplicationController
+    #fetching businesses by filter the the business
+    #each of the the condition filter the businesses base on either name and/or location
+    #note that bounds locatates the latitute and longitude for map
     def index
-        @businesses = Business.all #
+        @businesses = Business.all 
         bounds = params[:filters][:bounds]
         near = params[:filters][:near]
         find = params[:filters][:find]
@@ -22,15 +25,17 @@ class Api::BusinessesController < ApplicationController
             if bound_filter
                 @businesses = @businesses.select { |business| bound_filter.include?(business) }
             end
-        elsif near == ""
+
+        else near == ""
             @finds = Business.find_business(params[:filters][:find])
             @businesses = Business.select { |business| @finds.include?(business) } 
 
             if bound_filter
                 @businesses = @businesses.select { |business| bound_filter.include?(business) }
             end
-        else
-            @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
+            
+        #else
+            # @businesses = params[:bounds] ? Business.in_bounds(params[:bounds]) : Business.all
 
         end
 
