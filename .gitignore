@@ -30,3 +30,4 @@ bundle.js*
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/public
