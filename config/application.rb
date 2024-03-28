@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+config.railties_order = [:all, :main_app]
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
