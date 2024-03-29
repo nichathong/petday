@@ -1,9 +1,3 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .errors {
     color: red;
@@ -25,11 +19,8 @@
     margin-bottom: 5px;
 }
 .session-top-tap {
-    // justify-content: center;
     background-color: #d32323;
     padding: 18px 0px 10px 0px;
-    // overflow: hidden;
-    // display: grid;
     height: 48px;
     width: 100%;
 }
@@ -77,7 +68,8 @@
 }
 
 p {
-    color: grayscale($color: #2e2e2e);
+    color: #2e2e2e;
+    filter: grayscale(100%);
     font-weight: bolder;
     font-size: 16px;
 }
@@ -91,8 +83,6 @@ p {
     margin-top: -8px;
     min-width: 600px;
     width: 102%;
-    // padding: 20px;
-    // margin: 8% auto 0;
 }
 
 .login-form {
@@ -106,18 +96,7 @@ p {
 }
 
 .login-form .login-input {
-    // font-family: "Roboto", sans-serif;
-    // outline: 1;
-    // background: f2f2f2;
-    // width: 300px;
-    // height: 30px;
-    // border: 1px;
-    // padding: 15px;
-    // box-sizing: border-box;
     box-shadow: 0 0 1px 0 rgba(0,0,0,0.3);
-    // font-size: 14px; 
-    // // text-align: left;
-    // margin-top: 10px;
     background-color: white;
     margin: 0px 5px 9px;
     padding: 5px 9px;
@@ -137,7 +116,6 @@ p {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
-    // margin-top: 6px;
     border: 0px solid grey;
     border-radius: 4px;
     box-sizing: border-box;
@@ -164,7 +142,6 @@ p {
 .session-link {
     text-decoration: none;
     color: #01a1dd;
-    // font-weight: bold;
 }
 
 .session-link:hover {
