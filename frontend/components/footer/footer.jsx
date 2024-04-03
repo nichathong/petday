@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Footer extends React.Component {
+    //Add comment to trigger heroku change
     render() {
         return (
           <div className="footer-container">
